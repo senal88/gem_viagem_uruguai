@@ -129,6 +129,12 @@ def index():
     """Página principal do dashboard"""
     return render_template('index.html')
 
+@app.route('/gem/analise-carros')
+@app.route('/gem/analise-carros/')
+def analise_carros():
+    """Página de análise comparativa de carros"""
+    return render_template('analise_carros.html')
+
 @app.route('/api/chat', methods=['POST'])
 @app.route('/gem/api/chat', methods=['POST'])
 def chat():

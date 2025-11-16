@@ -22,10 +22,10 @@ class OfertaCarro:
     preco_diaria: float
     preco_total: float
     seguro_basico: str  # "Incluído" ou "+R$ X"
-    seguro_full: Optional[str] = None
     combustivel: str  # "Cheio/Cheio", "Vazio/Vazio", etc.
     cancelamento: str  # "Grátis" ou "Pago"
     limite_km: str  # "Ilimitado" ou "X km"
+    seguro_full: Optional[str] = None
     taxa_aeroporto: bool = False
     taxa_limpeza: bool = False
     gps_wifi: Optional[str] = None
