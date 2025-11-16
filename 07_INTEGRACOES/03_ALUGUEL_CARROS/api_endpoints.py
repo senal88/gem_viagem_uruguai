@@ -134,14 +134,14 @@ def adicionar_oferta_detalhada():
     """Adiciona uma oferta detalhada com todos os campos"""
     try:
         dados = request.json
-        
+
         # Validar campos obrigatórios
-        campos_obrigatorios = ['plataforma', 'veiculo', 'preco_diaria', 'preco_total', 
+        campos_obrigatorios = ['plataforma', 'veiculo', 'preco_diaria', 'preco_total',
                                'seguro_basico', 'combustivel', 'cancelamento', 'limite_km']
         for campo in campos_obrigatorios:
             if campo not in dados:
                 return jsonify({'error': f'Campo obrigatório ausente: {campo}'}), 400
-        
+
         # Criar oferta
         oferta = OfertaCarro(
             plataforma=dados['plataforma'],
@@ -160,9 +160,9 @@ def adicionar_oferta_detalhada():
             observacoes=dados.get('observacoes'),
             link_reserva=dados.get('link_reserva')
         )
-        
+
         analisador.adicionar_oferta(oferta)
-        
+
         return jsonify({
             'success': True,
             'message': 'Oferta adicionada com sucesso',
@@ -172,7 +172,7 @@ def adicionar_oferta_detalhada():
                 'preco_total': oferta.preco_total
             }
         }), 201
-        
+
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
