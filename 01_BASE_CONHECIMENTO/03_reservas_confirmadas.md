@@ -19,7 +19,7 @@
 
 | Total de Reservas | Status | Valor Total Aproximado |
 |-------------------|--------|------------------------|
-| **5 Reservas Críticas** | ✅ Todas Confirmadas | ~R$4.144 (casal) |
+| **6 Reservas Críticas** | ✅ Todas Confirmadas | ~R$4.144 (casal) + Carro |
 
 ---
 
@@ -189,6 +189,28 @@
 - Tour disponível todos os dias
 - Transfer busca no hotel em Punta Carretas/Pocitos/Centro
 - Duração total: ~4h30
+
+---
+
+## 🚙 RESERVA 06: Aluguel de Carro - Budget
+
+| Campo | Valor |
+|-------|-------|
+| **Locadora** | Budget |
+| **Número de Confirmação** | 35328815BR4 |
+| **Período** | 18 a 25 de novembro de 2025 (7 dias) |
+| **Local de Retirada** | Aeroporto Internacional de Carrasco (MVD) - Montevidéu |
+| **Data/Hora Retirada** | Terça-feira, 18/11/2025, 11:00 AM |
+| **Local de Devolução** | Aeroporto Internacional de Carrasco (MVD) - Montevidéu |
+| **Data/Hora Devolução** | Terça-feira, 25/11/2025, 12:30 AM (00:30) |
+| **Status** | ✅ CONFIRMADA |
+
+**Observações:**
+- ⚠️ **IMPORTANTE**: Levar número de confirmação **35328815BR4** para retirada
+- Retirada: Terça-feira, 18 de novembro de 2025 às 11:00 AM
+- Devolução: Terça-feira, 25 de novembro de 2025 às 12:30 AM (00:30)
+- Local: Aeroporto Montevidéu (Carrasco - MVD)
+- Verificar na retirada: tag Telepeaje, política de combustível, seguro incluído
 
 ---
 

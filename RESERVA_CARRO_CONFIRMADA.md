@@ -77,6 +77,6 @@
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
+**Última atualização**: 16 de Novembro de 2025
 **Status**: ✅ CONFIRMADA
 

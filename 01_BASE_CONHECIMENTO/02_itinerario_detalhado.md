@@ -22,7 +22,7 @@
 | Horário | Atividade | Local | Status | Observações |
 |---------|-----------|------|--------|-------------|
 | **10:35** | Desembarque | Aeroporto Carrasco (MVD) | ✅ Confirmado | LATAM |
-| **11:00-11:30** | Retirada do carro | Aeroporto Carrasco | ⏳ Pendente | Booking.com |
+| **11:00** | **RETIRADA DO CARRO** | Aeroporto Carrasco | ✅ Confirmado | Budget - Conf: 35328815BR4 |
 | **12:00-13:00** | Check-in hotel | Punta Carretas/Pocitos | ⏳ A definir | Hotel a confirmar |
 | **14:00-15:00** | Almoço | Mercado del Puerto | 💡 Sugestão | Tradicional |
 | **15:00-17:00** | Ônibus Turístico OU Tour de Carro | Montevidéu | 💡 Sugestão | R$129/pessoa (ônibus) |
@@ -191,7 +191,7 @@
 |---------|-----------|------|--------|-------------|
 | **23:30 (24/11)** | Check-out hotel | Montevidéu | ✅ Planejado | Preparar malas |
 | **23:30-00:15** | Viagem ao aeroporto | Hotel → Aeroporto Carrasco | ✅ Planejado | ~45 min carro |
-| **00:30-01:00** | Devolução do carro | Aeroporto Carrasco | ✅ Planejado | Booking.com |
+| **00:30** | **DEVOLUÇÃO DO CARRO** | Aeroporto Carrasco | ✅ Confirmado | Budget - Conf: 35328815BR4 |
 | **02:10** | **VOO: Partida** | Aeroporto Carrasco (MVD) | ✅ Confirmado | LATAM |
 | **09:00** | Chegada no Brasil | Vitória | ✅ Confirmado | LATAM |
 
