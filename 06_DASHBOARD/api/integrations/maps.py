@@ -17,7 +17,7 @@ def geocode_address(address):
     """Geocodificar endereço"""
     if not API_KEY:
         return None
-    
+
     try:
         import googlemaps
         gmaps = googlemaps.Client(key=API_KEY)
@@ -37,7 +37,7 @@ def get_route(origin, destination, mode="driving"):
     """Calcular rota"""
     if not API_KEY:
         return None
-    
+
     try:
         import googlemaps
         gmaps = googlemaps.Client(key=API_KEY)
@@ -70,11 +70,11 @@ def geocode():
     address = request.args.get('address')
     if not address:
         return jsonify({'error': 'Address is required'}), 400
-    
+
     result = geocode_address(address)
     if result:
         return jsonify(result)
-    
+
     return jsonify({'error': 'Geocoding failed'}), 500
 
 @bp.route('/route')
@@ -84,13 +84,13 @@ def route():
     origin = request.args.get('origin')
     destination = request.args.get('destination')
     mode = request.args.get('mode', 'driving')
-    
+
     if not origin or not destination:
         return jsonify({'error': 'Origin and destination are required'}), 400
-    
+
     result = get_route(origin, destination, mode)
     if result:
         return jsonify(result)
-    
+
     return jsonify({'error': 'Route calculation failed'}), 500
 

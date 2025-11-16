@@ -20,7 +20,7 @@ def get_exchange_rate(base="BRL", target="UYU"):
     """Obter cotação"""
     if not API_KEY:
         return None
-    
+
     try:
         url = f"{BASE_URL}/{API_KEY}/latest/{base}"
         response = requests.get(url, timeout=5)
@@ -61,10 +61,10 @@ def rate():
     base = request.args.get('base', 'BRL')
     target = request.args.get('target', 'UYU')
     rate_data = get_exchange_rate(base, target)
-    
+
     if rate_data:
         return jsonify(rate_data)
-    
+
     # Fallback se API não disponível
     return jsonify({
         'rate': 7.45,
@@ -82,10 +82,10 @@ def convert():
     base = request.args.get('base', 'BRL')
     target = request.args.get('target', 'UYU')
     result = convert_amount(amount, base, target)
-    
+
     if result:
         return jsonify(result)
-    
+
     # Fallback
     return jsonify({
         'original_amount': amount,

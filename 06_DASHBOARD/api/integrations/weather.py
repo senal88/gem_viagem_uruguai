@@ -19,7 +19,7 @@ def get_current_weather(city="Montevideo, UY"):
     """Obter clima atual"""
     if not API_KEY:
         return None
-    
+
     try:
         url = f"{BASE_URL}/weather"
         params = {
@@ -49,7 +49,7 @@ def get_forecast(city="Montevideo, UY", days=5):
     """Obter previsão"""
     if not API_KEY:
         return None
-    
+
     try:
         url = f"{BASE_URL}/forecast"
         params = {
@@ -72,10 +72,10 @@ def current():
     """Endpoint para clima atual"""
     city = request.args.get('city', 'Montevideo, UY')
     weather = get_current_weather(city)
-    
+
     if weather:
         return jsonify(weather)
-    
+
     # Fallback se API não disponível
     return jsonify({
         'temp': 22,
@@ -94,9 +94,9 @@ def forecast():
     city = request.args.get('city', 'Montevideo, UY')
     days = int(request.args.get('days', 5))
     forecast_data = get_forecast(city, days)
-    
+
     if forecast_data:
         return jsonify(forecast_data)
-    
+
     return jsonify({'error': 'Forecast not available'}), 500
 
