@@ -1,0 +1,482 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://senamfo.com.br:8081/gem/
+Subject: GEM Expert - Viagem Uruguai
+Date: Sun, 16 Nov 2025 12:48:42 -0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--wI4Ngd0RlVwrw1Tlwv1Xv8YLG6l5uVYyUrBn3HKIaO----"
+
+
+------MultipartBoundary--wI4Ngd0RlVwrw1Tlwv1Xv8YLG6l5uVYyUrBn3HKIaO----
+Content-Type: text/html
+Content-ID: <frame-B43E5B1B5ED6EBB63213A50142244DC8@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://senamfo.com.br:8081/gem/
+
+<!DOCTYPE html><html lang=3D"pt-BR"><head><meta http-equiv=3D"Content-Type"=
+ content=3D"text/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"te=
+xt/css" href=3D"cid:css-6847b1d0-41b8-4179-9279-1e285f95ebfd@mhtml.blink" /=
+>
+   =20
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0, maximum-scale=3D1.0, user-scalable=3Dno">
+    <meta name=3D"apple-mobile-web-app-capable" content=3D"yes">
+    <meta name=3D"apple-mobile-web-app-status-bar-style" content=3D"black-t=
+ranslucent">
+    <title>GEM Expert - Viagem Uruguai</title>
+    <link rel=3D"stylesheet" href=3D"http://senamfo.com.br:8081/gem/static/=
+css/dashboard.css">
+    <link rel=3D"apple-touch-icon" href=3D"http://senamfo.com.br:8081/gem/s=
+tatic/images/icon-192.png">
+<meta id=3D"dcngeagmmhegagicpcmpinaoklddcgon"></head>
+<body>
+    <!-- Header -->
+    <header class=3D"header">
+        <div class=3D"header-content">
+            <h1>=F0=9F=87=BA=F0=9F=87=BE GEM Expert</h1>
+            <div class=3D"header-info">
+                <span class=3D"date" id=3D"current-date">Domingo, 16 de nov=
+embro de 2025</span>
+                <span class=3D"time" id=3D"current-time">12:48</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class=3D"main-container">
+        <!-- Dashboard Cards -->
+        <section class=3D"dashboard-section">
+            <div class=3D"card next-event">
+                <div class=3D"card-header">
+                    <h2>=F0=9F=93=85 Pr=C3=B3ximo Evento</h2>
+                </div>
+                <div class=3D"card-body" id=3D"next-event">
+            <div class=3D"event-item">
+                <div>
+                    <div class=3D"event-name">Pizzorno Tour</div>
+                    <div class=3D"event-details">
+                        =F0=9F=93=8D Montevid=C3=A9u<br>
+                        =F0=9F=93=85 19 de novembro de 2025<br>
+                        =E2=8F=B0 Em 2 dia(s) e 20h
+                    </div>
+                </div>
+                <div class=3D"event-time">09:30</div>
+            </div>
+        </div>
+            </div>
+
+            <div class=3D"card weather-card">
+                <div class=3D"card-header">
+                    <h2>=F0=9F=8C=A4=EF=B8=8F Clima Agora</h2>
+                </div>
+                <div class=3D"card-body" id=3D"weather-info">
+                <div class=3D"weather-info">
+                    <div class=3D"weather-main">
+                        <div class=3D"weather-temp">22=C2=B0C</div>
+                        <div class=3D"weather-desc">Parcialmente nublado</d=
+iv>
+                    </div>
+                    <div class=3D"weather-details">
+                        Vento: 15 km/h<br>
+                        Umidade: 65%<br>
+                        UV: Moderado
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class=3D"card exchange-card">
+                <div class=3D"card-header">
+                    <h2>=F0=9F=92=B1 C=C3=A2mbio</h2>
+                </div>
+                <div class=3D"card-body" id=3D"exchange-info">
+                <div class=3D"exchange-rate">
+                    <div>
+                        <div class=3D"rate-value">7.45 UYU</div>
+                        <div class=3D"rate-label">1 BRL =3D 7.45 UYU</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class=3D"card timeline-card">
+                <div class=3D"card-header">
+                    <h2>=F0=9F=93=8B Itiner=C3=A1rio</h2>
+                </div>
+                <div class=3D"card-body" id=3D"timeline">
+        <div class=3D"timeline-item">
+            <div class=3D"timeline-date">19 de novembro de 2025 =C3=A0s 09:=
+30</div>
+            <div class=3D"timeline-content">
+                <strong>Pizzorno Tour</strong><br>
+                =F0=9F=93=8D Montevid=C3=A9u
+            </div>
+        </div>
+   =20
+        <div class=3D"timeline-item">
+            <div class=3D"timeline-date">20 de novembro de 2025 =C3=A0s 18:=
+30</div>
+            <div class=3D"timeline-content">
+                <strong>Pr=C3=A9-Wedding L'Incanto</strong><br>
+                =F0=9F=93=8D Punta del Este
+            </div>
+        </div>
+   =20
+        <div class=3D"timeline-item">
+            <div class=3D"timeline-date">22 de novembro de 2025 =C3=A0s 16:=
+30</div>
+            <div class=3D"timeline-content">
+                <strong>Casamento Fasano</strong><br>
+                =F0=9F=93=8D Punta del Este
+            </div>
+        </div>
+   =20
+        <div class=3D"timeline-item">
+            <div class=3D"timeline-date">23 de novembro de 2025 =C3=A0s 20:=
+30</div>
+            <div class=3D"timeline-content">
+                <strong>Primuseum</strong><br>
+                =F0=9F=93=8D Montevid=C3=A9u
+            </div>
+        </div>
+   =20
+        <div class=3D"timeline-item">
+            <div class=3D"timeline-date">24 de novembro de 2025 =C3=A0s 10:=
+30</div>
+            <div class=3D"timeline-content">
+                <strong>Bouza Tour</strong><br>
+                =F0=9F=93=8D Montevid=C3=A9u
+            </div>
+        </div>
+    </div>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section class=3D"chat-section">
+            <div class=3D"chat-container">
+                <div class=3D"chat-header">
+                    <h2>=F0=9F=92=AC Converse com o GEM Expert</h2>
+                    <select id=3D"ai-provider" class=3D"provider-select">
+                        <option value=3D"openai">OpenAI GPT-4</option>
+                        <option value=3D"anthropic">Claude (Anthropic)</opt=
+ion>
+                        <option value=3D"gemini">Gemini 2.5 Pro</option>
+                    </select>
+                </div>
+                <div class=3D"chat-messages" id=3D"chat-messages">
+                    <div class=3D"message bot-message">
+                        <div class=3D"message-content">
+                            <p>Ol=C3=A1! Sou seu concierge de viagem. Como =
+posso ajudar hoje?</p>
+                        </div>
+                        <div class=3D"message-time">Agora</div>
+                    </div>
+                </div>
+                <div class=3D"chat-input-container">
+                    <input type=3D"text" id=3D"chat-input" class=3D"chat-in=
+put" placeholder=3D"Digite sua pergunta..." autocomplete=3D"off">
+                    <button id=3D"send-button" class=3D"send-button">
+                        <span>=E2=9E=A4</span>
+                    </button>
+                </div>
+                <div class=3D"quick-questions">
+                    <button class=3D"quick-btn" data-question=3D"Qual a pre=
+vis=C3=A3o do tempo para hoje?">=F0=9F=8C=A4=EF=B8=8F Clima hoje</button>
+                    <button class=3D"quick-btn" data-question=3D"Que horas =
+=C3=A9 o pr=C3=B3ximo evento?">=E2=8F=B0 Pr=C3=B3ximo evento</button>
+                    <button class=3D"quick-btn" data-question=3D"Qual a cot=
+a=C3=A7=C3=A3o do Real hoje?">=F0=9F=92=B1 C=C3=A2mbio</button>
+                    <button class=3D"quick-btn" data-question=3D"Onde estam=
+os agora?">=F0=9F=93=8D Localiza=C3=A7=C3=A3o</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class=3D"quick-actions">
+            <h2>=E2=9A=A1 A=C3=A7=C3=B5es R=C3=A1pidas</h2>
+            <div class=3D"actions-grid">
+                <button class=3D"action-btn" data-action=3D"contacts">
+                    <span class=3D"icon">=F0=9F=93=9E</span>
+                    <span>Contatos</span>
+                </button>
+                <button class=3D"action-btn" data-action=3D"reservations">
+                    <span class=3D"icon">=F0=9F=93=8B</span>
+                    <span>Reservas</span>
+                </button>
+                <button class=3D"action-btn" data-action=3D"transport">
+                    <span class=3D"icon">=F0=9F=9A=97</span>
+                    <span>Transporte</span>
+                </button>
+                <button class=3D"action-btn" data-action=3D"map">
+                    <span class=3D"icon">=F0=9F=97=BA=EF=B8=8F</span>
+                    <span>Mapa</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <div id=3D"modal-overlay" class=3D"modal-overlay">
+        <div class=3D"modal-content">
+            <button class=3D"modal-close">=C3=97</button>
+            <div id=3D"modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+   =20
+   =20
+
+
+</body></html>
+------MultipartBoundary--wI4Ngd0RlVwrw1Tlwv1Xv8YLG6l5uVYyUrBn3HKIaO----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://senamfo.com.br:8081/gem/static/css/dashboard.css
+
+@charset "utf-8";
+
+:root { --primary-color: #2563eb; --secondary-color: #1e40af; --accent-colo=
+r: #3b82f6; --success-color: #10b981; --warning-color: #f59e0b; --danger-co=
+lor: #ef4444; --bg-color: #f8fafc; --card-bg: #ffffff; --text-primary: #1e2=
+93b; --text-secondary: #64748b; --border-color: #e2e8f0; --shadow: 0 2px 8p=
+x rgba(0, 0, 0, 0.1); --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15); }
+
+* { margin: 0px; padding: 0px; box-sizing: border-box; -webkit-tap-highligh=
+t-color: transparent; }
+
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, =
+"Helvetica Neue", Arial, sans-serif; background: var(--bg-color); color: va=
+r(--text-primary); line-height: 1.6; overflow-x: hidden; padding-bottom: en=
+v(safe-area-inset-bottom); }
+
+.header { background: linear-gradient(135deg, var(--primary-color), var(--s=
+econdary-color)); color: white; padding-right: 1rem; padding-bottom: 1rem; =
+padding-left: 1rem; position: sticky; top: 0px; z-index: 100; box-shadow: v=
+ar(--shadow); padding-top: calc(1rem + env(safe-area-inset-top)); }
+
+.header-content { display: flex; justify-content: space-between; align-item=
+s: center; max-width: 100%; }
+
+.header h1 { font-size: 1.5rem; font-weight: 700; }
+
+.header-info { display: flex; flex-direction: column; align-items: flex-end=
+; font-size: 0.875rem; }
+
+.date, .time { display: block; }
+
+.main-container { max-width: 100%; padding-top: 1rem; padding-right: 1rem; =
+padding-left: 1rem; padding-bottom: calc(1rem + env(safe-area-inset-bottom)=
+); }
+
+.card { background: var(--card-bg); border-radius: 12px; box-shadow: var(--=
+shadow); margin-bottom: 1rem; overflow: hidden; transition: transform 0.2s,=
+ box-shadow 0.2s; }
+
+.card:active { transform: scale(0.98); }
+
+.card-header { background: linear-gradient(135deg, rgb(241, 245, 249), rgb(=
+226, 232, 240)); padding: 1rem; border-bottom: 1px solid var(--border-color=
+); }
+
+.card-header h2 { font-size: 1rem; font-weight: 600; color: var(--text-prim=
+ary); }
+
+.card-body { padding: 1rem; min-height: 80px; }
+
+.loading { text-align: center; color: var(--text-secondary); padding: 2rem;=
+ }
+
+.next-event .event-item { display: flex; justify-content: space-between; al=
+ign-items: center; padding: 0.75rem 0px; border-bottom: 1px solid var(--bor=
+der-color); }
+
+.next-event .event-item:last-child { border-bottom: none; }
+
+.event-name { font-weight: 600; font-size: 1rem; margin-bottom: 0.25rem; }
+
+.event-details { font-size: 0.875rem; color: var(--text-secondary); }
+
+.event-time { font-size: 1.25rem; font-weight: 700; color: var(--primary-co=
+lor); }
+
+.weather-info { display: flex; justify-content: space-between; align-items:=
+ center; }
+
+.weather-main { flex: 1 1 0%; }
+
+.weather-temp { font-size: 2rem; font-weight: 700; color: var(--primary-col=
+or); }
+
+.weather-desc { font-size: 0.875rem; color: var(--text-secondary); margin-t=
+op: 0.25rem; }
+
+.weather-details { text-align: right; font-size: 0.875rem; color: var(--tex=
+t-secondary); }
+
+.exchange-rate { display: flex; justify-content: space-between; align-items=
+: center; padding: 0.75rem 0px; }
+
+.rate-value { font-size: 1.5rem; font-weight: 700; color: var(--success-col=
+or); }
+
+.rate-label { font-size: 0.875rem; color: var(--text-secondary); }
+
+.timeline-item { padding: 0.75rem 0px 0.75rem 1rem; border-left: 3px solid =
+var(--primary-color); margin-bottom: 0.75rem; position: relative; }
+
+.timeline-item::before { content: ""; position: absolute; left: -6px; top: =
+0.75rem; width: 12px; height: 12px; border-radius: 50%; background: var(--p=
+rimary-color); }
+
+.timeline-date { font-weight: 600; font-size: 0.875rem; color: var(--primar=
+y-color); margin-bottom: 0.25rem; }
+
+.timeline-content { font-size: 0.875rem; color: var(--text-primary); }
+
+.chat-section { margin-top: 2rem; }
+
+.chat-container { background: var(--card-bg); border-radius: 12px; box-shad=
+ow: var(--shadow-lg); overflow: hidden; display: flex; flex-direction: colu=
+mn; height: 600px; max-height: 70vh; }
+
+.chat-header { background: linear-gradient(135deg, var(--primary-color), va=
+r(--secondary-color)); color: white; padding: 1rem; display: flex; justify-=
+content: space-between; align-items: center; }
+
+.chat-header h2 { font-size: 1rem; font-weight: 600; }
+
+.provider-select { background: rgba(255, 255, 255, 0.2); border: 1px solid =
+rgba(255, 255, 255, 0.3); color: white; padding: 0.5rem; border-radius: 6px=
+; font-size: 0.875rem; appearance: none; }
+
+.chat-messages { flex: 1 1 0%; overflow-y: auto; padding: 1rem; background:=
+ rgb(248, 250, 252); }
+
+.message { margin-bottom: 1rem; animation: 0.3s ease-in 0s 1 normal none ru=
+nning fadeIn; }
+
+@keyframes fadeIn {=20
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+
+.user-message { text-align: right; }
+
+.user-message .message-content { background: var(--primary-color); color: w=
+hite; display: inline-block; padding: 0.75rem 1rem; border-radius: 18px 18p=
+x 4px; max-width: 80%; overflow-wrap: break-word; }
+
+.bot-message .message-content { background: white; color: var(--text-primar=
+y); display: inline-block; padding: 0.75rem 1rem; border-radius: 18px 18px =
+18px 4px; max-width: 80%; overflow-wrap: break-word; box-shadow: var(--shad=
+ow); }
+
+.message-time { font-size: 0.75rem; color: var(--text-secondary); margin-to=
+p: 0.25rem; }
+
+.chat-input-container { display: flex; padding: 1rem; background: white; bo=
+rder-top: 1px solid var(--border-color); gap: 0.5rem; }
+
+.chat-input { flex: 1 1 0%; padding: 0.75rem 1rem; border: 1px solid var(--=
+border-color); border-radius: 24px; font-size: 1rem; outline: none; appeara=
+nce: none; }
+
+.chat-input:focus { border-color: var(--primary-color); }
+
+.send-button { width: 48px; height: 48px; border-radius: 50%; background: v=
+ar(--primary-color); color: white; border: none; display: flex; align-items=
+: center; justify-content: center; font-size: 1.25rem; cursor: pointer; tra=
+nsition: background 0.2s; }
+
+.send-button:active { background: var(--secondary-color); }
+
+.send-button:disabled { background: var(--text-secondary); cursor: not-allo=
+wed; }
+
+.quick-questions { display: flex; gap: 0.5rem; padding: 0.75rem; background=
+: rgb(248, 250, 252); overflow-x: auto; }
+
+.quick-btn { padding: 0.5rem 1rem; background: white; border: 1px solid var=
+(--border-color); border-radius: 20px; font-size: 0.875rem; white-space: no=
+wrap; cursor: pointer; transition: 0.2s; }
+
+.quick-btn:active { background: var(--primary-color); color: white; border-=
+color: var(--primary-color); }
+
+.quick-actions { margin-top: 2rem; }
+
+.quick-actions h2 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--t=
+ext-primary); }
+
+.actions-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: =
+1rem; }
+
+.action-btn { background: var(--card-bg); border: 1px solid var(--border-co=
+lor); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: =
+column; align-items: center; gap: 0.5rem; cursor: pointer; transition: 0.2s=
+; box-shadow: var(--shadow); }
+
+.action-btn:active { transform: scale(0.95); box-shadow: var(--shadow-lg); =
+}
+
+.action-btn .icon { font-size: 2rem; }
+
+.action-btn span:not(.icon) { font-size: 0.875rem; font-weight: 600; color:=
+ var(--text-primary); }
+
+.modal-overlay { display: none; position: fixed; inset: 0px; background: rg=
+ba(0, 0, 0, 0.5); z-index: 1000; padding-right: 1rem; padding-left: 1rem; p=
+adding-top: calc(1rem + env(safe-area-inset-top)); padding-bottom: calc(1re=
+m + env(safe-area-inset-bottom)); overflow-y: auto; }
+
+.modal-overlay.active { display: flex; align-items: flex-start; justify-con=
+tent: center; }
+
+.modal-content { background: var(--card-bg); border-radius: 12px; width: 10=
+0%; max-width: 500px; max-height: 90vh; overflow-y: auto; position: relativ=
+e; box-shadow: var(--shadow-lg); }
+
+.modal-close { position: absolute; top: 1rem; right: 1rem; width: 32px; hei=
+ght: 32px; border-radius: 50%; background: rgba(0, 0, 0, 0.1); border: none=
+; font-size: 1.5rem; cursor: pointer; z-index: 10; }
+
+#modal-body { padding: 2rem 1rem 1rem; }
+
+@media (min-width: 768px) {
+  .main-container { max-width: 800px; margin: 0px auto; }
+  .actions-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@supports (padding: max(0px)) {
+  .header { padding-top: max(1rem, env(safe-area-inset-top)); }
+  .main-container { padding-bottom: max(1rem, env(safe-area-inset-bottom));=
+ }
+}
+------MultipartBoundary--wI4Ngd0RlVwrw1Tlwv1Xv8YLG6l5uVYyUrBn3HKIaO----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-6847b1d0-41b8-4179-9279-1e285f95ebfd@mhtml.blink
+
+@charset "utf-8";
+
+@font-face { font-family: tableconvert-icon; src: url("https://at.alicdn.co=
+m/t/c/font_1011144_jmo4009ffif.woff2?t=3D1719821135173") format("woff2"), u=
+rl("https://at.alicdn.com/t/c/font_1011144_jmo4009ffif.woff?t=3D17198211351=
+73") format("woff"), url("https://at.alicdn.com/t/c/font_1011144_jmo4009ffi=
+f.ttf?t=3D1719821135173") format("truetype"); font-display: swap; }
+
+.tableconvert-dropdown-content::-webkit-scrollbar { width: 3px; }
+
+.tableconvert-dropdown-content::-webkit-scrollbar-track { background: rgba(=
+241, 245, 249, 0.4); border-radius: 1.5px; }
+
+.tableconvert-dropdown-content::-webkit-scrollbar-thumb { background: rgba(=
+203, 213, 225, 0.6); border-radius: 1.5px; }
+
+.tableconvert-dropdown-content::-webkit-scrollbar-thumb:hover { background:=
+ rgba(148, 163, 184, 0.7); }
+------MultipartBoundary--wI4Ngd0RlVwrw1Tlwv1Xv8YLG6l5uVYyUrBn3HKIaO------
