@@ -235,6 +235,6 @@ gcloud services api-keys update KEY_ID --regenerate-key --project=gcp-ai-setup-2
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
+**Última atualização**: 16 de Novembro de 2025
 **Status**: Pronto para uso
 
