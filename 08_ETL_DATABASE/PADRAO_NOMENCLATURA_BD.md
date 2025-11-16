@@ -219,7 +219,7 @@ Antes de criar uma nova tabela ou coluna:
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 2.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 2.0.0
 **Status**: ✅ APROVADO PARA USO
 

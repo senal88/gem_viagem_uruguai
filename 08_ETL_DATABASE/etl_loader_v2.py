@@ -267,6 +267,17 @@ class DataLoaderV2:
         }
         return mapping.get(event_type, "atividade")
     
+    def _map_status(self, status: str) -> str:
+        """Mapeia status do JSON para schema"""
+        mapping = {
+            "confirmed": "confirmado",
+            "pending": "pendente",
+            "suggestion": "sugestao",
+            "free": "livre",
+            "planned": "pendente"
+        }
+        return mapping.get(status, "pendente")
+    
     def load_itinerary(self):
         """Carrega itinerário detalhado (novo schema)"""
         itinerary_json_path = Path(__file__).parent.parent / "04_DADOS_ESTRUTURADOS" / "03_roteiro_timeline.json"
@@ -281,6 +292,7 @@ class DataLoaderV2:
             for day_data in itinerary_data.get("timeline", []):
                 for event in day_data.get("events", []):
                     event_type = self._map_event_type(event.get("type", "atividade"))
+                    event_status = self._map_status(event.get("status", "pendente"))
                     self.conn.execute("""
                         INSERT INTO tbl_meta_itinerario (
                             num_dia, data_evento, doc_dia_semana, loc_cidade, hora_evento,
@@ -295,7 +307,7 @@ class DataLoaderV2:
                         event_type,
                         event.get("title"),
                         event.get("details"),
-                        event.get("status", "pendente"),
+                        event_status,
                         event.get("reservation_id"),
                         event.get("notes")
                     ))
