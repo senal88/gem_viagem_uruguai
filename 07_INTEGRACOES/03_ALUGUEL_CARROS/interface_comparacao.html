@@ -1,14 +1,14 @@
 <!-- Interface de Comparação de Ofertas - Aluguel de Carros -->
 <div class="comparacao-ofertas">
     <h2>🔍 Comparar Ofertas de Aluguel de Carros</h2>
-    
+
     <div class="adicionar-oferta">
         <h3>➕ Adicionar Nova Oferta</h3>
         <div class="input-group">
-            <input 
-                type="url" 
-                id="oferta-url" 
-                class="oferta-input" 
+            <input
+                type="url"
+                id="oferta-url"
+                class="oferta-input"
                 placeholder="Cole a URL da oferta (Booking.com, Livelo/Budget, etc.)"
             >
             <button id="adicionar-oferta-btn" class="btn-primary">
@@ -17,15 +17,15 @@
         </div>
         <div id="oferta-status" class="status-message"></div>
     </div>
-    
+
     <div class="comparacao-resultado" id="comparacao-resultado" style="display: none;">
         <h3>📊 Comparação de Ofertas</h3>
-        
+
         <div class="melhor-oferta" id="melhor-oferta">
             <h4>🏆 Melhor Oferta</h4>
             <div id="melhor-oferta-content"></div>
         </div>
-        
+
         <div class="todas-ofertas">
             <h4>📋 Todas as Ofertas</h4>
             <table class="ofertas-table" id="ofertas-table">
@@ -44,7 +44,7 @@
                 </tbody>
             </table>
         </div>
-        
+
         <button id="gerar-relatorio-btn" class="btn-secondary">
             📄 Gerar Relatório
         </button>
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addBtn = document.getElementById('adicionar-oferta-btn');
     const statusDiv = document.getElementById('oferta-status');
     const resultadoDiv = document.getElementById('comparacao-resultado');
-    
+
     addBtn.addEventListener('click', async () => {
         const url = urlInput.value.trim();
         if (!url) {
@@ -168,16 +168,16 @@ document.addEventListener('DOMContentLoaded', () => {
             statusDiv.className = 'status-message error';
             return;
         }
-        
+
         try {
             const response = await fetch('/gem/api/car-rental/ofertas', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ url: url })
             });
-            
+
             const data = await response.json();
-            
+
             if (response.ok) {
                 statusDiv.textContent = '✅ Oferta adicionada com sucesso!';
                 statusDiv.className = 'status-message success';
@@ -192,12 +192,12 @@ document.addEventListener('DOMContentLoaded', () => {
             statusDiv.className = 'status-message error';
         }
     });
-    
+
     async function atualizarComparacao() {
         try {
             const response = await fetch('/gem/api/car-rental/comparar');
             const data = await response.json();
-            
+
             if (data.total > 0) {
                 resultadoDiv.style.display = 'block';
                 exibirMelhorOferta(data.melhor_oferta);
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Erro ao atualizar comparação:', error);
         }
     }
-    
+
     function exibirMelhorOferta(oferta) {
         const content = document.getElementById('melhor-oferta-content');
         content.innerHTML = `
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </a>
         `;
     }
-    
+
     function exibirTodasOfertas(ofertas) {
         const tbody = document.getElementById('ofertas-tbody');
         tbody.innerHTML = ofertas.map(oferta => `
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </tr>
         `).join('');
     }
-    
+
     // Carregar comparação inicial
     atualizarComparacao();
 });

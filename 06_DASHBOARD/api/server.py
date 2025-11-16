@@ -18,18 +18,37 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../07_INTEGRACOES
 # Carregar variáveis de ambiente
 load_dotenv()
 
-app = Flask(__name__, 
+app = Flask(__name__,
             template_folder='../templates',
             static_folder='../static',
             static_url_path='/gem/static')
 CORS(app)
 
-# Registrar blueprint de aluguel de carros
+# Registrar blueprints de integrações
 try:
     from api_endpoints import bp as car_rental_bp
     app.register_blueprint(car_rental_bp)
 except ImportError:
     print("⚠️  Módulo de aluguel de carros não disponível")
+
+# Registrar integrações
+try:
+    from integrations.weather import bp as weather_bp
+    app.register_blueprint(weather_bp)
+except ImportError:
+    print("⚠️  Módulo de clima não disponível")
+
+try:
+    from integrations.exchange import bp as exchange_bp
+    app.register_blueprint(exchange_bp)
+except ImportError:
+    print("⚠️  Módulo de câmbio não disponível")
+
+try:
+    from integrations.maps import bp as maps_bp
+    app.register_blueprint(maps_bp)
+except ImportError:
+    print("⚠️  Módulo de mapas não disponível")
 
 # Configurar path base para funcionar com Nginx em /gem
 APPLICATION_ROOT = '/gem'
@@ -238,26 +257,35 @@ def chat_gemini(message, history):
 
 @app.route('/api/weather', methods=['GET'])
 @app.route('/gem/api/weather', methods=['GET'])
-def weather():
-    """Endpoint para dados do clima"""
-    # TODO: Integrar com API de clima real
+def weather_legacy():
+    """Endpoint legado para dados do clima (redireciona para novo)"""
+    # Redirecionar para novo endpoint
+    from integrations.weather import get_current_weather
+    weather = get_current_weather()
+    if weather:
+        return jsonify(weather)
     return jsonify({
         'temp': 22,
         'description': 'Parcialmente nublado',
         'wind': 15,
         'humidity': 65,
-        'uv': 'Moderado'
+        'note': 'Dados simulados'
     })
 
 @app.route('/api/exchange', methods=['GET'])
 @app.route('/gem/api/exchange', methods=['GET'])
-def exchange():
-    """Endpoint para câmbio"""
-    # TODO: Integrar com API de câmbio real
+def exchange_legacy():
+    """Endpoint legado para câmbio (redireciona para novo)"""
+    # Redirecionar para novo endpoint
+    from integrations.exchange import get_exchange_rate
+    rate = get_exchange_rate()
+    if rate:
+        return jsonify(rate)
     return jsonify({
         'rate': 7.45,
         'currency': 'UYU',
-        'base': 'BRL'
+        'base': 'BRL',
+        'note': 'Dados simulados'
     })
 
 @app.route('/api/reservations', methods=['GET'])

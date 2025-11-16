@@ -18,12 +18,12 @@ def adicionar_oferta():
     try:
         data = request.json
         url = data.get('url')
-        
+
         if not url:
             return jsonify({'error': 'URL é obrigatória'}), 400
-        
+
         sucesso = validador.adicionar_oferta(url)
-        
+
         if sucesso:
             return jsonify({
                 'success': True,
@@ -32,7 +32,7 @@ def adicionar_oferta():
             }), 201
         else:
             return jsonify({'error': 'Erro ao processar oferta'}), 400
-            
+
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
@@ -53,9 +53,9 @@ def comparar():
     """Retorna comparação completa das ofertas"""
     try:
         comparacao = validador.comparar_ofertas()
-        
+
         melhor_oferta = comparacao[0] if comparacao else None
-        
+
         return jsonify({
             'total': len(comparacao),
             'melhor_oferta': melhor_oferta,
@@ -87,26 +87,26 @@ def validar_oferta():
     try:
         data = request.json
         url = data.get('url')
-        
+
         if not url:
             return jsonify({'error': 'URL é obrigatória'}), 400
-        
+
         oferta = None
         if 'booking.com' in url.lower():
             oferta = validador.parsear_url_booking(url)
         elif 'livelo' in url.lower() or 'budget' in url.lower():
             oferta = validador.parsear_url_livelo_budget(url)
-        
+
         if not oferta:
             return jsonify({'error': 'Não foi possível processar a URL'}), 400
-        
+
         validacao = validador.validar_oferta(oferta)
-        
+
         return jsonify({
             'oferta': oferta,
             'validacao': validacao
         }), 200
-        
+
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
