@@ -1,4 +1,5 @@
 # 💱 Análise Comparativa de Câmbio BRL/UYU
+
 ## Estratégias de Conversão para Viagem ao Uruguai
 
 ---
@@ -26,6 +27,7 @@ Análise comparativa detalhada das estratégias de conversão de Reais (BRL) par
 ### 1. Cartão Wise
 
 **Características:**
+
 - Taxa de conversão: ~0.5-1.5% sobre o valor
 - Taxas de transferência: Transparentes
 - Limites: Variáveis por conta
@@ -33,11 +35,13 @@ Análise comparativa detalhada das estratégias de conversão de Reais (BRL) par
 - Taxas adicionais: Mínimas
 
 **Vantagens:**
+
 - Taxa baixa e transparente
 - Conta multi-moeda
 - Saques em ATM com taxa reduzida
 
 **Desvantagens:**
+
 - Requer conta prévia
 - Tempo de processamento
 
@@ -46,6 +50,7 @@ Análise comparativa detalhada das estratégias de conversão de Reais (BRL) par
 ### 2. Cartão NuBank Ultra Violeta
 
 **Características:**
+
 - Taxa de conversão: Spread comercial (~3.5%)
 - IOF: 6.38% (reembolsado para Black)
 - Taxas internacionais: Incluídas no spread
@@ -53,12 +58,14 @@ Análise comparativa detalhada das estratégias de conversão de Reais (BRL) par
 - Limites: Alto (conforme limite do cartão)
 
 **Vantagens:**
+
 - Já possuem o cartão
 - IOF reembolsado (Black)
 - Cashback em compras
 - Instantâneo
 
 **Desvantagens:**
+
 - Spread comercial maior que Wise
 - IOF inicial (depois reembolsado)
 
@@ -67,16 +74,19 @@ Análise comparativa detalhada das estratégias de conversão de Reais (BRL) par
 ### 3. Transferência Bancária Direta
 
 **Características:**
+
 - Taxa SWIFT: ~R$50-100 por transação
 - IOF: 1.1% (transferências)
 - Prazo: 2-5 dias úteis
 - Taxa adicional: Spread bancário
 
 **Vantagens:**
+
 - Valores grandes
 - Seguro
 
 **Desvantagens:**
+
 - Caro para valores pequenos
 - Lento
 
@@ -85,6 +95,7 @@ Análise comparativa detalhada das estratégias de conversão de Reais (BRL) par
 ### 4. PayPal
 
 **Características:**
+
 - Taxa de conversão: ~11.4% (muito alta)
 - Taxas: Ocultas no spread
 - Tempo: Instantâneo
@@ -96,6 +107,7 @@ Análise comparativa detalhada das estratégias de conversão de Reais (BRL) par
 ### 5. Western Union
 
 **Características:**
+
 - Taxa: Alta (~5-7%)
 - Tempo: Rápido (minutos)
 - Uso: Emergências
@@ -107,6 +119,7 @@ Análise comparativa detalhada das estratégias de conversão de Reais (BRL) par
 ### 6. XP Investimentos
 
 **Características:**
+
 - Spread: Regressivo (melhor para grandes valores)
 - Taxa: Competitiva para investidores
 
@@ -160,17 +173,19 @@ Análise comparativa detalhada das estratégias de conversão de Reais (BRL) par
 ### Plano Ótimo (Fase Pré-Viagem)
 
 **16-17 Nov (PRÉ-VIAGEM):**
+
 - [ ] Verificar limite cartão NuBank
 - [ ] Transferir R$2.500 via Wise (opcional, se tempo permitir)
 - [ ] Guardar R$200-300 cash (emergência)
 - [ ] Notificar bancos da viagem
 
 **18-25 Nov (DURANTE):**
+
 - [ ] Usar NuBank para 70% despesas (compras/hotéis)
 - [ ] Wise como backup (saques ATM se precisar)
 - [ ] Cash apenas para emergência
 
-**Custo Total Esperado:** R$300-350 (2.9-3.4%)  
+**Custo Total Esperado:** R$300-350 (2.9-3.4%)
 **Economia vs Mercado:** +R$300 economizados
 
 ---
@@ -225,7 +240,6 @@ Análise comparativa detalhada das estratégias de conversão de Reais (BRL) par
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ ANÁLISE COMPLETA
-

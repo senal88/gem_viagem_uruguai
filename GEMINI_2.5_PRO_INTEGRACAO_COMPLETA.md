@@ -282,7 +282,7 @@ Para dúvidas sobre integração:
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ INTEGRAÇÃO COMPLETA - PRONTO PARA GEMINI 2.5 PRO
 

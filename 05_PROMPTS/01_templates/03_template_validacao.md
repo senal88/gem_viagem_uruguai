@@ -213,7 +213,7 @@ _Use este espaço para documentar observações durante a validação:_
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ TEMPLATE VALIDADO
 

@@ -1,4 +1,5 @@
 # 📚 Fontes de Conhecimento Validadas
+
 ## GEM Expert - Viagem Aline & Luiz Fernando | Uruguai 2025
 
 ---
@@ -35,11 +36,13 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Idioma** | Espanhol |
 
 **Quando Usar:**
+
 - Previsões oficiais e precisas
 - Dados meteorológicos detalhados
 - Validação de informações climáticas críticas
 
 **Query Sugerida:**
+
 ```
 "inumet previsão [cidade] [data]"
 "inumet clima [cidade] hoje"
@@ -59,11 +62,13 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Idioma** | Português / Espanhol |
 
 **Quando Usar:**
+
 - Previsões gerais e acessíveis
 - Informações para turistas
 - Validação complementar
 
 **Query Sugerida:**
+
 ```
 "tempolimpo clima Uruguai novembro"
 "tripadvisor clima [cidade] [mês]"
@@ -83,11 +88,13 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Idioma** | Português |
 
 **Quando Usar:**
+
 - Informações climáticas históricas
 - Dicas de vestiário por estação
 - Contexto para turistas brasileiros
 
 **Query Sugerida:**
+
 ```
 "dicasdouruguai clima [cidade] novembro"
 "dicasdouruguai vestiário Uruguai"
@@ -108,12 +115,14 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Recursos** | Trânsito, rotas, tempo estimado |
 
 **Quando Usar:**
+
 - Tempo de deslocamento em tempo real
 - Condições de trânsito atuais
 - Rotas alternativas
 - Distâncias precisas
 
 **Query Sugerida:**
+
 ```
 "google maps [origem] para [destino]"
 "tempo de carro [origem] [destino] agora"
@@ -132,6 +141,7 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Recursos** | Trânsito, alertas, rotas |
 
 **Quando Usar:**
+
 - Validação complementar de trânsito
 - Alertas de trânsito em tempo real
 - Informações de usuários locais
@@ -151,12 +161,14 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Recursos** | Horários, telefone, endereço, avaliações |
 
 **Quando Usar:**
+
 - Horários de funcionamento oficiais
 - Informações de contato
 - Status atual (aberto/fechado)
 - Avaliações e críticas
 
 **Query Sugerida:**
+
 ```
 "[local] google business"
 "[local] horário funcionamento google"
@@ -175,11 +187,13 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Recursos** | Informações completas e oficiais |
 
 **Exemplos:**
+
 - `casapueblo.com.uy` - Casapueblo
 - `lodetere.com` - Lo de Tere
 - `primuseum.com` - Primuseum (se disponível)
 
 **Quando Usar:**
+
 - Informações mais detalhadas
 - Validação de horários especiais
 - Informações sobre eventos especiais
@@ -197,11 +211,13 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Recursos** | Horários, avaliações, fotos, dicas |
 
 **Quando Usar:**
+
 - Validação complementar de horários
 - Informações de outros viajantes
 - Dicas práticas e atualizações recentes
 
 **Query Sugerida:**
+
 ```
 "tripadvisor [local] horário funcionamento"
 "tripadvisor [local] aberto hoje"
@@ -223,11 +239,13 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Recursos** | Taxa comercial real, histórico |
 
 **Quando Usar:**
+
 - Taxa de câmbio comercial precisa
 - Comparação de taxas
 - Histórico de câmbio
 
 **Query Sugerida:**
+
 ```
 "wise cotação BRL UYU hoje"
 "wise taxa câmbio Real Peso Uruguaio"
@@ -247,11 +265,13 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Recursos** | Taxas comerciais, conversor |
 
 **Quando Usar:**
+
 - Validação complementar de câmbio
 - Comparação de taxas
 - Informações para brasileiros
 
 **Query Sugerida:**
+
 ```
 "exiap cotação BRL UYU"
 "exiap conversor Real Peso Uruguaio"
@@ -271,6 +291,7 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Recursos** | Conversor de moedas, histórico |
 
 **Quando Usar:**
+
 - Validação adicional de câmbio
 - Histórico de taxas
 - Análise de tendências
@@ -290,10 +311,12 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Recursos** | Menu, horários, reservas, contato |
 
 **Exemplos:**
+
 - `lodetere.com` - Lo de Tere
 - Sites dos restaurantes mencionados no itinerário
 
 **Quando Usar:**
+
 - Informações oficiais sobre reservas
 - Menus e preços
 - Contatos diretos
@@ -311,6 +334,7 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Recursos** | Horários, telefone, reservas online, avaliações |
 
 **Quando Usar:**
+
 - Verificação rápida de horários
 - Informações de contato
 - Sistema de reservas online (se disponível)
@@ -329,6 +353,7 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Recursos** | Avaliações, fotos, dicas, disponibilidade |
 
 **Quando Usar:**
+
 - Validação complementar
 - Informações de outros viajantes
 - Dicas práticas
@@ -349,12 +374,14 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Recursos** | Localização, endereços, rotas, serviços próximos |
 
 **Quando Usar:**
+
 - Localização de serviços
 - Endereços precisos
 - Rotas e direções
 - Serviços próximos
 
 **Query Sugerida:**
+
 ```
 "[serviço] próximo [local] google maps"
 "onde tem [serviço] [cidade]"
@@ -373,10 +400,12 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Recursos** | Informações oficiais, guias, dicas |
 
 **Exemplos:**
+
 - Sites oficiais de turismo do Uruguai
 - Sites de turismo de Montevidéu e Punta del Este
 
 **Quando Usar:**
+
 - Informações oficiais e atualizadas
 - Guias e dicas oficiais
 - Eventos e atrações
@@ -395,6 +424,7 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 | **Idioma** | Português |
 
 **Quando Usar:**
+
 - Informações práticas para brasileiros
 - Dicas de viagem
 - Contexto cultural
@@ -405,6 +435,7 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 ## 🎯 HIERARQUIA DE CONFIABILIDADE
 
 ### Nível 1: Máxima Confiabilidade (⭐⭐⭐⭐⭐)
+
 - Sites oficiais (governo, estabelecimentos)
 - Google Business / Maps (oficial)
 - APIs oficiais (Google Maps API)
@@ -413,6 +444,7 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 **Uso**: Sempre preferir para informações críticas
 
 ### Nível 2: Alta Confiabilidade (⭐⭐⭐⭐)
+
 - Plataformas estabelecidas (TripAdvisor, Google)
 - Blogs especializados validados (Dicas do Uruguai)
 - Serviços financeiros reconhecidos (Exiap)
@@ -420,6 +452,7 @@ Este documento lista e valida fontes de conhecimento confiáveis para busca de i
 **Uso**: Validação complementar e informações adicionais
 
 ### Nível 3: Confiabilidade Moderada (⭐⭐⭐)
+
 - Fóruns de viagem
 - Redes sociais
 - Blogs pessoais
@@ -481,4 +514,3 @@ Fonte 3 (Complementar): Dicas do Uruguai → Contexto histórico
 **Última atualização**: 16 de Novembro de 2025
 **Versão**: 1.0.0
 **Status**: ✅ COMPLETO E VALIDADO
-

@@ -91,8 +91,8 @@ Use este template ao criar qualquer novo documento no repositório do GEM Expert
 
 ---
 
-**Última atualização**: [DATA]  
-**Versão**: 1.0.0  
+**Última atualização**: [DATA]
+**Versão**: 1.0.0
 **Status**: ✅ COMPLETO
 ```
 
@@ -186,8 +186,8 @@ Este guia fornece instruções passo a passo para importar todos os documentos d
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ COMPLETO
 ```
 
@@ -229,7 +229,7 @@ Este guia fornece instruções passo a passo para importar todos os documentos d
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ TEMPLATE VALIDADO
 

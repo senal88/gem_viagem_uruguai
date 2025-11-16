@@ -1,0 +1,34 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/luiz.sena88/gem_viagem_uruguai"
+      ],
+      "description": "Acesso ao sistema de arquivos do repositório GEM Expert"
+    },
+    "web-search": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-web-search"
+      ],
+      "env": {
+        "SEARCH_PROVIDER": "duckduckgo"
+      },
+      "description": "Busca web em tempo real para informações dinâmicas (clima, trânsito, horários)"
+    },
+    "git": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-git",
+        "/Users/luiz.sena88/gem_viagem_uruguai"
+      ],
+      "description": "Integração Git para versionamento e histórico do repositório"
+    }
+  }
+}
+

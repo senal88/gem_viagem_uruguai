@@ -68,8 +68,8 @@ Use este template ao criar documentos que fazem parte da base de conhecimento ou
 
 ---
 
-**Última atualização**: [DATA]  
-**Versão**: [X.Y.Z]  
+**Última atualização**: [DATA]
+**Versão**: [X.Y.Z]
 **Status**: ✅ [STATUS]
 ```
 
@@ -172,7 +172,7 @@ Use este template ao criar documentos que fazem parte da base de conhecimento ou
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ TEMPLATE VALIDADO
 

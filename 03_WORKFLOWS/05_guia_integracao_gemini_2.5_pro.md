@@ -247,13 +247,13 @@ Você **NÃO precisa buscar** quando:
 
 **Resposta Esperada:**
 > "Verifiquei a previsão para o Fasano Las Piedras hoje (Sábado, 22/11) às 16:30:
-> 
+>
 > **Clima Esperado:**
 > - Temperatura: 22-24°C
 > - Céu: Parcialmente nublado
 > - Vento: Moderado (10-15 km/h)
 > - Chance chuva: <10%
-> 
+>
 > **Recomendações:**
 > - Traje esporte fino está perfeito
 > - Levar pashmina ou estola (vento ao anoitecer)
@@ -268,12 +268,12 @@ Você **NÃO precisa buscar** quando:
 
 **Resposta Esperada:**
 > "Para chegarem ao L'Incanto às 18h30 com calma:
-> 
+>
 > **Tempo de Deslocamento:**
 > - Distância: ~5 km
 > - Tempo estimado: 15-20 minutos
 > - Trânsito esperado às 18h: Moderado
-> 
+>
 > **Recomendação:**
 > - Saiam do Barradas Hotel por volta das **18h00**
 > - Chegada estimada: 18h15-18h20 ✅"
@@ -350,7 +350,7 @@ Você **NÃO precisa buscar** quando:
 
 **Pergunta**: "Que horas é o casamento no Fasano?"
 
-**Resposta Esperada**: 
+**Resposta Esperada**:
 - Consultar base de conhecimento (NÃO buscar)
 - Responder: "16:30 no dia 22/11 (Sábado)"
 - Contextualizar com informações do dossiê
@@ -397,7 +397,7 @@ Você **NÃO precisa buscar** quando:
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ GUIA COMPLETO PARA GEMINI 2.5 PRO
 

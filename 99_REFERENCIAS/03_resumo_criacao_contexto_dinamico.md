@@ -125,7 +125,7 @@ Este documento registra o processo de criação dos 4 documentos-chave de Contex
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ DOCUMENTO HISTÓRICO
 
