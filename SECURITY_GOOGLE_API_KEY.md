@@ -2,7 +2,7 @@
 
 ## ⚠️ ALERTA DE SEGURANÇA
 
-**Data**: 16 de Novembro de 2025  
+**Data**: 16 de Novembro de 2025
 **Status**: ✅ RESOLVIDO
 
 ---
@@ -119,6 +119,6 @@ Se precisar de ajuda adicional:
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
+**Última atualização**: 16 de Novembro de 2025
 **Status**: Chave removida do repositório - Aguardando regeneração no GCP
 

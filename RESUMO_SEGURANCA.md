@@ -2,7 +2,7 @@
 
 ## ⚠️ SITUAÇÃO
 
-**Data**: 16 de Novembro de 2025  
+**Data**: 16 de Novembro de 2025
 **Status**: ✅ **RESOLVIDO NO REPOSITÓRIO**
 
 Uma chave de API do Google foi detectada publicamente no GitHub e **foi removida**.
