@@ -10,14 +10,14 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -26,23 +26,23 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             overflow: hidden;
         }
-        
+
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 30px;
             text-align: center;
         }
-        
+
         .header h1 {
             font-size: 2em;
             margin-bottom: 10px;
         }
-        
+
         .content {
             padding: 30px;
         }
-        
+
         .section {
             margin-bottom: 40px;
             padding: 25px;
@@ -50,20 +50,20 @@
             border-radius: 15px;
             border-left: 5px solid #667eea;
         }
-        
+
         .section h2 {
             color: #333;
             margin-bottom: 20px;
             font-size: 1.5em;
         }
-        
+
         .comparison-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
-        
+
         .offer-card {
             background: white;
             padding: 20px;
@@ -72,17 +72,17 @@
             border: 2px solid #e0e0e0;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        
+
         .offer-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
-        
+
         .offer-card.best {
             border-color: #4caf50;
             background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
         }
-        
+
         .offer-card.best::before {
             content: "🏆 MELHOR PREÇO";
             display: block;
@@ -95,53 +95,53 @@
             margin-bottom: 15px;
             text-align: center;
         }
-        
+
         .offer-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 15px;
         }
-        
+
         .platform {
             font-weight: bold;
             color: #667eea;
             font-size: 1.2em;
         }
-        
+
         .price {
             font-size: 1.8em;
             font-weight: bold;
             color: #333;
         }
-        
+
         .price-detail {
             font-size: 0.9em;
             color: #666;
             margin-top: 5px;
         }
-        
+
         .offer-details {
             margin-top: 15px;
         }
-        
+
         .detail-item {
             display: flex;
             justify-content: space-between;
             padding: 8px 0;
             border-bottom: 1px solid #eee;
         }
-        
+
         .detail-label {
             color: #666;
             font-size: 0.9em;
         }
-        
+
         .detail-value {
             font-weight: bold;
             color: #333;
         }
-        
+
         .recommendation {
             background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
             color: white;
@@ -149,17 +149,17 @@
             border-radius: 15px;
             margin-top: 30px;
         }
-        
+
         .recommendation h3 {
             margin-bottom: 15px;
             font-size: 1.5em;
         }
-        
+
         .recommendation-item {
             margin: 10px 0;
             font-size: 1.1em;
         }
-        
+
         .btn {
             display: inline-block;
             padding: 12px 30px;
@@ -173,25 +173,25 @@
             cursor: pointer;
             font-size: 1em;
         }
-        
+
         .btn:hover {
             background: #5568d3;
         }
-        
+
         .btn-success {
             background: #4caf50;
         }
-        
+
         .btn-success:hover {
             background: #45a049;
         }
-        
+
         .loading {
             text-align: center;
             padding: 40px;
             color: #666;
         }
-        
+
         .error {
             background: #ffebee;
             color: #c62828;
@@ -199,25 +199,25 @@
             border-radius: 10px;
             margin: 20px 0;
         }
-        
+
         .add-offer-form {
             background: white;
             padding: 25px;
             border-radius: 15px;
             margin-top: 30px;
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 5px;
             color: #333;
             font-weight: bold;
         }
-        
+
         .form-group input,
         .form-group select {
             width: 100%;
@@ -226,24 +226,24 @@
             border-radius: 8px;
             font-size: 1em;
         }
-        
+
         .form-group input:focus,
         .form-group select:focus {
             outline: none;
             border-color: #667eea;
         }
-        
+
         .form-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
         }
-        
+
         @media (max-width: 768px) {
             .comparison-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .form-row {
                 grid-template-columns: 1fr;
             }
@@ -256,18 +256,18 @@
             <h1>🚗 Análise Comparativa</h1>
             <p>Kwid vs Onix - Melhor Preço (18-25 Novembro 2025)</p>
         </div>
-        
+
         <div class="content">
             <div id="loading" class="loading">
                 <p>Carregando análise...</p>
             </div>
-            
+
             <div id="error" class="error" style="display: none;"></div>
-            
+
             <div id="analysis" style="display: none;">
                 <!-- Análise será inserida aqui -->
             </div>
-            
+
             <div class="section">
                 <h2>➕ Adicionar Nova Oferta</h2>
                 <div class="add-offer-form">
@@ -283,7 +283,7 @@
                                     <option value="Avis (Livelo)">Avis (Livelo)</option>
                                 </select>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label>Veículo *</label>
                                 <select name="veiculo" required>
@@ -293,31 +293,31 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Preço Diária (R$) *</label>
                                 <input type="number" name="preco_diaria" step="0.01" required>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label>Preço Total 7 dias (R$) *</label>
                                 <input type="number" name="preco_total" step="0.01" required>
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Seguro Básico *</label>
                                 <input type="text" name="seguro_basico" placeholder="Ex: Incluído ou +R$ 200" required>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label>Seguro Full</label>
                                 <input type="text" name="seguro_full" placeholder="Ex: +R$ 300">
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Combustível *</label>
@@ -327,7 +327,7 @@
                                     <option value="Cheio/Vazio">Cheio/Vazio</option>
                                 </select>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label>Cancelamento *</label>
                                 <select name="cancelamento" required>
@@ -336,39 +336,39 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Limite KM *</label>
                                 <input type="text" name="limite_km" placeholder="Ex: Ilimitado ou 500 km" required>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label>Link para Reserva</label>
                                 <input type="url" name="link_reserva" placeholder="https://...">
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label>Observações</label>
                             <input type="text" name="observacoes" placeholder="Informações adicionais">
                         </div>
-                        
+
                         <button type="submit" class="btn">Adicionar Oferta</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <script>
         const API_BASE = window.location.pathname.includes('/gem') ? '/gem/api' : '/api';
-        
+
         async function carregarAnalise() {
             try {
                 const response = await fetch(`${API_BASE}/car-rental/analise-completa`);
                 if (!response.ok) throw new Error('Erro ao carregar análise');
-                
+
                 const data = await response.json();
                 exibirAnalise(data);
             } catch (error) {
@@ -377,24 +377,24 @@
                 document.getElementById('error').textContent = `Erro: ${error.message}`;
             }
         }
-        
+
         function exibirAnalise(data) {
             document.getElementById('loading').style.display = 'none';
             const analysisDiv = document.getElementById('analysis');
             analysisDiv.style.display = 'block';
-            
+
             let html = '';
-            
+
             // Melhor Kwid
             if (data.kwid.melhor_oferta) {
                 html += criarCardOferta(data.kwid.melhor_oferta, true, 'Kwid');
             }
-            
+
             // Melhor Onix
             if (data.onix.melhor_oferta) {
                 html += criarCardOferta(data.onix.melhor_oferta, true, 'Onix');
             }
-            
+
             // Recomendação
             if (data.comparacao.recomendacao.veiculo) {
                 const rec = data.comparacao.recomendacao;
@@ -417,20 +417,20 @@
                     </div>
                 `;
             }
-            
+
             // Todas as ofertas
             html += '<div class="section"><h2>📋 Todas as Ofertas</h2>';
             html += '<div class="comparison-grid">';
-            
+
             [...data.kwid.todas_ofertas, ...data.onix.todas_ofertas].forEach(oferta => {
                 html += criarCardOferta(oferta, false, oferta.veiculo);
             });
-            
+
             html += '</div></div>';
-            
+
             analysisDiv.innerHTML = html;
         }
-        
+
         function criarCardOferta(oferta, isBest, veiculo) {
             const bestClass = isBest ? 'best' : '';
             return `
@@ -476,18 +476,18 @@
                 </div>
             `;
         }
-        
+
         // Formulário
         document.getElementById('offerForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
             const formData = new FormData(e.target);
             const dados = Object.fromEntries(formData);
-            
+
             // Converter números
             dados.preco_diaria = parseFloat(dados.preco_diaria);
             dados.preco_total = parseFloat(dados.preco_total);
-            
+
             try {
                 const response = await fetch(`${API_BASE}/car-rental/adicionar-oferta-detalhada`, {
                     method: 'POST',
@@ -496,12 +496,12 @@
                     },
                     body: JSON.stringify(dados)
                 });
-                
+
                 if (!response.ok) {
                     const error = await response.json();
                     throw new Error(error.error || 'Erro ao adicionar oferta');
                 }
-                
+
                 alert('Oferta adicionada com sucesso!');
                 e.target.reset();
                 carregarAnalise();
@@ -509,7 +509,7 @@
                 alert(`Erro: ${error.message}`);
             }
         });
-        
+
         // Carregar análise ao carregar página
         carregarAnalise();
     </script>

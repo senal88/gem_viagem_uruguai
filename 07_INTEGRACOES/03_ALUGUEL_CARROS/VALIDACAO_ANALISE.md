@@ -235,6 +235,6 @@ Após coletar dados e usar o sistema:
 
 ---
 
-**Status**: ✅ Sistema completo e funcional  
+**Status**: ✅ Sistema completo e funcional
 **Próximo Passo**: Coletar dados reais das plataformas e usar o sistema
 
