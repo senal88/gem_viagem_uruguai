@@ -127,7 +127,10 @@ def analise_completa():
         relatorio = analisador.gerar_relatorio_comparativo()
         return jsonify(relatorio), 200
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        import traceback
+        error_detail = traceback.format_exc()
+        print(f"Erro em analise-completa: {error_detail}")
+        return jsonify({'error': str(e), 'detail': error_detail}), 500
 
 @bp.route('/adicionar-oferta-detalhada', methods=['POST'])
 def adicionar_oferta_detalhada():
