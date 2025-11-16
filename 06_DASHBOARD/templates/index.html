@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>GEM Expert - Viagem Uruguai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/icon-192.png') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>🇺🇾 GEM Expert</h1>
+            <div class="header-info">
+                <span class="date" id="current-date"></span>
+                <span class="time" id="current-time"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Dashboard Cards -->
+        <section class="dashboard-section">
+            <div class="card next-event">
+                <div class="card-header">
+                    <h2>📅 Próximo Evento</h2>
+                </div>
+                <div class="card-body" id="next-event">
+                    <div class="loading">Carregando...</div>
+                </div>
+            </div>
+
+            <div class="card weather-card">
+                <div class="card-header">
+                    <h2>🌤️ Clima Agora</h2>
+                </div>
+                <div class="card-body" id="weather-info">
+                    <div class="loading">Carregando...</div>
+                </div>
+            </div>
+
+            <div class="card exchange-card">
+                <div class="card-header">
+                    <h2>💱 Câmbio</h2>
+                </div>
+                <div class="card-body" id="exchange-info">
+                    <div class="loading">Carregando...</div>
+                </div>
+            </div>
+
+            <div class="card timeline-card">
+                <div class="card-header">
+                    <h2>📋 Itinerário</h2>
+                </div>
+                <div class="card-body" id="timeline">
+                    <div class="loading">Carregando...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section class="chat-section">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>💬 Converse com o GEM Expert</h2>
+                    <select id="ai-provider" class="provider-select">
+                        <option value="openai">OpenAI GPT-4</option>
+                        <option value="anthropic">Claude (Anthropic)</option>
+                        <option value="gemini">Gemini 2.5 Pro</option>
+                    </select>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <p>Olá! Sou seu concierge de viagem. Como posso ajudar hoje?</p>
+                        </div>
+                        <div class="message-time">Agora</div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input 
+                        type="text" 
+                        id="chat-input" 
+                        class="chat-input" 
+                        placeholder="Digite sua pergunta..."
+                        autocomplete="off"
+                    >
+                    <button id="send-button" class="send-button">
+                        <span>➤</span>
+                    </button>
+                </div>
+                <div class="quick-questions">
+                    <button class="quick-btn" data-question="Qual a previsão do tempo para hoje?">🌤️ Clima hoje</button>
+                    <button class="quick-btn" data-question="Que horas é o próximo evento?">⏰ Próximo evento</button>
+                    <button class="quick-btn" data-question="Qual a cotação do Real hoje?">💱 Câmbio</button>
+                    <button class="quick-btn" data-question="Onde estamos agora?">📍 Localização</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <h2>⚡ Ações Rápidas</h2>
+            <div class="actions-grid">
+                <button class="action-btn" data-action="contacts">
+                    <span class="icon">📞</span>
+                    <span>Contatos</span>
+                </button>
+                <button class="action-btn" data-action="reservations">
+                    <span class="icon">📋</span>
+                    <span>Reservas</span>
+                </button>
+                <button class="action-btn" data-action="transport">
+                    <span class="icon">🚗</span>
+                    <span>Transporte</span>
+                </button>
+                <button class="action-btn" data-action="map">
+                    <span class="icon">🗺️</span>
+                    <span>Mapa</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
+
