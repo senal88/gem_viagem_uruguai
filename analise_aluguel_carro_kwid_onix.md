@@ -1,19 +1,22 @@
 # 🚗 ANÁLISE COMPARATIVA: ALUGUEL DE CARRO
+
 ## Kwid vs Onix - Melhor Preço (18-25 Novembro 2025)
+
 ### Viagem Aline & Luiz Fernando - Uruguai
 
 ---
 
 ## 📊 RESUMO EXECUTIVO
 
-**Período:** 18/11/2025 (10h) a 25/11/2025 (00h30) - **7 dias**  
-**Locais:** Aeroporto Internacional de Carrasco (MVD)  
-**Veículos Comparados:** Kwid vs Onix  
-**Plataformas Analisadas:** Booking, Budget, Avis, senamfo.com.br  
+**Período:** 18/11/2025 (10h) a 25/11/2025 (00h30) - **7 dias**
+**Locais:** Aeroporto Internacional de Carrasco (MVD)
+**Veículos Comparados:** Kwid vs Onix
+**Plataformas Analisadas:** Booking, Budget, Avis, senamfo.com.br
 
 **Status:** ✅ RESERVA CONFIRMADA - Budget (Confirmação: 35328815BR4)
 
 **RESERVA FINAL:**
+
 - **Locadora:** Budget
 - **Número de Confirmação:** 35328815BR4
 - **Retirada:** 18/11/2025, 11:00 AM - Aeroporto MVD
@@ -147,12 +150,14 @@ COMPARATIVO FINAL: KWID vs ONIX
 **Status:** 🔗 Será analisado quando dados forem coletados
 
 **O que esperar:**
+
 - [ ] Simulador local/brasileiro
 - [ ] Possível agregador de múltiplas locadoras
 - [ ] Interface em português
 - [ ] Possível melhor custo para viajantes brasileiros
 
-**Ação:** 
+**Ação:**
+
 1. Acessar link
 2. Preencher: MVD, 18/11 10h → 25/11 00h30
 3. Buscar Kwid + Onix
@@ -162,7 +167,8 @@ COMPARATIVO FINAL: KWID vs ONIX
 
 ### 4.2 Booking.com
 
-**URL Fornecida:** 
+**URL Fornecida:**
+
 ```
 https://cars.booking.com/search-results?
 adplat=cross_product_bar&
@@ -191,6 +197,7 @@ puYear=2025
 ```
 
 **Análise de Parâmetros:**
+
 - ✅ Pick-up: 18/11 10h (MVD - Carrasco)
 - ✅ Drop-off: 25/11 00h (MVD - Carrasco)
 - ✅ Moeda: BRL
@@ -198,6 +205,7 @@ puYear=2025
 - ✅ Classe: Não especificado (verá econômicos)
 
 **Ação:**
+
 1. Acessar link
 2. Clicar em "Carros econômicos"
 3. Procurar Kwid (Renault) + Onix (Chevrolet)
@@ -208,6 +216,7 @@ puYear=2025
    - TOTAL
 
 **Dados Esperados:**
+
 ```
 Booking - KWID
 ├─ Preço/dia: R$ ___
@@ -227,6 +236,7 @@ Booking - ONIX
 ### 4.3 Budget via Livelo
 
 **URL Fornecida:**
+
 ```
 https://abglac.com/livelo-budget/step2/Budget/B/7F/
 e11ae9f1-1aa8-4b19-ac5f-9b22ff97fcbb
@@ -235,11 +245,13 @@ e11ae9f1-1aa8-4b19-ac5f-9b22ff97fcbb
 **Status:** 🔗 Link aparentemente em step2 (já tem cesta iniciada)
 
 **Análise:**
+
 - Pode ter valores pré-preenchidos da busca anterior
 - Necessário confirmar datas/locais
 - Possível usar pontos Livelo (check aproveitamento)
 
 **Ação:**
+
 1. Acessar link
 2. Verificar se datas estão corretas (18/11-25/11)
 3. Se não, voltar a step1
@@ -256,6 +268,7 @@ e11ae9f1-1aa8-4b19-ac5f-9b22ff97fcbb
 ### 4.4 Avis via Livelo
 
 **URL Fornecida:**
+
 ```
 https://abglac.com/livelo-avis/step1?
 pickup_location=MVD&
@@ -273,6 +286,7 @@ passenger_age=25
 ```
 
 **Análise de Parâmetros:**
+
 - ✅ Pick-up: MVD, 18/11 11h (nota: 1h depois do Booking!)
 - ✅ Drop-off: MVD, 25/11 00h30
 - ✅ Categoria: ID 12 (verificar o que é)
@@ -282,6 +296,7 @@ passenger_age=25
 **⚠️ ATENÇÃO:** Hora pick-up diferente (11h vs 10h)!
 
 **Ação:**
+
 1. Acessar link
 2. **IMPORTANTE:** Alterar hora pick-up para 10h (igualar aos outros)
 3. Confirmar: MVD → MVD, 18/11 10h → 25/11 00h30
@@ -498,5 +513,5 @@ Um documento como este, PREENCHIDO com:
 
 ---
 
-**Versão:** 1.0 | **Data:** 16 Novembro 2025  
+**Versão:** 1.0 | **Data:** 16 Novembro 2025
 **Pronto para preenchimento com dados reais**
