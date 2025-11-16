@@ -1,0 +1,27 @@
+[Unit]
+Description=GEM Expert Dashboard - Viagem Aline & Luiz Fernando | Uruguai 2025
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/gem_viagem_uruguai/06_DASHBOARD
+Environment="PATH=/opt/gem_viagem_uruguai/06_DASHBOARD/venv/bin"
+Environment="FLASK_ENV=production"
+Environment="FLASK_DEBUG=False"
+ExecStart=/opt/gem_viagem_uruguai/06_DASHBOARD/venv/bin/python3 /opt/gem_viagem_uruguai/06_DASHBOARD/api/server.py
+Restart=always
+RestartSec=10
+
+# Logs
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=gemexpert
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+

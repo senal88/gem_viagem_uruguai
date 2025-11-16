@@ -264,9 +264,18 @@ def next_event():
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
     debug = os.getenv('FLASK_DEBUG', 'False').lower() == 'true'
-
-    print(f"🚀 Servidor iniciando na porta {port}")
-    print(f"📱 Acesse no iPhone: http://[SEU_IP_LOCAL]:{port}")
-
-    app.run(host='0.0.0.0', port=port, debug=debug)
+    env = os.getenv('FLASK_ENV', 'development')
+    
+    if env == 'production':
+        # Produção: apenas escutar localhost (nginx faz proxy)
+        host = '127.0.0.1'
+        print(f"🚀 Servidor iniciando em modo PRODUÇÃO")
+        print(f"📱 Acesse via: http://senamfo.com.br/gem")
+    else:
+        # Desenvolvimento: escutar todas as interfaces
+        host = '0.0.0.0'
+        print(f"🚀 Servidor iniciando na porta {port}")
+        print(f"📱 Acesse no iPhone: http://[SEU_IP_LOCAL]:{port}")
+    
+    app.run(host=host, port=port, debug=debug)
 
