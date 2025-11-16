@@ -1,171 +1,129 @@
-// Chat JavaScript - GEM Expert
-// Lógica do chat interativo
+/**
+ * Chat com GEM Expert
+ * Integração com múltiplos providers (Gemini, OpenAI, Anthropic)
+ */
 
-let chatHistory = [];
-
-// Inicializar chat
-document.addEventListener('DOMContentLoaded', () => {
-    initChat();
-});
-
-function initChat() {
-    const input = document.getElementById('chat-input');
-    const sendBtn = document.getElementById('send-button');
-    const quickBtns = document.querySelectorAll('.quick-btn');
-
-    // Enviar mensagem ao pressionar Enter
-    input.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault();
-            sendMessage();
+(function() {
+    'use strict';
+    
+    const API_BASE = window.location.pathname.includes('/gem') ? '/gem/api' : '/api';
+    
+    // Elementos
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const sendButton = document.getElementById('sendButton');
+    const providerSelect = document.getElementById('providerSelect');
+    
+    // Histórico de mensagens
+    let messageHistory = [];
+    
+    // Inicialização
+    function init() {
+        setupEventListeners();
+        addWelcomeMessage();
+    }
+    
+    // Event listeners
+    function setupEventListeners() {
+        sendButton.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    }
+    
+    // Mensagem de boas-vindas
+    function addWelcomeMessage() {
+        addMessage('assistant', 'Olá! Sou o GEM Expert, seu concierge pessoal para a viagem ao Uruguai. Como posso ajudar?');
+    }
+    
+    // Enviar mensagem
+    async function sendMessage() {
+        const message = chatInput.value.trim();
+        if (!message) return;
+        
+        // Adicionar mensagem do usuário
+        addMessage('user', message);
+        chatInput.value = '';
+        
+        // Mostrar loading
+        const loadingId = addMessage('assistant', 'Pensando...', true);
+        
+        try {
+            const provider = providerSelect.value;
+            const response = await fetch(`${API_BASE}/chat`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: message,
+                    provider: provider,
+                    history: messageHistory
+                })
+            });
+            
+            if (!response.ok) {
+                throw new Error(`Erro ${response.status}: ${response.statusText}`);
+            }
+            
+            const data = await response.json();
+            
+            // Remover loading
+            removeMessage(loadingId);
+            
+            // Adicionar resposta
+            addMessage('assistant', data.response || 'Erro ao processar resposta');
+            
+            // Atualizar histórico
+            messageHistory.push(
+                { role: 'user', content: message },
+                { role: 'assistant', content: data.response }
+            );
+            
+            // Limitar histórico (últimas 10 mensagens)
+            if (messageHistory.length > 20) {
+                messageHistory = messageHistory.slice(-20);
+            }
+            
+        } catch (error) {
+            removeMessage(loadingId);
+            addMessage('assistant', `Erro: ${error.message}`, false);
         }
-    });
-
-    // Botão enviar
-    sendBtn.addEventListener('click', sendMessage);
-
-    // Botões rápidos
-    quickBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const question = btn.dataset.question;
-            input.value = question;
-            sendMessage();
-        });
-    });
-}
-
-// Enviar mensagem
-async function sendMessage() {
-    const input = document.getElementById('chat-input');
-    const message = input.value.trim();
-
-    if (!message) return;
-
-    // Adicionar mensagem do usuário
-    addMessage(message, 'user');
-    input.value = '';
-
-    // Desabilitar input enquanto processa
-    input.disabled = true;
-    document.getElementById('send-button').disabled = true;
-
-    // Mostrar indicador de digitação
-    showTypingIndicator();
-
-    try {
-        // Obter provider selecionado
-        const provider = document.getElementById('ai-provider').value;
-
-        // Enviar para API
-        const apiPath = window.location.pathname.startsWith('/gem') ? '/gem/api/chat' : '/api/chat';
-        const response = await fetch(apiPath, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                message: message,
-                provider: provider,
-                history: chatHistory.slice(-10) // Últimas 10 mensagens para contexto
-            })
-        });
-
-        const data = await response.json();
-
-        // Remover indicador de digitação
-        removeTypingIndicator();
-
-        // Adicionar resposta do bot
-        addMessage(data.response, 'bot');
-
-        // Atualizar histórico
-        chatHistory.push(
-            { role: 'user', content: message },
-            { role: 'assistant', content: data.response }
-        );
-
-    } catch (error) {
-        console.error('Erro ao enviar mensagem:', error);
-        removeTypingIndicator();
-        addMessage('Desculpe, ocorreu um erro. Tente novamente.', 'bot');
-    } finally {
-        // Reabilitar input
-        input.disabled = false;
-        document.getElementById('send-button').disabled = false;
-        input.focus();
     }
-}
-
-// Adicionar mensagem ao chat
-function addMessage(content, role) {
-    const messagesContainer = document.getElementById('chat-messages');
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `message ${role}-message`;
-
-    const now = new Date();
-    const timeStr = now.toLocaleTimeString('pt-BR', {
-        hour: '2-digit',
-        minute: '2-digit'
-    });
-
-    messageDiv.innerHTML = `
-        <div class="message-content">
-            <p>${formatMessage(content)}</p>
-        </div>
-        <div class="message-time">${timeStr}</div>
-    `;
-
-    messagesContainer.appendChild(messageDiv);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
-}
-
-// Formatar mensagem (markdown básico)
-function formatMessage(text) {
-    // Converter markdown básico para HTML
-    text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    text = text.replace(/\*(.*?)\*/g, '<em>$1</em>');
-    text = text.replace(/`(.*?)`/g, '<code>$1</code>');
-    text = text.replace(/\n/g, '<br>');
-
-    // Links
-    text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
-
-    return text;
-}
-
-// Mostrar indicador de digitação
-function showTypingIndicator() {
-    const messagesContainer = document.getElementById('chat-messages');
-    const typingDiv = document.createElement('div');
-    typingDiv.id = 'typing-indicator';
-    typingDiv.className = 'message bot-message';
-    typingDiv.innerHTML = `
-        <div class="message-content">
-            <p>Digitando<span class="typing-dots">...</span></p>
-        </div>
-    `;
-    messagesContainer.appendChild(typingDiv);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
-}
-
-// Remover indicador de digitação
-function removeTypingIndicator() {
-    const typingIndicator = document.getElementById('typing-indicator');
-    if (typingIndicator) {
-        typingIndicator.remove();
-    }
-}
-
-// Animação de digitação
-setInterval(() => {
-    const dots = document.querySelector('.typing-dots');
-    if (dots) {
-        const current = dots.textContent;
-        if (current === '...') {
-            dots.textContent = '.';
+    
+    // Adicionar mensagem ao chat
+    function addMessage(role, content, isLoading = false) {
+        const messageDiv = document.createElement('div');
+        const messageId = 'msg-' + Date.now();
+        messageDiv.id = messageId;
+        messageDiv.className = `chat-message ${role}`;
+        
+        if (isLoading) {
+            messageDiv.innerHTML = '<span class="loading-dots">...</span>';
         } else {
-            dots.textContent = current + '.';
+            messageDiv.textContent = content;
+        }
+        
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        
+        return messageId;
+    }
+    
+    // Remover mensagem
+    function removeMessage(messageId) {
+        const message = document.getElementById(messageId);
+        if (message) {
+            message.remove();
         }
     }
-}, 500);
-
+    
+    // Inicializar quando DOM estiver pronto
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();

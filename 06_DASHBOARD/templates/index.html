@@ -2,141 +2,237 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEM Expert - Viagem Uruguai</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css', _external=False) }}">
-    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/icon-192.png', _external=False) }}">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <h1>🇺🇾 GEM Expert</h1>
-            <div class="header-info">
-                <span class="date" id="current-date"></span>
-                <span class="time" id="current-time"></span>
+    <!-- Sidebar para versão web -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>🚗 GEM Expert</h2>
+            <p>Uruguai 2025</p>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="#chat" class="nav-item" data-section="chat">
+                <span class="nav-icon">💬</span>
+                <span class="nav-text">Chat</span>
+            </a>
+            <a href="#reservas" class="nav-item" data-section="reservas">
+                <span class="nav-icon">📅</span>
+                <span class="nav-text">Reservas</span>
+            </a>
+            <a href="#itinerario" class="nav-item" data-section="itinerario">
+                <span class="nav-icon">🗓️</span>
+                <span class="nav-text">Itinerário</span>
+            </a>
+            <a href="#carros" class="nav-item" data-section="carros">
+                <span class="nav-icon">🚙</span>
+                <span class="nav-text">Análise Carros</span>
+            </a>
+            <a href="#clima" class="nav-item" data-section="clima">
+                <span class="nav-icon">🌤️</span>
+                <span class="nav-text">Clima</span>
+            </a>
+            <a href="#cambio" class="nav-item" data-section="cambio">
+                <span class="nav-icon">💱</span>
+                <span class="nav-text">Câmbio</span>
+            </a>
+            <a href="#mapas" class="nav-item" data-section="mapas">
+                <span class="nav-icon">🗺️</span>
+                <span class="nav-text">Mapas</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="quick-info">
+                <div class="info-item">
+                    <span class="info-label">Período:</span>
+                    <span class="info-value">18-25 Nov</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Reservas:</span>
+                    <span class="info-value">6 confirmadas</span>
+                </div>
             </div>
         </div>
-    </header>
+    </aside>
 
-    <!-- Main Container -->
-    <main class="main-container">
-        <!-- Dashboard Cards -->
-        <section class="dashboard-section">
-            <div class="card next-event">
-                <div class="card-header">
-                    <h2>📅 Próximo Evento</h2>
-                </div>
-                <div class="card-body" id="next-event">
-                    <div class="loading">Carregando...</div>
-                </div>
+    <!-- Botão toggle sidebar (mobile) -->
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle sidebar">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+        <!-- Seção Dashboard -->
+        <section id="dashboard-section" class="content-section active">
+            <div class="header">
+                <h1>📊 Dashboard</h1>
+                <p>Bem-vindos, Aline & Luiz Fernando!</p>
             </div>
 
-            <div class="card weather-card">
-                <div class="card-header">
-                    <h2>🌤️ Clima Agora</h2>
-                </div>
-                <div class="card-body" id="weather-info">
-                    <div class="loading">Carregando...</div>
-                </div>
-            </div>
-
-            <div class="card exchange-card">
-                <div class="card-header">
-                    <h2>💱 Câmbio</h2>
-                </div>
-                <div class="card-body" id="exchange-info">
-                    <div class="loading">Carregando...</div>
-                </div>
-            </div>
-
-            <div class="card timeline-card">
-                <div class="card-header">
-                    <h2>📋 Itinerário</h2>
-                </div>
-                <div class="card-body" id="timeline">
-                    <div class="loading">Carregando...</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Chat Section -->
-        <section class="chat-section">
-            <div class="chat-container">
-                <div class="chat-header">
-                    <h2>💬 Converse com o GEM Expert</h2>
-                    <select id="ai-provider" class="provider-select">
-                        <option value="openai">OpenAI GPT-4</option>
-                        <option value="anthropic">Claude (Anthropic)</option>
-                        <option value="gemini">Gemini 2.5 Pro</option>
-                    </select>
-                </div>
-                <div class="chat-messages" id="chat-messages">
-                    <div class="message bot-message">
-                        <div class="message-content">
-                            <p>Olá! Sou seu concierge de viagem. Como posso ajudar hoje?</p>
-                        </div>
-                        <div class="message-time">Agora</div>
+            <div class="dashboard-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>📅 Próxima Atividade</h3>
+                    </div>
+                    <div class="card-body" id="nextActivity">
+                        <p>Carregando...</p>
                     </div>
                 </div>
-                <div class="chat-input-container">
-                    <input
-                        type="text"
-                        id="chat-input"
-                        class="chat-input"
-                        placeholder="Digite sua pergunta..."
-                        autocomplete="off"
-                    >
-                    <button id="send-button" class="send-button">
-                        <span>➤</span>
-                    </button>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>🌤️ Clima Atual</h3>
+                    </div>
+                    <div class="card-body" id="weatherCard">
+                        <p>Carregando...</p>
+                    </div>
                 </div>
-                <div class="quick-questions">
-                    <button class="quick-btn" data-question="Qual a previsão do tempo para hoje?">🌤️ Clima hoje</button>
-                    <button class="quick-btn" data-question="Que horas é o próximo evento?">⏰ Próximo evento</button>
-                    <button class="quick-btn" data-question="Qual a cotação do Real hoje?">💱 Câmbio</button>
-                    <button class="quick-btn" data-question="Onde estamos agora?">📍 Localização</button>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>💱 Câmbio BRL/UYU</h3>
+                    </div>
+                    <div class="card-body" id="exchangeCard">
+                        <p>Carregando...</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>🚙 Aluguel de Carro</h3>
+                    </div>
+                    <div class="card-body" id="carRentalCard">
+                        <div class="info-row">
+                            <strong>Locadora:</strong> Budget
+                        </div>
+                        <div class="info-row">
+                            <strong>Confirmação:</strong> 35328815BR4
+                        </div>
+                        <div class="info-row">
+                            <strong>Retirada:</strong> 18/11 às 11:00 AM
+                        </div>
+                        <div class="info-row">
+                            <strong>Devolução:</strong> 25/11 às 00:30
+                        </div>
+                        <a href="#carros" class="btn-link">Ver Análise Completa →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reservations-preview">
+                <h2>📋 Reservas Confirmadas</h2>
+                <div id="reservationsList" class="reservations-grid">
+                    <!-- Será preenchido via JavaScript -->
                 </div>
             </div>
         </section>
 
-        <!-- Quick Actions -->
-        <section class="quick-actions">
-            <h2>⚡ Ações Rápidas</h2>
-            <div class="actions-grid">
-                <button class="action-btn" data-action="contacts">
-                    <span class="icon">📞</span>
-                    <span>Contatos</span>
-                </button>
-                <button class="action-btn" data-action="reservations">
-                    <span class="icon">📋</span>
-                    <span>Reservas</span>
-                </button>
-                <button class="action-btn" data-action="transport">
-                    <span class="icon">🚗</span>
-                    <span>Transporte</span>
-                </button>
-                <button class="action-btn" data-action="map">
-                    <span class="icon">🗺️</span>
-                    <span>Mapa</span>
-                </button>
+        <!-- Seção Chat -->
+        <section id="chat-section" class="content-section">
+            <div class="header">
+                <h1>💬 Chat com GEM Expert</h1>
+                <p>Seu concierge pessoal de viagem</p>
+            </div>
+
+            <div class="chat-container">
+                <div id="chatMessages" class="chat-messages"></div>
+                <div class="chat-input-container">
+                    <select id="providerSelect" class="provider-select">
+                        <option value="gemini">Gemini 2.5 Pro</option>
+                        <option value="openai">OpenAI GPT-4</option>
+                        <option value="anthropic">Claude (Anthropic)</option>
+                    </select>
+                    <input type="text" id="chatInput" class="chat-input" placeholder="Pergunte sobre a viagem...">
+                    <button id="sendButton" class="send-button">Enviar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Reservas -->
+        <section id="reservas-section" class="content-section">
+            <div class="header">
+                <h1>📅 Reservas Confirmadas</h1>
+                <p>Todas as reservas da viagem</p>
+            </div>
+
+            <div id="reservasDetail" class="reservas-detail">
+                <!-- Será preenchido via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Seção Itinerário -->
+        <section id="itinerario-section" class="content-section">
+            <div class="header">
+                <h1>🗓️ Itinerário Detalhado</h1>
+                <p>Cronograma completo da viagem</p>
+            </div>
+
+            <div id="itinerarioDetail" class="itinerario-detail">
+                <!-- Será preenchido via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Seção Análise Carros -->
+        <section id="carros-section" class="content-section">
+            <div class="header">
+                <h1>🚙 Análise de Aluguel de Carros</h1>
+                <p>Comparação Kwid vs Onix</p>
+            </div>
+
+            <div class="iframe-container">
+                <iframe src="{{ url_for('analise_carros', _external=False) }}" frameborder="0" class="full-iframe"></iframe>
+            </div>
+        </section>
+
+        <!-- Seção Clima -->
+        <section id="clima-section" class="content-section">
+            <div class="header">
+                <h1>🌤️ Previsão do Tempo</h1>
+                <p>Montevidéu e Punta del Este</p>
+            </div>
+
+            <div id="weatherDetail" class="weather-detail">
+                <!-- Será preenchido via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Seção Câmbio -->
+        <section id="cambio-section" class="content-section">
+            <div class="header">
+                <h1>💱 Câmbio em Tempo Real</h1>
+                <p>BRL para Peso Uruguaio (UYU)</p>
+            </div>
+
+            <div id="exchangeDetail" class="exchange-detail">
+                <!-- Será preenchido via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Seção Mapas -->
+        <section id="mapas-section" class="content-section">
+            <div class="header">
+                <h1>🗺️ Mapas e Rotas</h1>
+                <p>Navegação e localizações</p>
+            </div>
+
+            <div id="mapsDetail" class="maps-detail">
+                <!-- Será preenchido via JavaScript -->
             </div>
         </section>
     </main>
 
-    <!-- Modals -->
-    <div id="modal-overlay" class="modal-overlay">
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <div id="modal-body"></div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
     <script src="{{ url_for('static', filename='js/dashboard.js', _external=False) }}"></script>
     <script src="{{ url_for('static', filename='js/chat.js', _external=False) }}"></script>
+    <script src="{{ url_for('static', filename='js/sidebar.js', _external=False) }}"></script>
 </body>
 </html>
-

@@ -135,6 +135,83 @@ def analise_carros():
     """Página de análise comparativa de carros"""
     return render_template('analise_carros.html')
 
+@app.route('/api/reservas', methods=['GET'])
+@app.route('/gem/api/reservas', methods=['GET'])
+def get_reservas():
+    """Retorna todas as reservas confirmadas"""
+    return jsonify({
+        'reservations': TRIP_DATA['reservations'],
+        'total': len(TRIP_DATA['reservations'])
+    }), 200
+
+@app.route('/api/itinerario', methods=['GET'])
+@app.route('/gem/api/itinerario', methods=['GET'])
+def get_itinerario():
+    """Retorna itinerário detalhado"""
+    # Estrutura básica - pode ser expandida com dados completos
+    days = [
+        {
+            'date': '18/11/2025',
+            'title': 'Chegada em Montevidéu',
+            'activities': [
+                {'time': '10:35', 'name': 'Desembarque', 'location': 'Aeroporto MVD'},
+                {'time': '11:00', 'name': 'Retirada do Carro', 'location': 'Aeroporto MVD'},
+                {'time': '14:00', 'name': 'Almoço', 'location': 'Mercado del Puerto'}
+            ]
+        },
+        {
+            'date': '19/11/2025',
+            'title': 'Tour Vinícola Pizzorno',
+            'activities': [
+                {'time': '09:30', 'name': 'Tour Pizzorno', 'location': 'Montevidéu'},
+                {'time': '14:30', 'name': 'Retorno ao hotel', 'location': 'Montevidéu'}
+            ]
+        },
+        {
+            'date': '20/11/2025',
+            'title': 'Transição para Punta del Este',
+            'activities': [
+                {'time': '10:00', 'name': 'Viagem para PDE', 'location': 'Estrada'},
+                {'time': '18:30', 'name': 'Pré-Wedding L\'Incanto', 'location': 'Punta del Este'}
+            ]
+        },
+        {
+            'date': '22/11/2025',
+            'title': 'Casamento Fasano',
+            'activities': [
+                {'time': '16:30', 'name': 'Casamento', 'location': 'Hotel Fasano'}
+            ]
+        },
+        {
+            'date': '23/11/2025',
+            'title': 'Primuseum',
+            'activities': [
+                {'time': '20:30', 'name': 'Jantar + Show Tango', 'location': 'Primuseum'}
+            ]
+        },
+        {
+            'date': '24/11/2025',
+            'title': 'Tour Bouza',
+            'activities': [
+                {'time': '10:30', 'name': 'Tour Bouza', 'location': 'Montevidéu'},
+                {'time': '23:30', 'name': 'Viagem ao aeroporto', 'location': 'Aeroporto MVD'}
+            ]
+        },
+        {
+            'date': '25/11/2025',
+            'title': 'Partida',
+            'activities': [
+                {'time': '00:30', 'name': 'Devolução do Carro', 'location': 'Aeroporto MVD'},
+                {'time': '02:10', 'name': 'Voo de Partida', 'location': 'Aeroporto MVD'}
+            ]
+        }
+    ]
+    
+    return jsonify({
+        'days': days,
+        'total_days': len(days)
+    }), 200
+
 # Adicionar rotas diretas para API de carros via /gem
 @app.route('/gem/api/car-rental/analise-completa', methods=['GET'])
 def gem_analise_completa():
