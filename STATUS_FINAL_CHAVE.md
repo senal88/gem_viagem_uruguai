@@ -2,7 +2,7 @@
 
 ## 🎉 CONCLUSÃO: SUCESSO
 
-**Data**: 16 de Novembro de 2025  
+**Data**: 16 de Novembro de 2025
 **Chave Nova**: `AIzaSyByKC4TPLsULBMLc5he5Ci9-rcIG2vJBDM` ✅
 
 ---
@@ -79,6 +79,6 @@ Crie uma **chave separada** para Google Maps:
 
 ---
 
-**Status**: ✅ Rotação de chave concluída com sucesso!  
+**Status**: ✅ Rotação de chave concluída com sucesso!
 **Chave Nova**: Configurada e funcionando para Gemini API
 

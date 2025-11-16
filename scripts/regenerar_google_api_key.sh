@@ -40,10 +40,10 @@ echo -e "${GREEN}✅ Chave válida detectada${NC}\n"
 ENV_LOCAL="$HOME/gem_viagem_uruguai/.env"
 if [ -f "$ENV_LOCAL" ]; then
     echo -e "${BLUE}📝 Atualizando .env local...${NC}"
-    
+
     # Backup (sem extensão .bak para evitar commit acidental)
     cp "$ENV_LOCAL" "${ENV_LOCAL}.backup.$(date +%Y%m%d_%H%M%S)"
-    
+
     # Remover linha antiga se existir
     sed -i '' '/^GOOGLE_API_KEY=/d' "$ENV_LOCAL" 2>/dev/null || sed -i '/^GOOGLE_API_KEY=/d' "$ENV_LOCAL"
 
