@@ -362,7 +362,10 @@
     </div>
 
     <script>
-        const API_BASE = window.location.pathname.includes('/gem') ? '/gem/api' : '/api';
+        // Detectar base path dinamicamente
+        const pathParts = window.location.pathname.split('/');
+        const gemIndex = pathParts.indexOf('gem');
+        const API_BASE = gemIndex !== -1 ? '/gem/api' : '/api';
 
         async function carregarAnalise() {
             try {
