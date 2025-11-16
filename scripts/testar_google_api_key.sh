@@ -51,7 +51,7 @@ try:
     from dotenv import load_dotenv
     load_dotenv("$ENV_FILE")
     import google.generativeai as genai
-    
+
     genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
     model = genai.GenerativeModel('gemini-pro')
     response = model.generate_content("Teste")
@@ -61,7 +61,7 @@ except Exception as e:
     sys.exit(1)
 EOF
 )
-    
+
     if [ "$PYTHON_TEST" == "OK" ]; then
         echo -e "${GREEN}   ✅ Gemini API funcionando${NC}"
     else

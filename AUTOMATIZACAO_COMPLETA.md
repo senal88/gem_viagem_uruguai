@@ -111,6 +111,6 @@ systemctl restart gemexpert
 
 ---
 
-**Status**: ✅ Scripts criados e prontos para uso  
+**Status**: ✅ Scripts criados e prontos para uso
 **Próximo passo**: Regenerar chave no Google Cloud e executar script de atualização
 

@@ -39,13 +39,13 @@ echo -e "${GREEN}✅ Chave válida detectada${NC}\n"
 ENV_LOCAL="$HOME/gem_viagem_uruguai/.env"
 if [ -f "$ENV_LOCAL" ]; then
     echo -e "${BLUE}📝 Atualizando .env local...${NC}"
-    
+
     # Remover linha antiga se existir
     sed -i.bak '/^GOOGLE_API_KEY=/d' "$ENV_LOCAL"
-    
+
     # Adicionar nova chave
     echo "GOOGLE_API_KEY=$NOVA_CHAVE" >> "$ENV_LOCAL"
-    
+
     echo -e "${GREEN}✅ .env local atualizado${NC}"
 else
     echo -e "${YELLOW}⚠️  Arquivo .env não encontrado em $ENV_LOCAL${NC}"
@@ -62,24 +62,24 @@ ssh root@147.79.81.59 << EOF
     if [ -f "$VPS_ENV" ]; then
         # Backup
         cp "$VPS_ENV" "$VPS_ENV.bak.\$(date +%Y%m%d_%H%M%S)"
-        
+
         # Remover linha antiga
         sed -i '/^GOOGLE_API_KEY=/d' "$VPS_ENV"
-        
+
         # Adicionar nova chave
         echo "GOOGLE_API_KEY=$NOVA_CHAVE" >> "$VPS_ENV"
-        
+
         echo "✅ .env no VPS atualizado"
     else
         echo "⚠️  Arquivo .env não encontrado no VPS"
         echo "GOOGLE_API_KEY=$NOVA_CHAVE" > "$VPS_ENV"
         echo "✅ Arquivo .env criado no VPS"
     fi
-    
+
     # Reiniciar serviço
     systemctl restart gemexpert
     sleep 2
-    
+
     if systemctl is-active --quiet gemexpert; then
         echo "✅ Serviço gemexpert reiniciado com sucesso"
     else
