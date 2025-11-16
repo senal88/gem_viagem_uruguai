@@ -7,7 +7,7 @@
 
 | API Key | Status | Chave |
 |---------|--------|-------|
-| **Google AI (Gemini)** | ✅ Configurada | `AIzaSyD7BUB4hBU...2_OCs` |
+| **Google AI (Gemini)** | ⚠️ **REQUER REGENERAÇÃO** | Chave exposta - ver `SECURITY_GOOGLE_API_KEY.md` |
 
 ---
 
