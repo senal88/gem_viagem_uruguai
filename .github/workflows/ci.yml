@@ -1,0 +1,54 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    name: Validar Documentação
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+        
+      - name: Validar Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v15
+        
+      - name: Validar JSON
+        run: |
+          find . -name "*.json" -not -path "./.git/*" -not -path "./node_modules/*" | while read file; do
+            python3 -m json.tool "$file" > /dev/null || exit 1
+          done
+          
+      - name: Verificar estrutura de pastas
+        run: |
+          test -d "00_GEM_STRUCTURE" || exit 1
+          test -d "01_BASE_CONHECIMENTO" || exit 1
+          test -d "02_CONTEXTO_DINAMICO" || exit 1
+          test -d "03_WORKFLOWS" || exit 1
+
+  sync:
+    name: Sincronizar com Repositório
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Configurar Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          
+      - name: Verificar status
+        run: |
+          git status
+          git log --oneline -5
+

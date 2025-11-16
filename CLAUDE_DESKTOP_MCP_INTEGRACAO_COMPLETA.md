@@ -1,4 +1,5 @@
 # 🖥️ Integração Completa: Claude Desktop + MCP Servers
+
 ## GEM Expert - Viagem Aline & Luiz Fernando | Uruguai 2025
 
 ---
@@ -26,23 +27,26 @@ Este documento consolida toda a documentação necessária para integrar o GEM E
 
 ### 1. Instalar Claude Desktop
 
-- Acesse: https://claude.ai/download
+- Acesse: <https://claude.ai/download>
 - Baixe e instale para seu sistema operacional
 - Faça login com sua conta Claude
 
 ### 2. Localizar Arquivo de Configuração
 
 **macOS:**
+
 ```
 ~/Library/Application Support/Claude/claude_desktop_config.json
 ```
 
 **Windows:**
+
 ```
 %APPDATA%\Claude\claude_desktop_config.json
 ```
 
 **Linux:**
+
 ```
 ~/.config/Claude/claude_desktop_config.json
 ```
@@ -50,12 +54,14 @@ Este documento consolida toda a documentação necessária para integrar o GEM E
 ### 3. Obter Caminho do Repositório
 
 **macOS/Linux:**
+
 ```bash
 cd /Users/luiz.sena88/gem_viagem_uruguai
 pwd
 ```
 
 **Windows:**
+
 ```cmd
 cd C:\caminho\para\gem_viagem_uruguai
 cd
@@ -121,6 +127,7 @@ Copie conteúdo de `11_claude_desktop_config_exemplo.json` e:
 **Função**: Acesso ao sistema de arquivos do repositório
 
 **Configuração:**
+
 ```json
 "filesystem": {
   "command": "npx",
@@ -133,6 +140,7 @@ Copie conteúdo de `11_claude_desktop_config_exemplo.json` e:
 ```
 
 **Acesso:**
+
 - ✅ `01_BASE_CONHECIMENTO/` - Leitura completa
 - ✅ `02_CONTEXTO_DINAMICO/` - Leitura completa
 - ✅ `03_WORKFLOWS/` - Leitura completa
@@ -142,6 +150,7 @@ Copie conteúdo de `11_claude_desktop_config_exemplo.json` e:
 **Função**: Busca web em tempo real
 
 **Opção 1: DuckDuckGo (Recomendado para início)**
+
 ```json
 "web-search": {
   "command": "npx",
@@ -156,6 +165,7 @@ Copie conteúdo de `11_claude_desktop_config_exemplo.json` e:
 ```
 
 **Opção 2: Google (Requer API)**
+
 ```json
 "web-search": {
   "command": "npx",
@@ -175,6 +185,7 @@ Copie conteúdo de `11_claude_desktop_config_exemplo.json` e:
 **Função**: Integração com Git
 
 **Configuração:**
+
 ```json
 "git": {
   "command": "npx",
@@ -225,33 +236,39 @@ Copie conteúdo de `11_claude_desktop_config_exemplo.json` e:
 ### Teste 1: Leitura de Arquivo ✅
 
 **Prompt:**
+
 ```
 "Leia o arquivo 01_BASE_CONHECIMENTO/01_dossie_viagem_completo.md e me diga qual é o período da viagem."
 ```
 
 **Resultado Esperado:**
+
 - Claude lê arquivo via MCP filesystem
 - Responde: "18 a 25 de novembro de 2025"
 
 ### Teste 2: Busca Web ✅
 
 **Prompt:**
+
 ```
 "Busque na web a previsão do tempo para Punta del Este hoje."
 ```
 
 **Resultado Esperado:**
+
 - Claude usa MCP web-search
 - Retorna informações sobre clima
 
 ### Teste 3: Contexto Completo ✅
 
 **Prompt:**
+
 ```
 "Baseado no itinerário da viagem, qual a previsão do tempo para o casamento no Fasano no dia 22/11?"
 ```
 
 **Resultado Esperado:**
+
 - Claude lê itinerário via filesystem
 - Busca previsão do tempo via web-search
 - Contextualiza resposta com evento
@@ -265,6 +282,7 @@ Copie conteúdo de `11_claude_desktop_config_exemplo.json` e:
 **Usuário**: "Que horas é o casamento no Fasano?"
 
 **Claude (com MCP)**:
+
 1. Lê `01_BASE_CONHECIMENTO/02_itinerario_detalhado.md` via filesystem
 2. Identifica evento: Casamento Fasano
 3. Responde: "O casamento é no dia 22/11 (Sábado) às 16:30 no Hotel Fasano Las Piedras."
@@ -274,6 +292,7 @@ Copie conteúdo de `11_claude_desktop_config_exemplo.json` e:
 **Usuário**: "Qual a previsão do tempo para hoje?"
 
 **Claude (com MCP)**:
+
 1. Identifica data atual
 2. Consulta itinerário via filesystem
 3. Usa busca web via web-search
@@ -286,6 +305,7 @@ Copie conteúdo de `11_claude_desktop_config_exemplo.json` e:
 ### Problema 1: MCP Servers Não Aparecem
 
 **Solução:**
+
 1. Verificar localização do arquivo de configuração
 2. Verificar sintaxe JSON (usar validador)
 3. Reiniciar Claude Desktop
@@ -294,6 +314,7 @@ Copie conteúdo de `11_claude_desktop_config_exemplo.json` e:
 ### Problema 2: Erro de Permissão de Arquivo
 
 **Solução:**
+
 1. Verificar permissões do diretório
 2. Verificar caminho absoluto correto
 3. Verificar antivírus/firewall
@@ -301,6 +322,7 @@ Copie conteúdo de `11_claude_desktop_config_exemplo.json` e:
 ### Problema 3: Busca Web Não Funciona
 
 **Solução:**
+
 1. Verificar API keys (se usando Google/Tavily)
 2. Tentar DuckDuckGo (sem API)
 3. Verificar conexão com internet
@@ -309,6 +331,7 @@ Copie conteúdo de `11_claude_desktop_config_exemplo.json` e:
 ### Problema 4: Claude Não Lê Arquivos
 
 **Solução:**
+
 1. Verificar se MCP server filesystem está ativo
 2. Verificar caminho do repositório
 3. Tentar caminho absoluto completo
@@ -320,9 +343,9 @@ Copie conteúdo de `11_claude_desktop_config_exemplo.json` e:
 
 ### Documentação Oficial
 
-- **Claude Desktop**: https://claude.ai/download
-- **MCP Protocol**: https://modelcontextprotocol.io
-- **MCP Servers**: https://github.com/modelcontextprotocol/servers
+- **Claude Desktop**: <https://claude.ai/download>
+- **MCP Protocol**: <https://modelcontextprotocol.io>
+- **MCP Servers**: <https://github.com/modelcontextprotocol/servers>
 
 ### Documentos Relacionados
 
@@ -363,13 +386,13 @@ Copie conteúdo de `11_claude_desktop_config_exemplo.json` e:
 ## 📞 SUPORTE
 
 Para dúvidas sobre integração:
+
 - Consulte: `09_guia_integracao_claude_desktop_mcp.md`
 - Quick Start: `12_quick_start_claude_desktop.md`
 - Instruções: `10_instrucoes_claude_desktop_completas.md`
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ INTEGRAÇÃO COMPLETA - PRONTO PARA CLAUDE DESKTOP + MCP
-

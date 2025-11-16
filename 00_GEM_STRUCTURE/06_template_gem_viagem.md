@@ -1,4 +1,5 @@
 # 🎯 Template GEM Ideal de Viagem
+
 ## Sistema de Consulta em Tempo Real para Viajantes
 
 ---
@@ -189,4 +190,3 @@ Ver arquivo: `03_WORKFLOWS/02_instrucoes_gem_formatadas.md`
 **Última atualização**: 16 de Novembro de 2025
 **Versão**: 1.0.0
 **Status**: ✅ TEMPLATE PRONTO PARA USO
-

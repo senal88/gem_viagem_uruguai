@@ -410,7 +410,7 @@ Claude Desktop Config:
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ GUIA COMPLETO PARA CLAUDE DESKTOP + MCP
 
