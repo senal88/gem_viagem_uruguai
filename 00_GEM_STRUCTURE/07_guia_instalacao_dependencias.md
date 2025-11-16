@@ -161,6 +161,7 @@ pip3 --version
 #### OpenAI Python SDK
 
 **Opção 1: Instalação Global (macOS com ambiente gerenciado)**
+
 ```bash
 pip3 install --user openai python-dotenv
 
@@ -169,6 +170,7 @@ python3 -c "import openai; print(openai.__version__)"
 ```
 
 **Opção 2: Ambiente Virtual (Recomendado)**
+
 ```bash
 python3 -m venv venv
 source venv/bin/activate  # macOS/Linux
@@ -179,6 +181,7 @@ pip install openai python-dotenv
 #### Anthropic Python SDK
 
 **Opção 1: Instalação Global**
+
 ```bash
 pip3 install --user anthropic
 
@@ -187,6 +190,7 @@ python3 -c "import anthropic; print(anthropic.__version__)"
 ```
 
 **Opção 2: Ambiente Virtual**
+
 ```bash
 source venv/bin/activate  # Se usando venv
 pip install anthropic
@@ -195,6 +199,7 @@ pip install anthropic
 #### Google Generative AI SDK
 
 **Opção 1: Instalação Global**
+
 ```bash
 pip3 install --user google-generativeai
 
@@ -203,6 +208,7 @@ python3 -c "import google.generativeai as genai; print('OK')"
 ```
 
 **Opção 2: Ambiente Virtual**
+
 ```bash
 source venv/bin/activate  # Se usando venv
 pip install google-generativeai
