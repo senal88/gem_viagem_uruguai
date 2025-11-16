@@ -74,7 +74,7 @@ read -p "Abrir links? (s/n): " resposta
 
 if [ "$resposta" = "s" ] || [ "$resposta" = "S" ]; then
     echo -e "\n${BLUE}Abrindo links...${NC}\n"
-    
+
     # Detectar sistema operacional
     if [[ "$OSTYPE" == "darwin"* ]]; then
         # macOS
@@ -103,7 +103,7 @@ if [ "$resposta" = "s" ] || [ "$resposta" = "S" ]; then
         sleep 1
         xdg-open "https://console.anthropic.com/" 2>/dev/null &
     fi
-    
+
     echo -e "${GREEN}✅ Links abertos!${NC}\n"
 fi
 
