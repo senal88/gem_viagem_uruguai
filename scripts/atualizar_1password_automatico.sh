@@ -38,9 +38,9 @@ atualizar_item() {
     local VAULT=$2
     local FIELD_LABEL=$3
     local FIELD_VALUE=$4
-    
+
     echo -e "${BLUE}📝 Atualizando: $FIELD_LABEL${NC}"
-    
+
     # Tentar atualizar campo existente
     op item edit "$ITEM_ID" \
         --vault="$VAULT" \

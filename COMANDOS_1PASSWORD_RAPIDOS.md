@@ -86,9 +86,9 @@ op item get ITEM_ID --format=json | jq .
 
 ## 📝 VALORES PARA ATUALIZAR
 
-**Nova Chave Google API**: `AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0`  
-**Project ID**: `gcp-ai-setup-24410`  
-**Dashboard URL**: `http://senamfo.com.br:8081/gem/`  
+**Nova Chave Google API**: `AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0`
+**Project ID**: `gcp-ai-setup-24410`
+**Dashboard URL**: `http://senamfo.com.br:8081/gem/`
 **VPS IP**: `147.79.81.59`
 
 ---
@@ -98,7 +98,7 @@ op item get ITEM_ID --format=json | jq .
 Execute o script automatizado e verifique:
 
 - [ ] GEMINI_API_KEY atualizada
-- [ ] GOOGLE_API_KEY atualizada  
+- [ ] GOOGLE_API_KEY atualizada
 - [ ] GCP Project atualizado
 - [ ] VPS atualizado
 - [ ] Dashboard URL adicionada onde necessário
