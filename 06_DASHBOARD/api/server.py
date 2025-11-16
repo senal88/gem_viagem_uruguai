@@ -171,33 +171,33 @@ def chat_openai(message, history):
     """Chat com OpenAI"""
     try:
         from openai import OpenAI
-        
+
         api_key = os.getenv('OPENAI_API_KEY')
-        
+
         # Verificar se API key está configurada
         if not api_key or api_key.strip() == '':
             return "⚠️ OpenAI API Key não configurada. Configure OPENAI_API_KEY no arquivo .env para usar o chat com GPT-4."
-        
+
         client = OpenAI(api_key=api_key)
-        
+
         messages = [{"role": "system", "content": SYSTEM_PROMPT}]
-        
+
         # Adicionar histórico
         for h in history:
             messages.append({"role": h['role'], "content": h['content']})
-        
+
         # Adicionar mensagem atual
         messages.append({"role": "user", "content": message})
-        
+
         response = client.chat.completions.create(
             model=os.getenv('OPENAI_MODEL', 'gpt-4-turbo-preview'),
             messages=messages,
             max_tokens=2000,
             temperature=0.7
         )
-        
+
         return response.choices[0].message.content
-        
+
     except ImportError:
         return "OpenAI SDK não instalado. Execute: pip install openai"
     except Exception as e:
@@ -210,13 +210,13 @@ def chat_anthropic(message, history):
     """Chat com Anthropic"""
     try:
         import anthropic
-        
+
         api_key = os.getenv('ANTHROPIC_API_KEY')
-        
+
         # Verificar se API key está configurada
         if not api_key or api_key.strip() == '':
             return "⚠️ Anthropic API Key não configurada. Configure ANTHROPIC_API_KEY no arquivo .env para usar o chat com Claude."
-        
+
         client = anthropic.Anthropic(api_key=api_key)
 
         # Construir mensagens
@@ -248,13 +248,13 @@ def chat_gemini(message, history):
     """Chat com Gemini"""
     try:
         import google.generativeai as genai
-        
+
         api_key = os.getenv('GOOGLE_API_KEY')
-        
+
         # Verificar se API key está configurada
         if not api_key or api_key.strip() == '':
             return "⚠️ Google API Key não configurada. Configure GOOGLE_API_KEY no arquivo .env para usar o chat com Gemini."
-        
+
         genai.configure(api_key=api_key)
 
         model = genai.GenerativeModel(

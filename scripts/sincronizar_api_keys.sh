@@ -40,48 +40,48 @@ echo -e "${YELLOW}📡 Sincronizando com VPS...${NC}"
 ssh ${VPS_USER}@${VPS_IP} << EOF
     # Criar arquivo .env se não existir
     touch ${VPS_ENV}
-    
+
     # Atualizar ou adicionar cada chave
     if [ -n "$OPENAI_KEY" ]; then
         sed -i '/^OPENAI_API_KEY=/d' ${VPS_ENV}
         echo "OPENAI_API_KEY=$OPENAI_KEY" >> ${VPS_ENV}
         echo "✅ OpenAI API Key sincronizada"
     fi
-    
+
     if [ -n "$ANTHROPIC_KEY" ]; then
         sed -i '/^ANTHROPIC_API_KEY=/d' ${VPS_ENV}
         echo "ANTHROPIC_API_KEY=$ANTHROPIC_KEY" >> ${VPS_ENV}
         echo "✅ Anthropic API Key sincronizada"
     fi
-    
+
     if [ -n "$GOOGLE_KEY" ]; then
         sed -i '/^GOOGLE_API_KEY=/d' ${VPS_ENV}
         echo "GOOGLE_API_KEY=$GOOGLE_KEY" >> ${VPS_ENV}
         echo "✅ Google API Key sincronizada"
     fi
-    
+
     if [ -n "$GOOGLE_MAPS_KEY" ]; then
         sed -i '/^GOOGLE_MAPS_API_KEY=/d' ${VPS_ENV}
         echo "GOOGLE_MAPS_API_KEY=$GOOGLE_MAPS_KEY" >> ${VPS_ENV}
         echo "✅ Google Maps API Key sincronizada"
     fi
-    
+
     if [ -n "$OPENWEATHER_KEY" ]; then
         sed -i '/^OPENWEATHER_API_KEY=/d' ${VPS_ENV}
         echo "OPENWEATHER_API_KEY=$OPENWEATHER_KEY" >> ${VPS_ENV}
         echo "✅ OpenWeather API Key sincronizada"
     fi
-    
+
     if [ -n "$EXCHANGERATE_KEY" ]; then
         sed -i '/^EXCHANGERATE_API_KEY=/d' ${VPS_ENV}
         echo "EXCHANGERATE_API_KEY=$EXCHANGERATE_KEY" >> ${VPS_ENV}
         echo "✅ ExchangeRate API Key sincronizada"
     fi
-    
+
     # Remover linhas duplicadas
     sort -u ${VPS_ENV} -o ${VPS_ENV}.tmp
     mv ${VPS_ENV}.tmp ${VPS_ENV}
-    
+
     echo ""
     echo "📊 Resumo das chaves na VPS:"
     grep -E "API_KEY|_KEY" ${VPS_ENV} | grep -v "^#" | cut -d'=' -f1
