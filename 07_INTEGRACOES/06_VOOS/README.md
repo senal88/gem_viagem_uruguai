@@ -127,7 +127,7 @@ function addAirportMarkers(map) {
             icon: '✈️'
         }
     ];
-    
+
     airports.forEach(airport => {
         new google.maps.Marker({
             position: airport.position,

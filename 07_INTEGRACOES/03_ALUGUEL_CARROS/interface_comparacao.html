@@ -1,0 +1,252 @@
+<!-- Interface de Comparação de Ofertas - Aluguel de Carros -->
+<div class="comparacao-ofertas">
+    <h2>🔍 Comparar Ofertas de Aluguel de Carros</h2>
+    
+    <div class="adicionar-oferta">
+        <h3>➕ Adicionar Nova Oferta</h3>
+        <div class="input-group">
+            <input 
+                type="url" 
+                id="oferta-url" 
+                class="oferta-input" 
+                placeholder="Cole a URL da oferta (Booking.com, Livelo/Budget, etc.)"
+            >
+            <button id="adicionar-oferta-btn" class="btn-primary">
+                Adicionar
+            </button>
+        </div>
+        <div id="oferta-status" class="status-message"></div>
+    </div>
+    
+    <div class="comparacao-resultado" id="comparacao-resultado" style="display: none;">
+        <h3>📊 Comparação de Ofertas</h3>
+        
+        <div class="melhor-oferta" id="melhor-oferta">
+            <h4>🏆 Melhor Oferta</h4>
+            <div id="melhor-oferta-content"></div>
+        </div>
+        
+        <div class="todas-ofertas">
+            <h4>📋 Todas as Ofertas</h4>
+            <table class="ofertas-table" id="ofertas-table">
+                <thead>
+                    <tr>
+                        <th>Provedor</th>
+                        <th>Retirada</th>
+                        <th>Devolução</th>
+                        <th>Localização</th>
+                        <th>Score</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="ofertas-tbody">
+                </tbody>
+            </table>
+        </div>
+        
+        <button id="gerar-relatorio-btn" class="btn-secondary">
+            📄 Gerar Relatório
+        </button>
+    </div>
+</div>
+
+<style>
+.comparacao-ofertas {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.adicionar-oferta {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.oferta-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.875rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1e40af;
+}
+
+.btn-secondary {
+    background: #64748b;
+    color: white;
+    margin-top: 1rem;
+}
+
+.melhor-oferta {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.ofertas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.ofertas-table th,
+.ofertas-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.ofertas-table th {
+    background: #f8fafc;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-valid {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status-warning {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+</style>
+
+<script>
+// JavaScript para interface de comparação
+document.addEventListener('DOMContentLoaded', () => {
+    const urlInput = document.getElementById('oferta-url');
+    const addBtn = document.getElementById('adicionar-oferta-btn');
+    const statusDiv = document.getElementById('oferta-status');
+    const resultadoDiv = document.getElementById('comparacao-resultado');
+    
+    addBtn.addEventListener('click', async () => {
+        const url = urlInput.value.trim();
+        if (!url) {
+            statusDiv.textContent = '⚠️ Por favor, cole uma URL';
+            statusDiv.className = 'status-message error';
+            return;
+        }
+        
+        try {
+            const response = await fetch('/gem/api/car-rental/ofertas', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ url: url })
+            });
+            
+            const data = await response.json();
+            
+            if (response.ok) {
+                statusDiv.textContent = '✅ Oferta adicionada com sucesso!';
+                statusDiv.className = 'status-message success';
+                urlInput.value = '';
+                await atualizarComparacao();
+            } else {
+                statusDiv.textContent = `❌ Erro: ${data.error}`;
+                statusDiv.className = 'status-message error';
+            }
+        } catch (error) {
+            statusDiv.textContent = `❌ Erro ao adicionar oferta: ${error.message}`;
+            statusDiv.className = 'status-message error';
+        }
+    });
+    
+    async function atualizarComparacao() {
+        try {
+            const response = await fetch('/gem/api/car-rental/comparar');
+            const data = await response.json();
+            
+            if (data.total > 0) {
+                resultadoDiv.style.display = 'block';
+                exibirMelhorOferta(data.melhor_oferta);
+                exibirTodasOfertas(data.todas_ofertas);
+            }
+        } catch (error) {
+            console.error('Erro ao atualizar comparação:', error);
+        }
+    }
+    
+    function exibirMelhorOferta(oferta) {
+        const content = document.getElementById('melhor-oferta-content');
+        content.innerHTML = `
+            <div><strong>${oferta.provider}</strong></div>
+            <div>Score: ${oferta.score}/18</div>
+            <div>Retirada: ${oferta.pickup_date} às ${oferta.pickup_time}</div>
+            <div>Devolução: ${oferta.dropoff_date} às ${oferta.dropoff_time}</div>
+            <div>Localização: ${oferta.pickup_location}</div>
+            <a href="${oferta.url}" target="_blank" style="color: white; text-decoration: underline;">
+                Ver Oferta →
+            </a>
+        `;
+    }
+    
+    function exibirTodasOfertas(ofertas) {
+        const tbody = document.getElementById('ofertas-tbody');
+        tbody.innerHTML = ofertas.map(oferta => `
+            <tr>
+                <td><strong>${oferta.provider}</strong></td>
+                <td>${oferta.pickup_date} ${oferta.pickup_time}</td>
+                <td>${oferta.dropoff_date} ${oferta.dropoff_time}</td>
+                <td>${oferta.pickup_location}</td>
+                <td>${oferta.score}/18</td>
+                <td>
+                    <span class="status-badge ${oferta.validacao.valida ? 'status-valid' : 'status-warning'}">
+                        ${oferta.validacao.valida ? '✅ Válida' : '⚠️ Atenção'}
+                    </span>
+                </td>
+                <td>
+                    <a href="${oferta.url}" target="_blank" style="color: #2563eb;">
+                        Ver →
+                    </a>
+                </td>
+            </tr>
+        `).join('');
+    }
+    
+    // Carregar comparação inicial
+    atualizarComparacao();
+});
+</script>
+

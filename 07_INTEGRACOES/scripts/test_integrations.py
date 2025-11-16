@@ -19,7 +19,7 @@ def test_google_maps():
     if not api_key:
         print("   ⚠️  GOOGLE_MAPS_API_KEY não configurada")
         return False
-    
+
     try:
         import googlemaps
         gmaps = googlemaps.Client(key=api_key)
@@ -38,7 +38,7 @@ def test_openweather():
     if not api_key:
         print("   ⚠️  OPENWEATHER_API_KEY não configurada")
         return False
-    
+
     try:
         import requests
         url = "http://api.openweathermap.org/data/2.5/weather"
@@ -64,7 +64,7 @@ def test_exchangerate():
     if not api_key:
         print("   ⚠️  EXCHANGERATE_API_KEY não configurada")
         return False
-    
+
     try:
         import requests
         url = f"https://v6.exchangerate-api.com/v6/{api_key}/latest/BRL"
@@ -81,20 +81,20 @@ def test_exchangerate():
 def main():
     print("🧪 Testando Integrações do GEM Expert\n")
     print("=" * 50)
-    
+
     results = {
         'Google Maps': test_google_maps(),
         'OpenWeather': test_openweather(),
         'ExchangeRate': test_exchangerate()
     }
-    
+
     print("\n" + "=" * 50)
     print("\n📊 Resumo dos Testes:\n")
-    
+
     for name, result in results.items():
         status = "✅" if result else "❌"
         print(f"{status} {name}")
-    
+
     total = sum(results.values())
     print(f"\nTotal: {total}/{len(results)} funcionando")
 

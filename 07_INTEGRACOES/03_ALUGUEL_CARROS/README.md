@@ -135,7 +135,7 @@ function addCarRentalMarkers(map) {
         title: 'Retirada do Carro',
         icon: '🚗'
     });
-    
+
     const dropoffMarker = new google.maps.Marker({
         position: { lat: -34.8384, lng: -56.0308 },
         map: map,

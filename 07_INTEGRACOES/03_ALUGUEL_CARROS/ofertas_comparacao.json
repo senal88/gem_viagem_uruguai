@@ -1,0 +1,50 @@
+[
+  {
+    "provider": "Booking.com",
+    "url": "https://cars.booking.com/search-results?adplat=cross_product_bar&aid=304142&coordinates=-34.83679962158203%2C-56.01620101928711&cor=br&doDay=25&doHour=0&doMinute=0&doMonth=11&doYear=2025&driversAge=30&dropCoordinates=-34.83679962158203%2C-56.01620101928711&dropFtsType=A&dropLocation=null&dropLocationIata=MVD&dropLocationName=Aeroporto%20Internacional%20de%20Carrasco&ftsType=A&label=gen173nr-10CAEoggI46AdILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Aqn-48gGwAIB0gIkZDM3MjZlMjEtMTdhYi00YmQ3LWJiOWUtZTQ2NjI1NGY1MzU42AIB4AIB&location=null&locationIata=MVD&locationName=Aeroporto%20Internacional%20de%20Carrasco&prefcurrency=BRL&preflang=br&puDay=18&puHour=10&puMinute=0&puMonth=11&puYear=2025",
+    "pickup_date": "2025-11-18",
+    "pickup_time": "10:0",
+    "dropoff_date": "2025-11-25",
+    "dropoff_time": "0:0",
+    "pickup_location": "Aeroporto Internacional de Carrasco",
+    "dropoff_location": "Aeroporto Internacional de Carrasco",
+    "pickup_coordinates": {
+      "lat": -34.83679962158203,
+      "lng": -56.01620101928711
+    },
+    "driver_age": 30,
+    "currency": "BRL",
+    "language": "br",
+    "parsed_at": "2025-11-16T12:59:09.631366",
+    "status": "pending_validation",
+    "validacao": {
+      "valida": true,
+      "erros": [],
+      "avisos": [],
+      "pontos": 18
+    },
+    "score": 18
+  },
+  {
+    "provider": "Livelo/Budget",
+    "url": "https://abglac.com/livelo-budget/step2/Budget/B/7F/e11ae9f1-1aa8-4b19-ac5f-9b22ff97fcbb",
+    "pickup_date": "2025-11-18",
+    "pickup_time": "10:00",
+    "dropoff_date": "2025-11-25",
+    "dropoff_time": "00:00",
+    "pickup_location": "Aeroporto Internacional de Carrasco (MVD)",
+    "dropoff_location": "Aeroporto Internacional de Carrasco (MVD)",
+    "parsed_at": "2025-11-16T12:59:09.631373",
+    "status": "pending_validation",
+    "note": "URL do Livelo/Budget - requer validação manual ou scraping",
+    "validacao": {
+      "valida": false,
+      "erros": [
+        "Idade do motorista abaixo do mínimo"
+      ],
+      "avisos": [],
+      "pontos": 5
+    },
+    "score": 5
+  }
+]
