@@ -49,7 +49,13 @@ class AnalisadorComparativo:
             try:
                 with open(self.arquivo_dados, 'r', encoding='utf-8') as f:
                     dados = json.load(f)
-                    self.ofertas = [OfertaCarro(**oferta) for oferta in dados.get('ofertas', [])]
+                    # Suportar tanto formato antigo (lista) quanto novo (dict com 'ofertas')
+                    if isinstance(dados, list):
+                        self.ofertas = [OfertaCarro(**oferta) for oferta in dados]
+                    elif isinstance(dados, dict):
+                        self.ofertas = [OfertaCarro(**oferta) for oferta in dados.get('ofertas', [])]
+                    else:
+                        self.ofertas = []
             except Exception as e:
                 print(f"⚠️ Erro ao carregar ofertas: {e}")
                 self.ofertas = []
