@@ -196,9 +196,12 @@
 | **09:00** | Chegada no Brasil | Vitória | ✅ Confirmado | LATAM |
 
 **Observações Críticas:**
-- Carro alugado até 24/11 (verificar horário exato de devolução)
+- ✅ Carro alugado confirmado: Budget (Conf: 35328815BR4)
+- Retirada: 18/11 às 11:00 AM - Aeroporto MVD
+- Devolução: 25/11 às 12:30 AM (00:30) - Aeroporto MVD
+- ⚠️ Verificar na retirada: tag Telepeaje, combustível, seguro
 - Chegar ao aeroporto ~23h50 (30 min antes do voo)
-- Devolução do carro pode ser noturna (verificar procedimento)
+- Devolução do carro noturna (00:30) - verificar procedimento Budget
 
 ---
 
