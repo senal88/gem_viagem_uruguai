@@ -1,0 +1,59 @@
+# --- .cursorrules ---
+# Regras de Governança de Contexto para o projeto "GEM Expert"
+# Este arquivo define quais arquivos o Cursor DEVE e NÃO DEVE ler.
+
+[RULES]
+
+# 1. IGNORAR (Never Read)
+# Ignora arquivos de baixo sinal, binários e dependências.
+# A IA não deve aprender com arquivos legados ou de ambiente.
+
+99_OBSOLETOS/
+99_REFERENCIAS/
+venv/
+.git/
+.mypy_cache/
+*.db
+*.db-journal
+*.zip
+*.pdf
+*.docx
+*.xlsx
+*.png
+*.jpg
+.DS_Store
+*__pycache__*/
+*.pyc
+
+# 2. FOCO PRINCIPAL (Always Include)
+# Estes arquivos definem a "mente" do concierge.
+# A IA DEVE sempre ler estes arquivos para entender o projeto.
+
+# O Agente principal que define a identidade do usuário e do projeto
+AGENT.md
+
+# A Base de Conhecimento Estático (O QUÊ)
+01_BASE_CONHECIMENTO/01_dossie_viagem_completo.md
+01_BASE_CONHECIMENTO/02_itinerario_detalhado.md
+01_BASE_CONHECIMENTO/03_reservas_confirmadas.md
+01_BASE_CONHECIMENTO/04_logistica_transporte.md
+01_BASE_CONHECIMENTO/05_perfil_viajantes.md
+
+# Os Protocolos Dinâmicos (COMO)
+02_CONTEXTO_DINAMICO/01_protocolo_busca_web.md
+02_CONTEXTO_DINAMICO/02_gatilhos_validacao.md
+
+# Os Workflows/Prompts (A IDENTIDADE DA IA)
+03_WORKFLOWS/07_workflow_gemini_2.5_pro.json
+03_WORKFLOWS/10_instrucoes_claude_desktop_completas.md
+03_WORKFLOWS/14_instrucoes_openai_completas.md
+
+# 3. REGRAS DE GERAÇÃO DE CÓDIGO
+# Define o estilo de código para este repositório.
+[CODE GENERATION]
+
+# O código gerado deve seguir o PEP 8 e incluir type hints.
+python.style = pep8
+python.imports = localFolder
+python.typeAnnotations = true
+
