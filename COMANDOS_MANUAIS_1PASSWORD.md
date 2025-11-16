@@ -13,8 +13,7 @@
 ```bash
 op item edit 6xbzl566sj62zphes4b6kodt5e \
   --vault=gkpsbgizlks2zknwzqpppnb2ze \
-  --field-label="GOOGLE_API_KEY" \
-  --field-value="AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0"
+  "GOOGLE_API_KEY=AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0"
 ```
 
 **Estrutura atual**:
@@ -29,8 +28,7 @@ op item edit 6xbzl566sj62zphes4b6kodt5e \
 ```bash
 op item edit 27ateuu2y37dblvo3lkb4szt6y \
   --vault=gkpsbgizlks2zknwzqpppnb2ze \
-  --field-label="credential" \
-  --field-value="AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0"
+  "credential=AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0"
 ```
 
 **Estrutura atual**:
@@ -45,8 +43,7 @@ op item edit 27ateuu2y37dblvo3lkb4szt6y \
 ```bash
 op item edit pzxuyfevbtwa26fegzd4xsjz64 \
   --vault=oa3tidekmeu26nxiier2qbi7v4 \
-  --field-label="credential" \
-  --field-value="AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0"
+  "credential=AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0"
 ```
 
 **Estrutura atual**:
@@ -69,20 +66,17 @@ op item edit pzxuyfevbtwa26fegzd4xsjz64 \
 # Atualizar GOOGLE_API_KEY
 op item edit 6xbzl566sj62zphes4b6kodt5e \
   --vault=gkpsbgizlks2zknwzqpppnb2ze \
-  --field-label="GOOGLE_API_KEY" \
-  --field-value="AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0"
+  "GOOGLE_API_KEY=AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0"
 
 # Atualizar Gemini_API_Key_macos
 op item edit 27ateuu2y37dblvo3lkb4szt6y \
   --vault=gkpsbgizlks2zknwzqpppnb2ze \
-  --field-label="credential" \
-  --field-value="AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0"
+  "credential=AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0"
 
 # Atualizar GEMINI_API_KEY
 op item edit pzxuyfevbtwa26fegzd4xsjz64 \
   --vault=oa3tidekmeu26nxiier2qbi7v4 \
-  --field-label="credential" \
-  --field-value="AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0"
+  "credential=AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0"
 ```
 
 ---
