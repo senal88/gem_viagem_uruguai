@@ -121,7 +121,6 @@ def validar_oferta():
 # ===== NOVOS ENDPOINTS PARA ANÁLISE COMPARATIVA =====
 
 @bp.route('/analise-completa', methods=['GET'])
-@bp.route('/gem/api/car-rental/analise-completa', methods=['GET'])
 def analise_completa():
     """Gera análise completa comparando Kwid vs Onix"""
     try:

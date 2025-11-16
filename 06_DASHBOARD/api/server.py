@@ -28,8 +28,6 @@ CORS(app)
 try:
     from api_endpoints import bp as car_rental_bp
     app.register_blueprint(car_rental_bp)
-    # Registrar também com prefixo /gem para compatibilidade
-    app.register_blueprint(car_rental_bp, url_prefix='/gem')
 except ImportError:
     print("⚠️  Módulo de aluguel de carros não disponível")
 
@@ -136,6 +134,63 @@ def index():
 def analise_carros():
     """Página de análise comparativa de carros"""
     return render_template('analise_carros.html')
+
+# Adicionar rotas diretas para API de carros via /gem
+@app.route('/gem/api/car-rental/analise-completa', methods=['GET'])
+def gem_analise_completa():
+    """Proxy para análise completa via /gem"""
+    try:
+        from api_endpoints import analisador
+        relatorio = analisador.gerar_relatorio_comparativo()
+        return jsonify(relatorio), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/gem/api/car-rental/adicionar-oferta-detalhada', methods=['POST'])
+def gem_adicionar_oferta_detalhada():
+    """Proxy para adicionar oferta via /gem"""
+    try:
+        from api_endpoints import analisador, OfertaCarro
+        dados = request.json
+        
+        campos_obrigatorios = ['plataforma', 'veiculo', 'preco_diaria', 'preco_total', 
+                               'seguro_basico', 'combustivel', 'cancelamento', 'limite_km']
+        for campo in campos_obrigatorios:
+            if campo not in dados:
+                return jsonify({'error': f'Campo obrigatório ausente: {campo}'}), 400
+        
+        oferta = OfertaCarro(
+            plataforma=dados['plataforma'],
+            veiculo=dados['veiculo'],
+            preco_diaria=float(dados['preco_diaria']),
+            preco_total=float(dados['preco_total']),
+            seguro_basico=dados['seguro_basico'],
+            seguro_full=dados.get('seguro_full'),
+            combustivel=dados['combustivel'],
+            cancelamento=dados['cancelamento'],
+            limite_km=dados['limite_km'],
+            taxa_aeroporto=dados.get('taxa_aeroporto', False),
+            taxa_limpeza=dados.get('taxa_limpeza', False),
+            gps_wifi=dados.get('gps_wifi'),
+            motorista_adicional=dados.get('motorista_adicional'),
+            observacoes=dados.get('observacoes'),
+            link_reserva=dados.get('link_reserva')
+        )
+        
+        analisador.adicionar_oferta(oferta)
+        
+        return jsonify({
+            'success': True,
+            'message': 'Oferta adicionada com sucesso',
+            'oferta': {
+                'plataforma': oferta.plataforma,
+                'veiculo': oferta.veiculo,
+                'preco_total': oferta.preco_total
+            }
+        }), 201
+        
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/api/chat', methods=['POST'])
 @app.route('/gem/api/chat', methods=['POST'])
