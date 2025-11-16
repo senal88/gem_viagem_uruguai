@@ -1,4 +1,5 @@
 # 🎯 Sistema de Prompts - GEM Expert
+
 ## Viagem Aline & Luiz Fernando | Uruguai 2025
 
 ---
@@ -145,6 +146,7 @@ Este sistema de prompts fornece templates, guias e melhores práticas para traba
 ## 📝 CHANGELOG
 
 ### Versão 1.0.0 - 16/11/2025
+
 - ✅ Sistema de prompts criado
 - ✅ Estrutura de pastas organizada
 - ✅ Templates e guias documentados
@@ -153,7 +155,6 @@ Este sistema de prompts fornece templates, guias e melhores práticas para traba
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ SISTEMA COMPLETO
-
