@@ -8,9 +8,10 @@
       "location": "Montevidéu",
       "address": "Vinícola Pizzorno, 20 km ao norte de Montevidéu",
       "type": "tour",
+      "status": "confirmed",
       "cost": {
-        "per_person": 697.00,
-        "total": 1394.00,
+        "per_person": 697.0,
+        "total": 1394.0,
         "currency": "BRL"
       },
       "transfer": {
@@ -18,10 +19,7 @@
         "pickup_time": "09:30",
         "pickup_location": "Hotel em Punta Carretas/Pocitos",
         "return_time": "14:30"
-      },
-      "status": "confirmed",
-      "contact": "Incluído no tour",
-      "notes": "Tour completo + Almoço. Guia em português/inglês/espanhol disponível."
+      }
     },
     {
       "id": "RES002",
@@ -31,14 +29,11 @@
       "location": "Punta del Este",
       "address": "Porto de Punta, rua 21, Punta del Este",
       "type": "event",
-      "cost": {
-        "included": true,
-        "note": "Incluído no evento"
-      },
-      "dress_code": "Casual Chique",
       "status": "confirmed",
-      "contact": "Organizadores do evento",
-      "notes": "Vista para Baía da Praia Mansa. Chegar com alguns minutos de antecedência."
+      "cost": {
+        "included": true
+      },
+      "dress_code": "Casual Chique"
     },
     {
       "id": "RES003",
@@ -48,14 +43,11 @@
       "location": "Punta del Este",
       "address": "Hotel Fasano Las Piedras, Região Las Piedras",
       "type": "event",
-      "cost": {
-        "included": true,
-        "note": "Incluído (Convidados)"
-      },
-      "dress_code": "Esporte Fino",
       "status": "confirmed",
-      "contact": "Organizadores do casamento",
-      "notes": "Localização em área elevada e aberta. Vento ao anoitecer."
+      "cost": {
+        "included": true
+      },
+      "dress_code": "Esporte Fino"
     },
     {
       "id": "RES004",
@@ -63,17 +55,21 @@
       "time": "20:30",
       "name": "Primuseum",
       "location": "Montevidéu",
-      "address": "Primuseum, Montevidéu",
+      "address": "Primuseum, Cidade Velha, Montevidéu",
       "type": "event",
-      "cost": {
-        "per_person": 175.00,
-        "total": 350.00,
-        "currency": "BRL",
-        "note": "Transfer + Jantar + Show de Tango"
-      },
       "status": "confirmed",
-      "contact": "+598 99 2176 45",
-      "notes": "Jantar e Show de Tango. Preparar gorjeta em pesos uruguaios."
+      "cost": {
+        "per_person": 380.0,
+        "total": 760.0,
+        "currency": "BRL"
+      },
+      "transfer": {
+        "included": true,
+        "pickup_time": null,
+        "pickup_location": null,
+        "return_time": null
+      },
+      "contact": "+598 99 2176 45"
     },
     {
       "id": "RES005",
@@ -81,22 +77,20 @@
       "time": "10:30",
       "name": "Bouza Tour",
       "location": "Montevidéu",
-      "address": "Bodega Bouza, Montevidéu",
+      "address": "Bodega Bouza, Melilla (15-20 min de Montevidéu)",
       "type": "tour",
+      "status": "confirmed",
       "cost": {
-        "per_person": 1200.00,
-        "total": 2400.00,
+        "per_person": 990.0,
+        "total": 1980.0,
         "currency": "BRL"
       },
       "transfer": {
         "included": true,
         "pickup_time": "10:30",
-        "pickup_location": "Hotel em Montevidéu",
-        "return_time": "14:00"
-      },
-      "status": "confirmed",
-      "contact": "Incluído no tour",
-      "notes": "Tour completo + Almoço. Transfer incluído."
+        "pickup_location": null,
+        "return_time": "15:00"
+      }
     }
   ],
   "hotel_reservations": [
@@ -113,9 +107,8 @@
   ],
   "summary": {
     "total_reservations": 5,
-    "total_cost_brl": 4144.00,
+    "total_cost_brl": 4134.0,
     "confirmed": 5,
     "pending": 0
   }
 }
-

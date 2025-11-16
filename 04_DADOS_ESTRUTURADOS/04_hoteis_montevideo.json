@@ -1,33 +1,8 @@
 {
-  "hotels": [
-    {
-      "id": "HOTEL_MVD_001",
-      "name": "Hotel em Punta Carretas",
-      "location": "Punta Carretas, Montevidéu",
-      "period": {
-        "check_in": "2025-11-18",
-        "check_out": "2025-11-20",
-        "nights": 2
-      },
-      "status": "pending",
-      "notes": "Hotel a confirmar - Período 18-20/11"
-    },
-    {
-      "id": "HOTEL_MVD_002",
-      "name": "Hotel em Punta Carretas/Pocitos/Centro",
-      "location": "Montevidéu",
-      "period": {
-        "check_in": "2025-11-23",
-        "check_out": "2025-11-25",
-        "nights": 2
-      },
-      "status": "pending",
-      "notes": "Hotel a confirmar - Período 23-25/11"
-    }
-  ],
+  "hotels": [],
   "confirmed_hotels": [
     {
-      "id": "HOTEL_PDE_001",
+      "id": "HOTEL_PUNTA_DEL_ESTE_001",
       "name": "Barradas Parque Hotel & Spa",
       "location": "Punta del Este",
       "period": {
@@ -35,21 +10,18 @@
         "check_out": "2025-11-23",
         "nights": 3
       },
-      "reservation_number": "6417055860",
-      "pin": "2921",
       "status": "confirmed",
-      "address": "Punta del Este, Uruguai",
-      "contact": null
+      "reservation_number": "6417055860",
+      "pin": "2921"
     }
   ],
   "summary": {
-    "total_nights": 7,
+    "total_nights": 3,
     "confirmed": 1,
-    "pending": 2,
+    "pending": 0,
     "locations": {
-      "montevideo": 4,
+      "montevideo": 0,
       "punta_del_este": 3
     }
   }
 }
-

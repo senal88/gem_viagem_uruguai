@@ -2,7 +2,7 @@
 
 ## 🎯 STATUS: TODOS OS VAULTS ATUALIZADOS
 
-**Data**: 16 de Novembro de 2025  
+**Data**: 16 de Novembro de 2025
 **Nova Chave**: `AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0`
 
 ---
@@ -12,7 +12,7 @@
 ### ✅ Personal
 - Itens relacionados a Google, Gemini, API, GCP atualizados
 
-### ✅ 1p_macos  
+### ✅ 1p_macos
 - Itens relacionados a Google, Gemini, API, GCP atualizados
 
 ### ✅ 1p_vps
@@ -93,13 +93,13 @@ op item get ITEM_ID --format=json | jq .
 
 ## 📝 VALORES ATUALIZADOS
 
-**Nova Chave Google API**: `AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0`  
-**Project ID**: `gcp-ai-setup-24410`  
-**Dashboard URL**: `http://senamfo.com.br:8081/gem/`  
+**Nova Chave Google API**: `AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0`
+**Project ID**: `gcp-ai-setup-24410`
+**Dashboard URL**: `http://senamfo.com.br:8081/gem/`
 **VPS IP**: `147.79.81.59`
 
 ---
 
-**Status**: ✅ Atualização completa executada em todos os vaults  
+**Status**: ✅ Atualização completa executada em todos os vaults
 **Próximo passo**: Verificar manualmente no 1Password para confirmar
 

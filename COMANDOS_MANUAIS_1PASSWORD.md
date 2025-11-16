@@ -55,7 +55,7 @@ op item edit pzxuyfevbtwa26fegzd4xsjz64 \
 
 ### 4. GCP - Gemini Code Assist (1p_vps)
 
-**⚠️ NOTA**: Este item é uma Service Account, não usa API Key tradicional.  
+**⚠️ NOTA**: Este item é uma Service Account, não usa API Key tradicional.
 **Não precisa atualizar** - usa autenticação via chave privada.
 
 ---

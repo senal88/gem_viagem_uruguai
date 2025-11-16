@@ -37,19 +37,19 @@ echo -e "${GREEN}📋 Atualizando itens específicos encontrados...${NC}\n"
 for item_info in "${ITEMS_GOOGLE[@]}"; do
     IFS='|' read -r item_id vault_id item_title <<< "$item_info"
     vault_name=$(op vault get "$vault_id" --format=json 2>/dev/null | jq -r '.name' || echo "unknown")
-    
+
     echo -e "${BLUE}📝 Item: $item_title${NC}"
     echo -e "   ${BLUE}Vault: $vault_name${NC}"
-    
+
     # Obter estrutura do item
     item_json=$(op item get "$item_id" --vault="$vault_id" --format=json 2>/dev/null || echo "{}")
-    
+
     # Tentar encontrar campo de API Key
     field_label=$(echo "$item_json" | jq -r '.fields[]? | select(.label | test("(?i)(api.*key|credential|key)"; "g")) | .label' 2>/dev/null | head -1)
-    
+
     if [ ! -z "$field_label" ] && [ "$field_label" != "null" ]; then
         echo -e "   ${GREEN}✅ Campo encontrado: '$field_label'${NC}"
-        
+
         # Atualizar campo encontrado
         if op item edit "$item_id" \
             --vault="$vault_id" \
@@ -64,7 +64,7 @@ for item_info in "${ITEMS_GOOGLE[@]}"; do
         # Tentar atualizar campos comuns
         campos_tentados=("credential" "API Key" "api_key" "GOOGLE_API_KEY" "GEMINI_API_KEY")
         atualizado=false
-        
+
         for campo in "${campos_tentados[@]}"; do
             if op item edit "$item_id" \
                 --vault="$vault_id" \
@@ -76,13 +76,13 @@ for item_info in "${ITEMS_GOOGLE[@]}"; do
                 break
             fi
         done
-        
+
         if [ "$atualizado" = false ]; then
             echo -e "   ${YELLOW}⚠️  Nenhum campo encontrado - atualizar manualmente${NC}"
             echo -e "   ${BLUE}   Ver estrutura: op item get $item_id --vault=$vault_id${NC}"
         fi
     fi
-    
+
     echo ""
 done
 

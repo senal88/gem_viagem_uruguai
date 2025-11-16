@@ -1,12 +1,18 @@
 {
   "trip": {
-    "travelers": ["Aline Torres", "Luiz Fernando Sena"],
+    "travelers": [
+      "Aline Torres",
+      "Luiz Fernando Sena"
+    ],
     "period": {
       "start": "2025-11-18",
       "end": "2025-11-25",
       "days": 8
     },
-    "destinations": ["Montevidéu", "Punta del Este"]
+    "destinations": [
+      "Montevidéu",
+      "Punta del Este"
+    ]
   },
   "timeline": [
     {
@@ -26,8 +32,9 @@
           "time": "11:00-11:30",
           "type": "logistics",
           "title": "Retirada do Carro",
-          "details": "Booking.com - Aeroporto Carrasco",
-          "status": "pending"
+          "details": "Budget - Conf: 35328815BR4",
+          "status": "confirmed",
+          "notes": "Retirada confirmada às 11:00 AM"
         },
         {
           "time": "12:00-13:00",
@@ -96,13 +103,6 @@
       "location": "Montevidéu → Punta del Este",
       "events": [
         {
-          "time": "Manhã",
-          "type": "logistics",
-          "title": "Check-out Montevidéu",
-          "details": "Hotel a confirmar",
-          "status": "pending"
-        },
-        {
           "time": "10:00-12:00",
           "type": "travel",
           "title": "Viagem para Punta del Este",
@@ -117,19 +117,26 @@
           "status": "confirmed"
         },
         {
-          "time": "Tarde",
-          "type": "free",
-          "title": "Livre / Exploração",
-          "details": "Porto de PDE, instalação",
-          "status": "free"
-        },
-        {
           "time": "18:30",
           "type": "reservation",
           "title": "Pré-Wedding L'Incanto",
           "details": "Dress: Casual Chique",
           "status": "confirmed",
           "reservation_id": "RES002"
+        },
+        {
+          "time": "Manhã",
+          "type": "logistics",
+          "title": "Check-out Montevidéu",
+          "details": "Hotel a confirmar",
+          "status": "pending"
+        },
+        {
+          "time": "Tarde",
+          "type": "free",
+          "title": "Livre / Exploração",
+          "details": "Porto de PDE, instalação",
+          "status": "free"
         }
       ]
     },
@@ -147,17 +154,17 @@
           "status": "suggestion"
         },
         {
-          "time": "Tarde",
-          "type": "activity",
-          "title": "Casapueblo",
-          "details": "Cerimônia do Sol ao pôr do sol",
-          "status": "suggestion"
-        },
-        {
           "time": "Noite",
           "type": "meal",
           "title": "Jantar",
           "details": "Lo de Tere (sugestão)",
+          "status": "suggestion"
+        },
+        {
+          "time": "Tarde",
+          "type": "activity",
+          "title": "Casapueblo",
+          "details": "Cerimônia do Sol ao pôr do sol",
           "status": "suggestion"
         }
       ]
@@ -169,19 +176,19 @@
       "location": "Punta del Este",
       "events": [
         {
-          "time": "Manhã",
-          "type": "free",
-          "title": "Livre",
-          "details": "Descanso, praia",
-          "status": "free"
-        },
-        {
           "time": "16:30",
           "type": "reservation",
           "title": "Casamento Fasano",
           "details": "Dress: Esporte Fino",
           "status": "confirmed",
           "reservation_id": "RES003"
+        },
+        {
+          "time": "Manhã",
+          "type": "free",
+          "title": "Livre",
+          "details": "Descanso, praia",
+          "status": "free"
         }
       ]
     },
@@ -191,6 +198,14 @@
       "weekday": "Domingo",
       "location": "Punta del Este → Montevidéu",
       "events": [
+        {
+          "time": "20:30",
+          "type": "reservation",
+          "title": "Primuseum",
+          "details": "Jantar e Show de Tango",
+          "status": "confirmed",
+          "reservation_id": "RES004"
+        },
         {
           "time": "Manhã",
           "type": "free",
@@ -211,14 +226,6 @@
           "title": "Check-in Montevidéu",
           "details": "Hotel a confirmar",
           "status": "pending"
-        },
-        {
-          "time": "20:30",
-          "type": "reservation",
-          "title": "Primuseum",
-          "details": "Jantar e Show de Tango",
-          "status": "confirmed",
-          "reservation_id": "RES004"
         }
       ]
     },
@@ -244,18 +251,18 @@
           "status": "confirmed"
         },
         {
-          "time": "Tarde",
-          "type": "free",
-          "title": "Livre",
-          "details": "Últimas compras, Punta Carretas Shopping",
-          "status": "free"
-        },
-        {
           "time": "Noite",
           "type": "meal",
           "title": "Jantar Leve",
           "details": "Arrumar malas",
           "status": "suggestion"
+        },
+        {
+          "time": "Tarde",
+          "type": "free",
+          "title": "Livre",
+          "details": "Últimas compras, Punta Carretas Shopping",
+          "status": "free"
         }
       ]
     },
@@ -266,27 +273,27 @@
       "location": "Montevidéu → Brasil",
       "events": [
         {
-          "time": "23:30-00:00",
-          "type": "logistics",
-          "title": "Devolução do Carro",
-          "details": "Aeroporto Carrasco",
-          "status": "pending"
-        },
-        {
           "time": "02:10",
           "type": "departure",
           "title": "Partida",
           "details": "LATAM - Aeroporto Carrasco",
           "status": "confirmed"
+        },
+        {
+          "time": "23:30-00:00",
+          "type": "logistics",
+          "title": "Devolução do Carro",
+          "details": "Budget - Conf: 35328815BR4",
+          "status": "confirmed",
+          "notes": "Devolução confirmada às 00:30"
         }
       ]
     }
   ],
   "summary": {
     "total_days": 8,
-    "confirmed_reservations": 5,
+    "confirmed_reservations": 12,
     "pending_items": 3,
-    "suggestions": 8
+    "suggestions": 7
   }
 }
-

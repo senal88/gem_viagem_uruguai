@@ -48,7 +48,7 @@ atualizar_campo() {
     local VAULT_ID=$2
     local FIELD_LABEL=$3
     local FIELD_VALUE=$4
-    
+
     # Tentar diferentes métodos de atualização
     op item edit "$ITEM_ID" \
         --vault="$VAULT_ID" \
@@ -62,76 +62,76 @@ atualizar_vault() {
     local VAULT_ID=$1
     local VAULT_NAME=$2
     local SEARCH_PATTERN=$3
-    
+
     echo -e "${BLUE}🔍 Buscando em: ${GREEN}$VAULT_NAME${NC}"
-    
+
     # Buscar itens no vault
     ITEMS=$(op item list --vault="$VAULT_ID" --format=json 2>/dev/null | \
         jq -r ".[] | select(.title | test(\"(?i)$SEARCH_PATTERN\"; \"g\")) | \"\(.id)|\(.title)\"" 2>/dev/null || echo "")
-    
+
     if [ -z "$ITEMS" ]; then
         echo -e "${YELLOW}   ⚠️  Nenhum item encontrado${NC}\n"
         return
     fi
-    
+
     echo "$ITEMS" | while IFS='|' read -r item_id item_title; do
         echo -e "   ${BLUE}📝 Item: $item_title${NC}"
-        
+
         # Tentar atualizar diferentes campos possíveis
         atualizado=false
-        
+
         # Tentar campo "API Key"
         if atualizar_campo "$item_id" "$VAULT_ID" "API Key" "$NOVA_GOOGLE_API_KEY" 2>/dev/null; then
             echo -e "      ${GREEN}✅ Campo 'API Key' atualizado${NC}"
             atualizado=true
         fi
-        
+
         # Tentar campo "credential"
         if atualizar_campo "$item_id" "$VAULT_ID" "credential" "$NOVA_GOOGLE_API_KEY" 2>/dev/null; then
             echo -e "      ${GREEN}✅ Campo 'credential' atualizado${NC}"
             atualizado=true
         fi
-        
+
         # Tentar campo "api_key"
         if atualizar_campo "$item_id" "$VAULT_ID" "api_key" "$NOVA_GOOGLE_API_KEY" 2>/dev/null; then
             echo -e "      ${GREEN}✅ Campo 'api_key' atualizado${NC}"
             atualizado=true
         fi
-        
+
         # Tentar campo "Google API Key"
         if atualizar_campo "$item_id" "$VAULT_ID" "Google API Key" "$NOVA_GOOGLE_API_KEY" 2>/dev/null; then
             echo -e "      ${GREEN}✅ Campo 'Google API Key' atualizado${NC}"
             atualizado=true
         fi
-        
+
         # Tentar campo "GOOGLE_API_KEY"
         if atualizar_campo "$item_id" "$VAULT_ID" "GOOGLE_API_KEY" "$NOVA_GOOGLE_API_KEY" 2>/dev/null; then
             echo -e "      ${GREEN}✅ Campo 'GOOGLE_API_KEY' atualizado${NC}"
             atualizado=true
         fi
-        
+
         # Tentar campo "GEMINI_API_KEY"
         if atualizar_campo "$item_id" "$VAULT_ID" "GEMINI_API_KEY" "$NOVA_GOOGLE_API_KEY" 2>/dev/null; then
             echo -e "      ${GREEN}✅ Campo 'GEMINI_API_KEY' atualizado${NC}"
             atualizado=true
         fi
-        
+
         # Atualizar Project ID se aplicável
         if atualizar_campo "$item_id" "$VAULT_ID" "Project ID" "$PROJECT_ID" 2>/dev/null; then
             echo -e "      ${GREEN}✅ Campo 'Project ID' atualizado${NC}"
         fi
-        
+
         # Atualizar Dashboard URL se aplicável
         if atualizar_campo "$item_id" "$VAULT_ID" "Dashboard URL" "$DASHBOARD_URL" 2>/dev/null; then
             echo -e "      ${GREEN}✅ Campo 'Dashboard URL' atualizado${NC}"
         fi
-        
+
         if [ "$atualizado" = false ]; then
             echo -e "      ${YELLOW}⚠️  Nenhum campo encontrado - atualizar manualmente${NC}"
             echo -e "         ${BLUE}ID: $item_id${NC}"
             echo -e "         ${BLUE}Vault: $VAULT_ID${NC}"
         fi
-        
+
         echo ""
     done
 }
