@@ -14,10 +14,14 @@ from dotenv import load_dotenv
 # Carregar variáveis de ambiente
 load_dotenv()
 
-app = Flask(__name__,
+app = Flask(__name__, 
             template_folder='../templates',
-            static_folder='../static')
+            static_folder='../static',
+            static_url_path='/gem/static')
 CORS(app)
+
+# Configurar path base para funcionar com Nginx em /gem
+APPLICATION_ROOT = '/gem'
 
 # Configurações
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev-secret-key-change-in-production')
@@ -89,11 +93,14 @@ REGRAS CRÍTICAS DE CONDUÇÃO:
 Responda em português, com tom sofisticado e prestativo (concierge de elite)."""
 
 @app.route('/')
+@app.route('/gem')
+@app.route('/gem/')
 def index():
     """Página principal do dashboard"""
     return render_template('index.html')
 
 @app.route('/api/chat', methods=['POST'])
+@app.route('/gem/api/chat', methods=['POST'])
 def chat():
     """Endpoint para chat com GEM Expert"""
     try:
@@ -219,6 +226,7 @@ def chat_gemini(message, history):
         return f"Erro ao processar com Gemini: {str(e)}"
 
 @app.route('/api/weather', methods=['GET'])
+@app.route('/gem/api/weather', methods=['GET'])
 def weather():
     """Endpoint para dados do clima"""
     # TODO: Integrar com API de clima real
@@ -231,6 +239,7 @@ def weather():
     })
 
 @app.route('/api/exchange', methods=['GET'])
+@app.route('/gem/api/exchange', methods=['GET'])
 def exchange():
     """Endpoint para câmbio"""
     # TODO: Integrar com API de câmbio real
@@ -265,7 +274,7 @@ if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
     debug = os.getenv('FLASK_DEBUG', 'False').lower() == 'true'
     env = os.getenv('FLASK_ENV', 'development')
-    
+
     if env == 'production':
         # Produção: apenas escutar localhost (nginx faz proxy)
         host = '127.0.0.1'
@@ -276,6 +285,6 @@ if __name__ == '__main__':
         host = '0.0.0.0'
         print(f"🚀 Servidor iniciando na porta {port}")
         print(f"📱 Acesse no iPhone: http://[SEU_IP_LOCAL]:{port}")
-    
+
     app.run(host=host, port=port, debug=debug)
 

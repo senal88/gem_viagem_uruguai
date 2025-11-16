@@ -57,7 +57,8 @@ async function sendMessage() {
         const provider = document.getElementById('ai-provider').value;
 
         // Enviar para API
-        const response = await fetch('/api/chat', {
+        const apiPath = window.location.pathname.startsWith('/gem') ? '/gem/api/chat' : '/api/chat';
+        const response = await fetch(apiPath, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

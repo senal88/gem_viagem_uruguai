@@ -174,7 +174,8 @@ function loadWeather() {
     `;
 
     // TODO: Integrar com API de clima real
-    fetch('/api/weather')
+    const apiPath = window.location.pathname.startsWith('/gem') ? '/gem/api/weather' : '/api/weather';
+    fetch(apiPath)
         .then(res => res.json())
         .then(data => {
             container.innerHTML = `
@@ -209,7 +210,8 @@ function loadExchange() {
     `;
 
     // TODO: Integrar com API de câmbio real
-    fetch('/api/exchange')
+    const apiPath = window.location.pathname.startsWith('/gem') ? '/gem/api/exchange' : '/api/exchange';
+    fetch(apiPath)
         .then(res => res.json())
         .then(data => {
             container.innerHTML = `

@@ -6,8 +6,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>GEM Expert - Viagem Uruguai</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
-    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/icon-192.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css', _external=False) }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/icon-192.png', _external=False) }}">
 </head>
 <body>
     <!-- Header -->
@@ -135,8 +135,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js', _external=False) }}"></script>
+    <script src="{{ url_for('static', filename='js/chat.js', _external=False) }}"></script>
 </body>
 </html>
 
