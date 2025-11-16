@@ -1,0 +1,11 @@
+# Production Dependencies for Ubuntu VPS
+# Versões testadas e compatíveis com Ubuntu 22.04+
+
+-r requirements.txt
+
+# Production Server
+gunicorn>=21.2.0,<22.0.0
+
+# Process Management
+supervisor>=4.2.0,<5.0.0
+

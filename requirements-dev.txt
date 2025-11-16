@@ -1,0 +1,18 @@
+# Development Dependencies
+# Instalar apenas em ambiente de desenvolvimento
+
+-r requirements.txt
+
+# Testing
+pytest>=7.4.0,<8.0.0
+pytest-cov>=4.1.0,<5.0.0
+
+# Code Quality
+black>=23.0.0,<24.0.0
+flake8>=6.0.0,<7.0.0
+mypy>=1.7.0,<2.0.0
+
+# Development Tools
+ipython>=8.18.0,<9.0.0
+ipdb>=0.13.0,<1.0.0
+

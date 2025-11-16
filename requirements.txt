@@ -1,0 +1,36 @@
+# Requirements - GEM Expert Viagem Uruguai
+# Compatível com macOS Silicon (M1/M2/M3) e Ubuntu VPS
+
+# Core Dependencies
+flask>=3.0.0,<4.0.0
+flask-cors>=4.0.0,<5.0.0
+python-dotenv>=1.0.0,<2.0.0
+
+# AI/ML APIs
+openai>=1.12.0,<2.0.0
+anthropic>=0.18.0,<1.0.0
+google-generativeai>=0.3.0,<1.0.0
+
+# HTTP & Requests
+requests>=2.31.0,<3.0.0
+httpx>=0.26.0,<1.0.0
+
+# PDF Processing
+pdfplumber>=0.10.0,<1.0.0
+PyPDF2>=3.0.0,<4.0.0
+
+# Database
+# SQLite3 é built-in no Python, não precisa instalar
+
+# Data Processing
+python-dateutil>=2.8.0,<3.0.0
+
+# Environment & System
+psutil>=5.9.0,<6.0.0
+
+# Development Dependencies (opcional)
+# Instalar apenas em desenvolvimento:
+# pytest>=7.4.0,<8.0.0
+# black>=23.0.0,<24.0.0
+# flake8>=6.0.0,<7.0.0
+
