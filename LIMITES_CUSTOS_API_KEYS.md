@@ -2,8 +2,8 @@
 
 ## 📊 RESUMO EXECUTIVO
 
-**Projeto**: `gcp-ai-setup-24410`  
-**Chave Ativa**: `AIzaSyByKC4TPLsULBMLc5he5Ci9-rcIG2vJBDM`  
+**Projeto**: `gcp-ai-setup-24410`
+**Chave Ativa**: `AIzaSyByKC4TPLsULBMLc5he5Ci9-rcIG2vJBDM`
 **APIs Configuradas**: Generative Language API (Gemini)
 
 ---
@@ -51,7 +51,7 @@
 - **Geocoding**: ~20/dia = 600/mês = **$3.00/mês**
 - **Directions**: ~5/dia = 150/mês = **$0.75/mês**
 
-**Total Maps**: ~$5.85/mês  
+**Total Maps**: ~$5.85/mês
 **✅ Dentro do crédito grátis de $200/mês**
 
 ---
@@ -321,6 +321,6 @@ gcloud logging read "resource.type=api AND protoPayload.serviceName=generativela
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
+**Última atualização**: 16 de Novembro de 2025
 **Status**: Dentro dos limites seguros
 
