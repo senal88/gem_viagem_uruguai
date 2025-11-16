@@ -47,7 +47,7 @@ echo -e "\n${BLUE}📦 Verificando Dependências Críticas:${NC}\n"
 check_dependency() {
     local module=$1
     local name=$2
-    
+
     if python3 -c "import $module" 2>/dev/null; then
         local version=$(python3 -c "import $module; print(getattr($module, '__version__', 'installed'))" 2>/dev/null || echo "installed")
         echo -e "${GREEN}✅ ${name}: ${version}${NC}"
@@ -78,7 +78,7 @@ echo -e "\n${BLUE}🏗️  Verificando Compatibilidade de Arquitetura:${NC}\n"
 if [[ "$OS" == "macos" && "$ARCH" == "arm64" ]]; then
     echo -e "${GREEN}✅ macOS Silicon (ARM64) detectado${NC}"
     echo -e "${BLUE}   Verificando compatibilidade de pacotes...${NC}"
-    
+
     # Verificar se pacotes foram compilados para ARM64
     python3 -c "
 import sys
@@ -95,20 +95,20 @@ echo -e "\n${BLUE}🔐 Verificando Variáveis de Ambiente:${NC}\n"
 
 if [ -f "$PROJECT_ROOT/.env" ]; then
     echo -e "${GREEN}✅ Arquivo .env encontrado${NC}"
-    
+
     # Verificar chaves críticas (sem mostrar valores)
     if grep -q "GOOGLE_API_KEY" "$PROJECT_ROOT/.env"; then
         echo -e "${GREEN}✅ GOOGLE_API_KEY configurada${NC}"
     else
         echo -e "${YELLOW}⚠️  GOOGLE_API_KEY não encontrada${NC}"
     fi
-    
+
     if grep -q "OPENAI_API_KEY" "$PROJECT_ROOT/.env"; then
         echo -e "${GREEN}✅ OPENAI_API_KEY configurada${NC}"
     else
         echo -e "${YELLOW}⚠️  OPENAI_API_KEY não encontrada${NC}"
     fi
-    
+
     if grep -q "ANTHROPIC_API_KEY" "$PROJECT_ROOT/.env"; then
         echo -e "${GREEN}✅ ANTHROPIC_API_KEY configurada${NC}"
     else
@@ -124,7 +124,7 @@ echo -e "\n${BLUE}🧪 Testando Imports Críticos:${NC}\n"
 test_import() {
     local code=$1
     local name=$2
-    
+
     if python3 -c "$code" 2>/dev/null; then
         echo -e "${GREEN}✅ ${name}: OK${NC}"
         return 0
