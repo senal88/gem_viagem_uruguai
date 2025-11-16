@@ -6,19 +6,30 @@ API para chat e dados da viagem
 
 import os
 import json
+import sys
 from datetime import datetime
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from dotenv import load_dotenv
 
+# Adicionar diretório de integrações ao path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../07_INTEGRACOES/03_ALUGUEL_CARROS'))
+
 # Carregar variáveis de ambiente
 load_dotenv()
 
-app = Flask(__name__,
+app = Flask(__name__, 
             template_folder='../templates',
             static_folder='../static',
             static_url_path='/gem/static')
 CORS(app)
+
+# Registrar blueprint de aluguel de carros
+try:
+    from api_endpoints import bp as car_rental_bp
+    app.register_blueprint(car_rental_bp)
+except ImportError:
+    print("⚠️  Módulo de aluguel de carros não disponível")
 
 # Configurar path base para funcionar com Nginx em /gem
 APPLICATION_ROOT = '/gem'
