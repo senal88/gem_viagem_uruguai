@@ -5,8 +5,8 @@
 
 ## 🎉 STATUS: DEPLOY REALIZADO COM SUCESSO
 
-**Data**: 16 de Novembro de 2025  
-**Hora**: 15:19 UTC  
+**Data**: 16 de Novembro de 2025
+**Hora**: 15:19 UTC
 **VPS**: senamfo.com.br (147.79.81.59)
 
 ---
@@ -207,7 +207,7 @@ O dashboard está rodando e acessível em:
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ DEPLOY REALIZADO
 
