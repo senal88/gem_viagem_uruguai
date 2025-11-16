@@ -13,19 +13,19 @@ from typing import Dict, List, Optional, Any
 
 class DataLoader:
     """Carrega dados estruturados no banco de dados"""
-    
+
     def __init__(self, db_path: str = "viagem_uruguai.db"):
         self.db_path = db_path
         self.conn = sqlite3.connect(db_path)
         self.conn.row_factory = sqlite3.Row
-    
+
     def load_travelers(self):
         """Carrega dados dos viajantes"""
         travelers = [
             {"name": "Aline Torres", "document": None, "email": None, "phone": None},
             {"name": "Luiz Fernando Sena", "document": None, "email": None, "phone": None}
         ]
-        
+
         for traveler in travelers:
             cursor = self.conn.execute(
                 "SELECT id FROM travelers WHERE name = ?",
@@ -42,7 +42,7 @@ class DataLoader:
                     traveler.get("phone")
                 ))
         self.conn.commit()
-    
+
     def load_car_rental(self, data: Dict[str, Any]):
         """Carrega dados de aluguel de carro confirmado"""
         # Dados confirmados do aluguel de carro
@@ -61,14 +61,14 @@ class DataLoader:
             "status": "confirmed",
             "notes": "Verificar na retirada: tag Telepeaje, política de combustível, seguro incluído"
         }
-        
+
         # Atualizar ou inserir
         cursor = self.conn.execute(
             "SELECT id FROM car_rentals WHERE confirmation_number = ?",
             (car_data["confirmation_number"],)
         )
         existing = cursor.fetchone()
-        
+
         if existing:
             # Atualizar
             self.conn.execute("""
@@ -126,7 +126,7 @@ class DataLoader:
                 car_data["notes"]
             ))
         self.conn.commit()
-    
+
     def load_hotels(self):
         """Carrega dados de hotéis confirmados"""
         hotels = [
@@ -141,7 +141,7 @@ class DataLoader:
                 "status": "confirmed"
             }
         ]
-        
+
         for hotel in hotels:
             cursor = self.conn.execute(
                 "SELECT id FROM hotels WHERE reservation_number = ?",
@@ -164,7 +164,7 @@ class DataLoader:
                     hotel["status"]
                 ))
         self.conn.commit()
-    
+
     def load_reservations(self):
         """Carrega reservas confirmadas"""
         reservations = [
@@ -239,7 +239,7 @@ class DataLoader:
                 "return_time": "15:00"
             }
         ]
-        
+
         for res in reservations:
             cursor = self.conn.execute(
                 "SELECT id FROM reservations WHERE reservation_id = ?",
@@ -254,7 +254,7 @@ class DataLoader:
                         update_fields.append(f"{key} = ?")
                         values.append(value)
                 values.append(res["reservation_id"])
-                
+
                 self.conn.execute(f"""
                     UPDATE reservations SET
                         {', '.join(update_fields)},
@@ -270,19 +270,19 @@ class DataLoader:
                     VALUES ({placeholders})
                 """, list(res.values()))
         self.conn.commit()
-    
+
     def load_itinerary(self):
         """Carrega itinerário detalhado"""
         # Dados do itinerário serão carregados do JSON existente
         itinerary_json_path = Path(__file__).parent.parent / "04_DADOS_ESTRUTURADOS" / "03_roteiro_timeline.json"
-        
+
         if itinerary_json_path.exists():
             with open(itinerary_json_path, 'r', encoding='utf-8') as f:
                 itinerary_data = json.load(f)
-            
+
             # Limpar itinerário existente
             self.conn.execute("DELETE FROM itinerary")
-            
+
             for day_data in itinerary_data.get("timeline", []):
                 for event in day_data.get("events", []):
                     self.conn.execute("""
@@ -304,7 +304,7 @@ class DataLoader:
                         event.get("notes")
                     ))
             self.conn.commit()
-    
+
     def update_itinerary_with_confirmed_data(self):
         """Atualiza itinerário com dados confirmados do banco"""
         # Atualizar retirada de carro
@@ -315,7 +315,7 @@ class DataLoader:
                 notes = 'Retirada confirmada às 11:00 AM'
             WHERE title LIKE '%Retirada%Carro%' AND date = '2025-11-18'
         """)
-        
+
         # Atualizar devolução de carro
         self.conn.execute("""
             UPDATE itinerary SET
@@ -324,9 +324,9 @@ class DataLoader:
                 notes = 'Devolução confirmada às 00:30'
             WHERE title LIKE '%Devolução%Carro%' AND date = '2025-11-25'
         """)
-        
+
         self.conn.commit()
-    
+
     def close(self):
         """Fecha conexão"""
         self.conn.close()
@@ -336,28 +336,28 @@ def main():
     """Função principal"""
     project_root = Path(__file__).parent.parent
     db_path = project_root / "08_ETL_DATABASE" / "viagem_uruguai.db"
-    
+
     loader = DataLoader(str(db_path))
-    
+
     print("📊 Carregando dados no banco...")
     loader.load_travelers()
     print("✅ Viajantes carregados")
-    
+
     loader.load_car_rental({})
     print("✅ Aluguel de carro carregado")
-    
+
     loader.load_hotels()
     print("✅ Hotéis carregados")
-    
+
     loader.load_reservations()
     print("✅ Reservas carregadas")
-    
+
     loader.load_itinerary()
     print("✅ Itinerário carregado")
-    
+
     loader.update_itinerary_with_confirmed_data()
     print("✅ Itinerário atualizado com dados confirmados")
-    
+
     loader.close()
     print("\n✅ Todos os dados foram carregados!")
 
