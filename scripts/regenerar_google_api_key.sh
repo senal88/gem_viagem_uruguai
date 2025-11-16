@@ -26,9 +26,10 @@ fi
 
 NOVA_CHAVE="$1"
 
-# Validar formato da chave
-if [[ ! "$NOVA_CHAVE" =~ ^AIzaSy[A-Za-z0-9_-]{35}$ ]] && [[ ! "$NOVA_CHAVE" =~ ^AQ\.[A-Za-z0-9_-]+$ ]]; then
+# Validar formato da chave (AIzaSy seguido de 33 caracteres = 39 total, ou AQ.)
+if [[ ! "$NOVA_CHAVE" =~ ^AIzaSy[A-Za-z0-9_-]{33}$ ]] && [[ ! "$NOVA_CHAVE" =~ ^AQ\.[A-Za-z0-9_-]+$ ]]; then
     echo -e "${RED}❌ Formato de chave inválido${NC}"
+    echo -e "Chave recebida: ${NOVA_CHAVE:0:20}... (${#NOVA_CHAVE} caracteres)"
     echo -e "Formato esperado: AIzaSy... (39 caracteres) ou AQ...."
     exit 1
 fi
@@ -39,9 +40,12 @@ echo -e "${GREEN}✅ Chave válida detectada${NC}\n"
 ENV_LOCAL="$HOME/gem_viagem_uruguai/.env"
 if [ -f "$ENV_LOCAL" ]; then
     echo -e "${BLUE}📝 Atualizando .env local...${NC}"
-
+    
+    # Backup (sem extensão .bak para evitar commit acidental)
+    cp "$ENV_LOCAL" "${ENV_LOCAL}.backup.$(date +%Y%m%d_%H%M%S)"
+    
     # Remover linha antiga se existir
-    sed -i.bak '/^GOOGLE_API_KEY=/d' "$ENV_LOCAL"
+    sed -i '' '/^GOOGLE_API_KEY=/d' "$ENV_LOCAL" 2>/dev/null || sed -i '/^GOOGLE_API_KEY=/d' "$ENV_LOCAL"
 
     # Adicionar nova chave
     echo "GOOGLE_API_KEY=$NOVA_CHAVE" >> "$ENV_LOCAL"

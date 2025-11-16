@@ -2,8 +2,8 @@
 
 ## 🎉 STATUS: CONCLUÍDO
 
-**Data**: 16 de Novembro de 2025  
-**Chave Antiga**: `AIzaSyD7BUB4hBUCPsNAWdpecA2dZZ2zm02_OCs` (removida)  
+**Data**: 16 de Novembro de 2025
+**Chave Antiga**: `AIzaSyD7BUB4hBUCPsNAWdpecA2dZZ2zm02_OCs` (removida)
 **Chave Nova**: `AIzaSyByKC4TPLsULBMLc5he5Ci9-rcIG2vJBDM` ✅
 
 ---
@@ -81,6 +81,6 @@ Execute para validar:
 
 ---
 
-**Status**: ✅ Chave regenerada e atualizada com sucesso!  
+**Status**: ✅ Chave regenerada e atualizada com sucesso!
 **Próximo passo**: Configurar restrições de segurança
 
