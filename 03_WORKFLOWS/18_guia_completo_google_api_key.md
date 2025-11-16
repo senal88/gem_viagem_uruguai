@@ -269,7 +269,7 @@ EOF
 
 **Causa**: Você está usando uma API Key, mas o serviço requer OAuth2.
 
-**Solução**: 
+**Solução**:
 - Use a API Key diretamente do Google AI Studio (https://aistudio.google.com/)
 - Não use Service Account JSON
 
@@ -363,6 +363,6 @@ systemctl restart gemexpert
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
+**Última atualização**: 16 de Novembro de 2025
 **Versão**: 1.0.0
 
