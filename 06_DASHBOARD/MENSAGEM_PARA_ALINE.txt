@@ -4,9 +4,14 @@ Olá Aline! 👋
 
 O dashboard da nossa viagem está pronto! Aqui está como acessar:
 
-📱 NO IPHONE:
+📱 NO CELULAR (QUALQUER NAVEGADOR):
 
-1. Abra o Safari
+1. Abra qualquer navegador:
+   - Safari (iPhone)
+   - Chrome
+   - Firefox
+   - Edge
+   - Qualquer outro navegador
 2. Digite: senamfo.com.br:8081/gem
 3. Pronto! O dashboard abre
 

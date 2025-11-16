@@ -7,9 +7,17 @@
 
 ### Passo 1: Abrir o Navegador
 
-No iPhone da Aline:
-1. Abra o **Safari** (navegador padrão do iPhone)
-2. Ou use **Chrome** se preferir
+**Funciona em QUALQUER navegador:**
+- ✅ **Safari** (iPhone/iPad)
+- ✅ **Chrome** (Android/iPhone)
+- ✅ **Firefox** (Android/iPhone)
+- ✅ **Edge** (Android/iPhone)
+- ✅ **Opera** (Android/iPhone)
+- ✅ **Qualquer outro navegador**
+
+**No iPhone da Aline:**
+1. Abra qualquer navegador instalado
+2. Safari, Chrome, Firefox... qualquer um funciona!
 
 ### Passo 2: Digitar o Endereço
 
@@ -35,12 +43,20 @@ O dashboard vai abrir automaticamente! 🎉
 
 Para ter acesso rápido como um app:
 
-### No iPhone:
+### No iPhone (Safari):
 
 1. Abra o dashboard no Safari
 2. Toque no botão de **compartilhar** (quadrado com seta para cima) na parte inferior
 3. Role para baixo e toque em **"Adicionar à Tela de Início"**
 4. Personalize o nome: **"GEM Expert"** ou **"Viagem Uruguai"**
+5. Toque em **"Adicionar"**
+
+### No Android (Chrome):
+
+1. Abra o dashboard no Chrome
+2. Toque no menu (3 pontos) no canto superior direito
+3. Toque em **"Adicionar à tela inicial"** ou **"Instalar app"**
+4. Personalize o nome: **"GEM Expert"**
 5. Toque em **"Adicionar"**
 
 Agora você tem um ícone na tela de início que abre o dashboard direto! 📱
@@ -83,9 +99,12 @@ Ou escaneie o QR Code (anexo)
 
 ### Como Abrir:
 
-1. 📱 Abra o **Safari** no iPhone
+1. 📱 Abra **qualquer navegador** no celular:
+   - Safari, Chrome, Firefox, Edge... qualquer um!
 2. 🔗 Digite: `senamfo.com.br:8081/gem`
 3. ✅ Pronto! O dashboard abre
+
+**Importante**: Funciona em qualquer navegador, não precisa ser Safari!
 
 ### Como Adicionar à Tela de Início:
 
@@ -142,7 +161,11 @@ Quando abrir o dashboard, a Aline verá:
 **Solução:**
 1. Verifique se o Wi-Fi está ligado
 2. Tente usar dados móveis
-3. Limpe o cache do Safari (Configurações → Safari → Limpar Histórico)
+3. Limpe o cache do navegador:
+   - **Safari**: Configurações → Safari → Limpar Histórico
+   - **Chrome**: Menu → Histórico → Limpar dados de navegação
+   - **Outros**: Procure por "Limpar cache" nas configurações
+4. Tente em outro navegador
 
 ### Problema: Chat não funciona
 
@@ -169,12 +192,14 @@ Se tiver problemas:
 
 ## ✅ CHECKLIST PARA ALINE
 
-- [ ] Abrir Safari no iPhone
+- [ ] Abrir qualquer navegador no celular (Safari, Chrome, Firefox...)
 - [ ] Digitar: `senamfo.com.br:8081/gem`
 - [ ] Dashboard abriu? ✅
 - [ ] Adicionar à tela de início (opcional)
 - [ ] Testar o chat com uma pergunta
 - [ ] Pronto para usar! 🎉
+
+**Lembrete**: Funciona em qualquer navegador! 🎉
 
 ---
 
@@ -198,6 +223,6 @@ http://senamfo.com.br:8081/gem/
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
+**Última atualização**: 16 de Novembro de 2025
 **Versão**: 1.0.0
 
