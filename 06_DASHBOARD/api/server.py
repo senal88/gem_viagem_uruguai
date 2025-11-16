@@ -28,6 +28,8 @@ CORS(app)
 try:
     from api_endpoints import bp as car_rental_bp
     app.register_blueprint(car_rental_bp)
+    # Registrar também com prefixo /gem para compatibilidade
+    app.register_blueprint(car_rental_bp, url_prefix='/gem')
 except ImportError:
     print("⚠️  Módulo de aluguel de carros não disponível")
 
