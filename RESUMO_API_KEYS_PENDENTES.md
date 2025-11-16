@@ -24,7 +24,7 @@
 4. Crie chave de API
 5. Configure restrições (opcional)
 
-**Tempo**: ~5 minutos  
+**Tempo**: ~5 minutos
 **Custo**: Grátis ($200 créditos/mês)
 
 **Configurar**:
@@ -44,7 +44,7 @@ GOOGLE_MAPS_API_KEY=sua_chave_aqui
 3. Confirme email
 4. Copie API Key do dashboard
 
-**Tempo**: ~3 minutos  
+**Tempo**: ~3 minutos
 **Custo**: Grátis (60 req/min)
 
 **Configurar**:
@@ -64,7 +64,7 @@ OPENWEATHER_API_KEY=sua_chave_aqui
 3. Confirme email
 4. Copie API Key do dashboard
 
-**Tempo**: ~2 minutos  
+**Tempo**: ~2 minutos
 **Custo**: Grátis (1.500 req/mês)
 
 **Configurar**:
@@ -84,7 +84,7 @@ EXCHANGERATE_API_KEY=sua_chave_aqui
 3. Adicione método de pagamento
 4. Crie API Key
 
-**Tempo**: ~5 minutos  
+**Tempo**: ~5 minutos
 **Custo**: Pago
 
 **Configurar**:
@@ -104,7 +104,7 @@ OPENAI_API_KEY=sk-proj-...
 3. Adicione créditos
 4. Crie API Key
 
-**Tempo**: ~5 minutos  
+**Tempo**: ~5 minutos
 **Custo**: Pago
 
 **Configurar**:

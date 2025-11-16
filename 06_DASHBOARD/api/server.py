@@ -171,38 +171,53 @@ def chat_openai(message, history):
     """Chat com OpenAI"""
     try:
         from openai import OpenAI
-
-        client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-
+        
+        api_key = os.getenv('OPENAI_API_KEY')
+        
+        # Verificar se API key está configurada
+        if not api_key or api_key.strip() == '':
+            return "⚠️ OpenAI API Key não configurada. Configure OPENAI_API_KEY no arquivo .env para usar o chat com GPT-4."
+        
+        client = OpenAI(api_key=api_key)
+        
         messages = [{"role": "system", "content": SYSTEM_PROMPT}]
-
+        
         # Adicionar histórico
         for h in history:
             messages.append({"role": h['role'], "content": h['content']})
-
+        
         # Adicionar mensagem atual
         messages.append({"role": "user", "content": message})
-
+        
         response = client.chat.completions.create(
             model=os.getenv('OPENAI_MODEL', 'gpt-4-turbo-preview'),
             messages=messages,
             max_tokens=2000,
             temperature=0.7
         )
-
+        
         return response.choices[0].message.content
-
+        
     except ImportError:
         return "OpenAI SDK não instalado. Execute: pip install openai"
     except Exception as e:
-        return f"Erro ao processar com OpenAI: {str(e)}"
+        error_msg = str(e)
+        if "401" in error_msg or "API key" in error_msg:
+            return "⚠️ OpenAI API Key não configurada ou inválida. Configure OPENAI_API_KEY no arquivo .env. Veja o guia: 07_INTEGRACOES/GUIA_COMPLETO_API_KEYS.md"
+        return f"Erro ao processar com OpenAI: {error_msg}"
 
 def chat_anthropic(message, history):
     """Chat com Anthropic"""
     try:
         import anthropic
-
-        client = anthropic.Anthropic(api_key=os.getenv('ANTHROPIC_API_KEY'))
+        
+        api_key = os.getenv('ANTHROPIC_API_KEY')
+        
+        # Verificar se API key está configurada
+        if not api_key or api_key.strip() == '':
+            return "⚠️ Anthropic API Key não configurada. Configure ANTHROPIC_API_KEY no arquivo .env para usar o chat com Claude."
+        
+        client = anthropic.Anthropic(api_key=api_key)
 
         # Construir mensagens
         messages = []
@@ -224,14 +239,23 @@ def chat_anthropic(message, history):
     except ImportError:
         return "Anthropic SDK não instalado. Execute: pip install anthropic"
     except Exception as e:
-        return f"Erro ao processar com Anthropic: {str(e)}"
+        error_msg = str(e)
+        if "401" in error_msg or "API key" in error_msg or "credit balance" in error_msg:
+            return "⚠️ Anthropic API Key não configurada ou sem créditos. Configure ANTHROPIC_API_KEY no arquivo .env e adicione créditos. Veja o guia: 07_INTEGRACOES/GUIA_COMPLETO_API_KEYS.md"
+        return f"Erro ao processar com Anthropic: {error_msg}"
 
 def chat_gemini(message, history):
     """Chat com Gemini"""
     try:
         import google.generativeai as genai
-
-        genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+        
+        api_key = os.getenv('GOOGLE_API_KEY')
+        
+        # Verificar se API key está configurada
+        if not api_key or api_key.strip() == '':
+            return "⚠️ Google API Key não configurada. Configure GOOGLE_API_KEY no arquivo .env para usar o chat com Gemini."
+        
+        genai.configure(api_key=api_key)
 
         model = genai.GenerativeModel(
             model_name=os.getenv('GOOGLE_MODEL', 'gemini-2.5-pro'),
