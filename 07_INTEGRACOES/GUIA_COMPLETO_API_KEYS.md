@@ -279,7 +279,7 @@ OPENWEATHER_API_KEY=sua_chave_aqui
 EXCHANGERATE_API_KEY=sua_chave_aqui
 
 # Google AI (Gemini) - Já configurada
-GOOGLE_API_KEY=AIzaSyD7BUB4hBUCPsNAWdpecA2dZZ2zm02_OCs
+GOOGLE_API_KEY=SUA_GOOGLE_API_KEY_AQUI
 
 # OpenAI
 OPENAI_API_KEY=sua_chave_aqui

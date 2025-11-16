@@ -251,6 +251,6 @@ journalctl -u gemexpert -f
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
+**Última atualização**: 16 de Novembro de 2025
 **Versão**: 2.0.0 (com Sidebar)
 

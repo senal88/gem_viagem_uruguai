@@ -482,11 +482,11 @@ body {
     .sidebar {
         transform: translateX(0);
     }
-    
+
     .main-content {
         margin-left: var(--sidebar-width);
     }
-    
+
     .sidebar-toggle {
         display: none;
     }
@@ -497,24 +497,24 @@ body {
         width: 100%;
         max-width: 300px;
     }
-    
+
     .main-content {
         margin-left: 0;
         padding: 60px 15px 20px;
     }
-    
+
     .sidebar.active ~ .main-content {
         margin-left: 0;
     }
-    
+
     .dashboard-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .chat-container {
         height: calc(100vh - 150px);
     }
-    
+
     .nav-text {
         display: block;
     }

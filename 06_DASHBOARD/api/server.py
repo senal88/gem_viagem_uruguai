@@ -206,7 +206,7 @@ def get_itinerario():
             ]
         }
     ]
-    
+
     return jsonify({
         'days': days,
         'total_days': len(days)
