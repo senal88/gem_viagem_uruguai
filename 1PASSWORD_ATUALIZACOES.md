@@ -2,7 +2,7 @@
 
 ## 📋 REGISTROS PARA ATUALIZAR
 
-**Data**: 16 de Novembro de 2025  
+**Data**: 16 de Novembro de 2025
 **Nova Chave Google API**: `AIzaSyDpBm7CuSoB_zofE9-ySiSRiAs4iIk6fq0`
 
 ---
@@ -131,8 +131,8 @@ op item list --vault="1p_vps" --format=json | jq -r '.[] | select(.title | test(
 
 ## 📋 TEMPLATE COMPLETO PARA NOVO ITEM
 
-**Título**: GEM Expert - Google API Key  
-**Tipo**: API Credential  
+**Título**: GEM Expert - Google API Key
+**Tipo**: API Credential
 **Vault**: Personal
 
 **Campos Principais**:
@@ -166,6 +166,6 @@ Execute para gerar instruções:
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
+**Última atualização**: 16 de Novembro de 2025
 **Status**: Pronto para atualização manual no 1Password
 

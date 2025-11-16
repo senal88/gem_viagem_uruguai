@@ -46,10 +46,10 @@ ITEMS=$(op item list --format=json 2>/dev/null | jq -r '.[] | select(.title | te
 if [ -z "$ITEMS" ]; then
     echo -e "${YELLOW}⚠️  Nenhum item encontrado automaticamente${NC}"
     echo -e "${BLUE}Vamos criar/atualizar manualmente...${NC}\n"
-    
+
     # Criar/atualizar item principal
     echo -e "${BLUE}📝 Criando/Atualizando item 'GEM Expert - Google API Key'...${NC}"
-    
+
     # Template JSON para criar item
     ITEM_JSON=$(cat <<EOF
 {
@@ -110,11 +110,11 @@ if [ -z "$ITEMS" ]; then
 }
 EOF
 )
-    
+
     echo -e "${GREEN}✅ Item preparado${NC}"
     echo -e "${YELLOW}⚠️  Para criar via CLI, use:${NC}"
     echo -e "${BLUE}op item create --template='API Credential' --title='GEM Expert - Google API Key' --vault='Personal'${NC}\n"
-    
+
 else
     echo -e "${GREEN}✅ Encontrados itens relacionados${NC}"
     echo "$ITEMS" | while read -r item_id; do
