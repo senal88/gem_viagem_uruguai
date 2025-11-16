@@ -478,7 +478,7 @@ Fonte 3 (Complementar): Dicas do Uruguai → Contexto histórico
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ COMPLETO E VALIDADO
 

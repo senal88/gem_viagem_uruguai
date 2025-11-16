@@ -1,4 +1,5 @@
 # 📝 Categorias de Perguntas Inteligentes
+
 ## GEM Expert - Viagem Aline & Luiz Fernando | Uruguai 2025
 
 ---
@@ -28,12 +29,14 @@ Este documento categoriza tipos de perguntas que o GEM Expert pode receber, defi
 #### Padrões de Reconhecimento
 
 **Palavras-chave:**
+
 - clima, tempo, temperatura, chuva, vento, sol, nublado
 - previsão, previsão do tempo, como está o tempo
 - frio, quente, calor, fresco
 - guarda-chuva, casaco, roupas
 
 **Padrões de Pergunta:**
+
 ```
 - "Qual a previsão para [evento/local/data]?"
 - "Como está o tempo [hoje/amanhã/agora]?"
@@ -89,12 +92,14 @@ Este documento categoriza tipos de perguntas que o GEM Expert pode receber, defi
 > "Perfeito! Acabo de verificar a previsão para o Fasano Las Piedras hoje (Sábado, 22/11) às 16h30:
 >
 > **Clima Esperado:**
+>
 > - Temperatura: 22-24°C
 > - Céu: Parcialmente nublado a ensolarado
 > - Vento: Moderado (10-15 km/h)
 > - Chance chuva: <10%
 >
 > **Recomendações:**
+>
 > - O traje esporte fino está perfeito
 > - Levar pashmina ou estola (vento ao anoitecer)
 > - Protetor solar se houver foto ao ar livre"
@@ -106,12 +111,14 @@ Este documento categoriza tipos de perguntas que o GEM Expert pode receber, defi
 #### Padrões de Reconhecimento
 
 **Palavras-chave:**
+
 - tempo, distância, quanto tempo leva
 - trânsito, tráfego, congestionado
 - rota, caminho, como chegar
 - sair, partir, que horas sair
 
 **Padrões de Pergunta:**
+
 ```
 - "Quanto tempo leva de [origem] para [destino]?"
 - "Como está o trânsito [agora/para [horário]]?"
@@ -149,7 +156,7 @@ Este documento categoriza tipos de perguntas que o GEM Expert pode receber, defi
 - Rota recomendada: [rota]
 
 [RECOMENDAÇÃO LOGÍSTICA]
-"Saiam do [ORIGEM] por volta das [HORA_SAIDA] 
+"Saiam do [ORIGEM] por volta das [HORA_SAIDA]
 para chegarem com [MARGEM] de antecedência."
 ```
 
@@ -161,11 +168,13 @@ para chegarem com [MARGEM] de antecedência."
 > "Para chegarem ao L'Incanto às 18h30 com calma, recomendo:
 >
 > **Tempo de Deslocamento:**
+>
 > - Distância: ~5 km
 > - Tempo estimado: 15-20 minutos (sem trânsito)
 > - Trânsito esperado às 18h: Moderado
 >
 > **Recomendação:**
+>
 > - Saiam do Barradas Hotel por volta das **18h00**
 > - Chegada estimada: 18h15-18h20
 > - Tempo para estacionar e chegar ao restaurante: 10 min
@@ -178,12 +187,14 @@ para chegarem com [MARGEM] de antecedência."
 #### Padrões de Reconhecimento
 
 **Palavras-chave:**
+
 - aberto, fechado, funcionamento
 - horário, que horas, até que horas
 - visita, visitar, acesso
 - último acesso, fecha
 
 **Padrões de Pergunta:**
+
 ```
 - "[Local] está aberto [hoje/agora]?"
 - "Até que horas [local] fica aberto?"
@@ -238,12 +249,14 @@ Vocês [PODEM/NÃO PODEM] visitar."
 > "Verifiquei o horário de funcionamento da Casapueblo hoje:
 >
 > **Horários:**
+>
 > - Abertura: 10h00
 > - Fechamento: Pôr do sol (~19h00)
 > - Último acesso: ~18h00
 > - Status: ✅ ABERTA agora
 >
 > **Recomendação:**
+>
 > - Para a 'Cerimônia do Sol', cheguem até 16h00
 > - Explorem até 18h30
 > - Participem da cerimônia às 19h00
@@ -256,12 +269,14 @@ Vocês [PODEM/NÃO PODEM] visitar."
 #### Padrões de Reconhecimento
 
 **Palavras-chave:**
+
 - cotação, câmbio, taxa
 - trocar dinheiro, casa de câmbio
 - real, peso, dólar
 - melhor taxa, onde trocar
 
 **Padrões de Pergunta:**
+
 ```
 - "Qual a cotação do Real hoje?"
 - "Onde trocar dinheiro com melhor taxa?"
@@ -314,14 +329,17 @@ Recomendo trocar [QUANTIDADE] agora."
 > "Verifiquei a cotação atual:
 >
 > **Câmbio Hoje (23/11):**
+>
 > - Taxa Comercial (Wise): 1 BRL = 7.40-7.51 UYU
 > - Taxa em casas de câmbio: 7.30-7.35 UYU (pior)
 >
 > **Locais Recomendados:**
+>
 > 1. **Caixas Eletrônicos** (MELHOR): Taxa automática melhor
 > 2. Casas de câmbio: Taxa pior (~5% de diferença)
 >
 > **Recomendação:**
+>
 > - Sacar no caixa eletrônico AGORA (melhor taxa, 24h)
 > - Levar R$500-1000 para Primuseum, almoço e compras"
 
@@ -332,12 +350,14 @@ Recomendo trocar [QUANTIDADE] agora."
 #### Padrões de Reconhecimento
 
 **Palavras-chave:**
+
 - reserva, disponibilidade, mesa
 - conseguir, tem vaga, lotado
 - como reservar, telefone
 - aceita reserva, precisa reservar
 
 **Padrões de Pergunta:**
+
 ```
 - "Conseguimos mesa em [restaurante] para [data/hora]?"
 - "[Restaurante] tem disponibilidade [hoje/amanhã]?"
@@ -391,15 +411,18 @@ Se não disponível: Sugerir alternativas similares
 > "Verifiquei a disponibilidade no Lo de Tere:
 >
 > **Status:**
+>
 > - Lo de Tere não possui sistema de reserva online
 > - **É PRECISO LIGAR DIRETO** para confirmar
 >
 > **Contato:**
+>
 > - Telefone: +598 4244 0492
 > - Horário: Aberto até ~23h30
 > - Desconto: Antes de 20h30 (aplica)
 >
 > **Recomendação:**
+>
 > - Liguem AGORA (é sexta-feira, peak)
 > - Peçam mesa para 20h00-20h30
 > - Confirmem antes de sair do hotel"
@@ -411,12 +434,14 @@ Se não disponível: Sugerir alternativas similares
 #### Padrões de Reconhecimento
 
 **Palavras-chave:**
+
 - onde, como, localização
 - próximo, perto, próximo de
 - estacionamento, banco, farmácia
 - como fazer, como chegar
 
 **Padrões de Pergunta:**
+
 ```
 - "Onde tem [serviço] [próximo]?"
 - "Como [ação] [no Uruguai/em [cidade]]?"
@@ -469,16 +494,19 @@ Se não disponível: Sugerir alternativas similares
 > "Encontrei estacionamento próximo ao Mercado del Puerto:
 >
 > **Localização:**
+>
 > - Estacionamento próprio do Mercado del Puerto
 > - Endereço: Próximo ao porto, Cidade Velha
 > - Distância: A pé do mercado
 >
 > **Informações:**
+>
 > - Tipo: Estacionamento pago
 > - Horário: Disponível durante funcionamento do mercado
 > - Observação: Pode ficar cheio em horários de pico
 >
 > **Recomendação:**
+>
 > - Cheguem cedo (antes das 13h) para garantir vaga
 > - Alternativa: Estacionamento público próximo à Rambla"
 
@@ -506,7 +534,6 @@ Se não disponível: Sugerir alternativas similares
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ COMPLETO E VALIDADO
-

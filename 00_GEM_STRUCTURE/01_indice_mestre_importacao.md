@@ -30,7 +30,11 @@ Este documento serve como **índice mestre** para importação de todos os arqui
 |-------|---------|------|------------|--------|-----------|
 | 1 | `00_nomenclatura_e_melhores_praticas.md` | Estrutura | CRÍTICO | ✅ Pronto | Define padrões e convenções |
 | 2 | `01_indice_mestre_importacao.md` | Estrutura | CRÍTICO | ✅ Pronto | Este documento |
-| 3 | `02_checklist_validacao.md` | Estrutura | IMPORTANTE | ⏳ Pendente | Checklist de validação pré-importação |
+| 3 | `02_checklist_validacao.md` | Estrutura | IMPORTANTE | ✅ Pronto | Checklist de validação pré-importação |
+| 4 | `03_resumo_executivo.md` | Estrutura | IMPORTANTE | ✅ Pronto | Resumo executivo do projeto |
+| 5 | `04_pendencias_projeto.md` | Estrutura | IMPORTANTE | ✅ Pronto | Pendências e ações do projeto |
+| 6 | `05_analise_integracao_roadmap.md` | Estrutura | IMPORTANTE | ✅ Pronto | Análise de integração e roadmap |
+| 7 | `06_template_gem_viagem.md` | Estrutura | REFERENCIA | ✅ Pronto | Template para criar novos GEMs |
 
 ---
 
@@ -38,11 +42,11 @@ Este documento serve como **índice mestre** para importação de todos os arqui
 
 | Ordem | Arquivo | Tipo | Prioridade | Status | Descrição |
 |-------|---------|------|------------|--------|-----------|
-| 4 | `01_dossie_viagem_completo.md` | Base | CRÍTICO | ⏳ A criar | Dossiê completo consolidado |
-| 5 | `02_itinerario_detalhado.md` | Base | CRÍTICO | ⏳ A criar | Itinerário dia a dia detalhado |
-| 6 | `03_reservas_confirmadas.md` | Base | CRÍTICO | ⏳ A criar | Todas as reservas confirmadas |
-| 7 | `04_logistica_transporte.md` | Base | CRÍTICO | ⏳ A criar | Logística de transporte e condução |
-| 8 | `05_perfil_viajantes.md` | Base | IMPORTANTE | ⏳ A criar | Perfil e preferências dos viajantes |
+| 8 | `01_dossie_viagem_completo.md` | Base | CRÍTICO | ✅ Pronto | Dossiê completo consolidado |
+| 9 | `02_itinerario_detalhado.md` | Base | CRÍTICO | ✅ Pronto | Itinerário dia a dia detalhado |
+| 10 | `03_reservas_confirmadas.md` | Base | CRÍTICO | ✅ Pronto | Todas as reservas confirmadas |
+| 11 | `04_logistica_transporte.md` | Base | CRÍTICO | ✅ Pronto | Logística de transporte e condução |
+| 12 | `05_perfil_viajantes.md` | Base | IMPORTANTE | ✅ Pronto | Perfil e preferências dos viajantes |
 
 **Dependências Fase 2**: Nenhuma (pode ser importada independentemente)
 
@@ -52,10 +56,11 @@ Este documento serve como **índice mestre** para importação de todos os arqui
 
 | Ordem | Arquivo | Tipo | Prioridade | Status | Descrição |
 |-------|---------|------|------------|--------|-----------|
-| 9 | `01_protocolo_busca_web.md` | Dinâmico | CRÍTICO | ⏳ A criar | Protocolo completo de busca na web |
-| 10 | `02_gatilhos_validacao.md` | Dinâmico | CRÍTICO | ⏳ A criar | Gatilhos que disparam busca |
-| 11 | `03_categorias_perguntas.md` | Dinâmico | IMPORTANTE | ⏳ A criar | Categorização de perguntas |
-| 12 | `04_fontes_conhecimento_validadas.md` | Dinâmico | IMPORTANTE | ⏳ A criar | Fontes validadas e confiáveis |
+| 13 | `01_protocolo_busca_web.md` | Dinâmico | CRÍTICO | ✅ Pronto | Protocolo completo de busca na web |
+| 14 | `02_gatilhos_validacao.md` | Dinâmico | CRÍTICO | ✅ Pronto | Gatilhos que disparam busca |
+| 15 | `03_categorias_perguntas.md` | Dinâmico | IMPORTANTE | ✅ Pronto | Categorização de perguntas |
+| 16 | `04_fontes_conhecimento_validadas.md` | Dinâmico | IMPORTANTE | ✅ Pronto | Fontes validadas e confiáveis |
+| 17 | `05_analise_cambio_brl_uyu.md` | Dinâmico | IMPORTANTE | ✅ Pronto | Análise comparativa de câmbio |
 
 **Dependências Fase 3**: Fase 2 (base de conhecimento)
 
@@ -65,9 +70,11 @@ Este documento serve como **índice mestre** para importação de todos os arqui
 
 | Ordem | Arquivo | Tipo | Prioridade | Status | Descrição |
 |-------|---------|------|------------|--------|-----------|
-| 13 | `01_workflow_concierge_principal.json` | Workflow | CRÍTICO | ✅ Existe | Workflow principal do concierge |
-| 14 | `02_workflow_backup_contingencia.json` | Workflow | IMPORTANTE | ⏳ A criar | Workflow para contingências |
-| 15 | `03_exemplos_interacao.md` | Workflow | IMPORTANTE | ⏳ A criar | Exemplos de interação validados |
+| 18 | `01_workflow_concierge_principal.json` | Workflow | CRÍTICO | ✅ Pronto | Workflow principal do concierge |
+| 19 | `02_instrucoes_gem_formatadas.md` | Workflow | CRÍTICO | ✅ Pronto | Instruções formatadas para GEM |
+| 20 | `03_guia_importacao_gem_completo.md` | Workflow | IMPORTANTE | ✅ Pronto | Guia completo de importação |
+| 21 | `04_campos_essenciais_gem.md` | Workflow | IMPORTANTE | ✅ Pronto | Campos essenciais (referência rápida) |
+| 22 | `README.md` | Workflow | IMPORTANTE | ✅ Pronto | Documentação da pasta workflows |
 
 **Dependências Fase 4**: Fase 2 e Fase 3
 
@@ -92,7 +99,11 @@ Este documento serve como **índice mestre** para importação de todos os arqui
 00_GEM_STRUCTURE/
 ├── 00_nomenclatura_e_melhores_praticas.md (INDEPENDENTE)
 ├── 01_indice_mestre_importacao.md (INDEPENDENTE)
-└── 02_checklist_validacao.md (INDEPENDENTE)
+├── 02_checklist_validacao.md (INDEPENDENTE)
+├── 03_resumo_executivo.md (INDEPENDENTE)
+├── 04_pendencias_projeto.md (INDEPENDENTE)
+├── 05_analise_integracao_roadmap.md (DEPENDE: contexto_dinamico)
+└── 06_template_gem_viagem.md (INDEPENDENTE)
 
 01_BASE_CONHECIMENTO/
 ├── 01_dossie_viagem_completo.md (INDEPENDENTE)
@@ -105,12 +116,15 @@ Este documento serve como **índice mestre** para importação de todos os arqui
 ├── 01_protocolo_busca_web.md (DEPENDE: base_conhecimento)
 ├── 02_gatilhos_validacao.md (DEPENDE: protocolo_busca)
 ├── 03_categorias_perguntas.md (DEPENDE: protocolo_busca)
-└── 04_fontes_conhecimento_validadas.md (INDEPENDENTE)
+├── 04_fontes_conhecimento_validadas.md (INDEPENDENTE)
+└── 05_analise_cambio_brl_uyu.md (INDEPENDENTE)
 
 03_WORKFLOWS/
 ├── 01_workflow_concierge_principal.json (DEPENDE: base + contexto)
-├── 02_workflow_backup_contingencia.json (DEPENDE: workflow_principal)
-└── 03_exemplos_interacao.md (DEPENDE: workflow_principal)
+├── 02_instrucoes_gem_formatadas.md (DEPENDE: base + contexto)
+├── 03_guia_importacao_gem_completo.md (DEPENDE: instrucoes)
+├── 04_campos_essenciais_gem.md (DEPENDE: instrucoes)
+└── README.md (INDEPENDENTE)
 
 04_DADOS_ESTRUTURADOS/
 ├── 01_hoteis_montevideo.json (INDEPENDENTE)
@@ -203,22 +217,22 @@ Este documento serve como **índice mestre** para importação de todos os arqui
 
 | Fase | Arquivos Totais | Prontos | Pendentes | Progresso |
 |------|----------------|---------|-----------|-----------|
-| Fase 1 | 3 | 2 | 1 | 67% |
-| Fase 2 | 5 | 0 | 5 | 0% |
-| Fase 3 | 4 | 0 | 4 | 0% |
-| Fase 4 | 3 | 1 | 2 | 33% |
+| Fase 1 | 7 | 7 | 0 | 100% |
+| Fase 2 | 5 | 5 | 0 | 100% |
+| Fase 3 | 5 | 5 | 0 | 100% |
+| Fase 4 | 5 | 5 | 0 | 100% |
 | Fase 5 | 4 | 0 | 4 | 0% |
-| **TOTAL** | **19** | **3** | **16** | **16%** |
+| **TOTAL** | **26** | **22** | **4** | **85%** |
 
 ---
 
 ## 🚀 PRÓXIMOS PASSOS
 
 1. ✅ Criar estrutura de pastas completa
-2. ⏳ Reestruturar documentos existentes seguindo nomenclatura
-3. ⏳ Criar documentos faltantes da Fase 2
-4. ⏳ Criar documentos faltantes da Fase 3
-5. ⏳ Criar documentos faltantes da Fase 5
+2. ✅ Reestruturar documentos existentes seguindo nomenclatura
+3. ✅ Criar documentos faltantes da Fase 2
+4. ✅ Criar documentos faltantes da Fase 3
+5. ⏳ Criar documentos faltantes da Fase 5 (dados estruturados JSON)
 6. ⏳ Validar todos os documentos
 7. ⏳ Executar importação no GEM Expert
 
@@ -246,5 +260,5 @@ Se houver problemas de dependência, pode-se importar em ordem alfabética dentr
 ---
 
 **Última atualização**: 16 de Novembro de 2025
-**Versão**: 1.0.0
-**Status**: ✅ ESTRUTURA DEFINIDA - AGUARDANDO CRIAÇÃO DE DOCUMENTOS
+**Versão**: 1.1.0
+**Status**: ✅ 85% COMPLETO - FALTAM APENAS DADOS ESTRUTURADOS (FASE 5)

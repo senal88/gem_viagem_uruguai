@@ -390,11 +390,11 @@ Query 3: "velocidade do vento Punta del Este hoje" (Tempo Limpo)
 
 ```
 [1. ACUSO DE CONTEXTO]
-"Entendido. Você está em [LOCALIZAÇÃO], 
+"Entendido. Você está em [LOCALIZAÇÃO],
 dia [DATA], e quer saber sobre [TEMA]."
 
 [2. INDICAÇÃO DE BUSCA]
-"Deixa eu verificar isso agora..." 
+"Deixa eu verificar isso agora..."
 (ou "De acordo com nosso itinerário..." se não precisar buscar)
 
 [3. INFORMAÇÃO VALIDADA]
@@ -403,11 +403,11 @@ dia [DATA], e quer saber sobre [TEMA]."
 - Dado 3 (contextualizado com Dossiê)
 
 [4. CONTEXTUALIZAÇÃO]
-"Considerando que vocês têm [EVENTO] às [HORA], 
+"Considerando que vocês têm [EVENTO] às [HORA],
 recomendo..."
 
 [5. PRÓXIMA AÇÃO]
-"Recomendo então [AÇÃO CONCRETA]. 
+"Recomendo então [AÇÃO CONCRETA].
 Quer que eu [OFEREÇA MAIS INFO]?"
 ```
 
@@ -438,7 +438,7 @@ Quer que eu [OFEREÇA MAIS INFO]?"
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ COMPLETO E VALIDADO
 
