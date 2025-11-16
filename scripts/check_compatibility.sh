@@ -66,11 +66,11 @@ echo -e "${BLUE}📦 Verificando Dependências Críticas:${NC}\n"
 check_package() {
     local package=$1
     local name=$2
-    
+
     if python3 -c "import $package" 2>/dev/null; then
         local version=$(python3 -c "import $package; print(getattr($package, '__version__', 'installed'))" 2>/dev/null || echo "installed")
         echo -e "${GREEN}✅ ${name}: ${version}${NC}"
-        
+
         # Verificar compatibilidade de arquitetura
         if [[ "$CURRENT_ENV" == "macOS" && "$ARCH" == "arm64" ]]; then
             # Verificar se pacote foi compilado para ARM64
@@ -107,7 +107,7 @@ echo -e "\n${BLUE}🏗️  Compatibilidade de Arquitetura:${NC}\n"
 if [[ "$CURRENT_ENV" == "macOS" && "$ARCH" == "arm64" ]]; then
     echo -e "${GREEN}✅ macOS Silicon (ARM64)${NC}"
     echo -e "${BLUE}   Verificando compatibilidade ARM64...${NC}"
-    
+
     # Verificar se pacotes foram compilados corretamente
     python3 -c "
 import platform
@@ -117,7 +117,7 @@ print(f'Plataforma: {platform.platform()}')
 print(f'Arquitetura: {platform.machine()}')
 print(f'Processador: {platform.processor()}')
 " || true
-    
+
     echo -e "${GREEN}✅ Compatibilidade ARM64 verificada${NC}"
 elif [[ "$CURRENT_ENV" == "Ubuntu/Linux" ]]; then
     echo -e "${GREEN}✅ Ubuntu/Linux (${ARCH})${NC}"
