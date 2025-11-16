@@ -1,0 +1,47 @@
+🇺🇾 Dashboard da Viagem Uruguai - GEM Expert
+
+Olá Aline! 👋
+
+O dashboard da nossa viagem está pronto! Aqui está como acessar:
+
+📱 NO IPHONE:
+
+1. Abra o Safari
+2. Digite: senamfo.com.br:8081/gem
+3. Pronto! O dashboard abre
+
+💡 DICA: Adicione à tela de início para acesso rápido:
+   - Toque no botão de compartilhar (□↑)
+   - "Adicionar à Tela de Início"
+   - Nome: "GEM Expert"
+   - "Adicionar"
+
+🎯 O QUE TEM NO DASHBOARD:
+
+✅ Próximo evento da viagem
+✅ Clima em tempo real
+✅ Câmbio atualizado
+✅ Timeline completa do itinerário
+✅ Chat com GEM Expert (concierge de viagem)
+✅ Contatos essenciais
+✅ Reservas confirmadas
+
+💬 COMO USAR O CHAT:
+
+1. Role até "Converse com o GEM Expert"
+2. Selecione "Gemini 2.5 Pro"
+3. Digite sua pergunta
+4. Envie e receba respostas!
+
+Exemplos:
+- "Qual a previsão do tempo para hoje?"
+- "Que horas é o próximo evento?"
+- "Qual a cotação do Real hoje?"
+
+🔗 LINK DIRETO:
+http://senamfo.com.br:8081/gem/
+
+Qualquer dúvida, me chama! 😊
+
+Luiz Fernando
+
