@@ -1,0 +1,86 @@
+{
+  "contacts": [
+    {
+      "id": "CONT001",
+      "name": "Primuseum",
+      "type": "restaurant",
+      "phone": "+598 99 2176 45",
+      "email": null,
+      "location": "Montevidéu",
+      "when_to_use": "Reservas, mudanças, informações sobre show de tango",
+      "notes": "Jantar e Show de Tango. Reserva confirmada para 23/11 às 20:30"
+    },
+    {
+      "id": "CONT002",
+      "name": "Casapueblo",
+      "type": "attraction",
+      "phone": "+598 4257 8611",
+      "email": null,
+      "location": "Punta Ballena, Punta del Este",
+      "when_to_use": "Horários, informações sobre visitação, Cerimônia do Sol",
+      "notes": "Museu e atração turística. Imperdível ao pôr do sol."
+    },
+    {
+      "id": "CONT003",
+      "name": "Lo de Tere",
+      "type": "restaurant",
+      "phone": "+598 4244 0492",
+      "email": null,
+      "location": "Punta del Este",
+      "when_to_use": "Reservas para jantar",
+      "notes": "Restaurante recomendado. Desconto antes de 20h30."
+    },
+    {
+      "id": "CONT004",
+      "name": "Aeroporto Carrasco",
+      "type": "airport",
+      "phone": "+598 2 2604 0000",
+      "email": null,
+      "location": "Montevidéu",
+      "when_to_use": "Informações gerais sobre voos, check-in, bagagem",
+      "notes": "Aeroporto internacional de Montevidéu"
+    },
+    {
+      "id": "CONT005",
+      "name": "Barradas Parque Hotel & Spa",
+      "type": "hotel",
+      "phone": null,
+      "email": null,
+      "location": "Punta del Este",
+      "when_to_use": "Check-in, check-out, serviços do hotel",
+      "notes": "Reserva #6417055860, PIN: 2921. Check-in 20/11, Check-out 23/11"
+    },
+    {
+      "id": "CONT006",
+      "name": "LATAM Airlines",
+      "type": "airline",
+      "phone": "+55 11 4002-5700",
+      "email": null,
+      "location": "Brasil/Uruguai",
+      "when_to_use": "Informações sobre voos, bagagem, check-in online",
+      "notes": "Companhia aérea. Reserva DYYFYZ"
+    }
+  ],
+  "emergency_contacts": [
+    {
+      "id": "EMERG001",
+      "name": "Polícia",
+      "phone": "911",
+      "type": "emergency"
+    },
+    {
+      "id": "EMERG002",
+      "name": "Emergências Médicas",
+      "phone": "911",
+      "type": "emergency"
+    },
+    {
+      "id": "EMERG003",
+      "name": "Consulado Brasileiro em Montevidéu",
+      "phone": "+598 2 711 0049",
+      "type": "consulate",
+      "address": "Av. 18 de Julio 853, Montevidéu"
+    }
+  ]
+}
+

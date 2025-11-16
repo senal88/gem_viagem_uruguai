@@ -34,7 +34,7 @@ python3 api/server.py
    ```bash
    # macOS/Linux
    ifconfig | grep "inet " | grep -v 127.0.0.1
-   
+
    # Ou use:
    ipconfig getifaddr en0
    ```
@@ -133,6 +133,6 @@ FLASK_ENV=production python3 api/server.py
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
+**Última atualização**: 16 de Novembro de 2025
 **Versão**: 1.0.0
 

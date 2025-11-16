@@ -1,0 +1,292 @@
+{
+  "trip": {
+    "travelers": ["Aline Torres", "Luiz Fernando Sena"],
+    "period": {
+      "start": "2025-11-18",
+      "end": "2025-11-25",
+      "days": 8
+    },
+    "destinations": ["Montevidéu", "Punta del Este"]
+  },
+  "timeline": [
+    {
+      "day": 1,
+      "date": "2025-11-18",
+      "weekday": "Terça-feira",
+      "location": "Montevidéu",
+      "events": [
+        {
+          "time": "10:35",
+          "type": "arrival",
+          "title": "Chegada Aeroporto Carrasco",
+          "details": "LATAM - Desembarque e retirada de bagagem",
+          "status": "confirmed"
+        },
+        {
+          "time": "11:00-11:30",
+          "type": "logistics",
+          "title": "Retirada do Carro",
+          "details": "Booking.com - Aeroporto Carrasco",
+          "status": "pending"
+        },
+        {
+          "time": "12:00-13:00",
+          "type": "checkin",
+          "title": "Check-in Hotel",
+          "details": "Punta Carretas/Pocitos - Hotel a confirmar",
+          "status": "pending"
+        },
+        {
+          "time": "14:00-15:00",
+          "type": "meal",
+          "title": "Almoço",
+          "details": "Mercado del Puerto - Tradicional",
+          "status": "suggestion"
+        },
+        {
+          "time": "15:00-17:00",
+          "type": "activity",
+          "title": "Tour Montevidéu",
+          "details": "Ônibus Turístico OU Tour de Carro",
+          "status": "suggestion"
+        },
+        {
+          "time": "20:00+",
+          "type": "activity",
+          "title": "Jantar/Noite",
+          "details": "Cassino Carrasco - Experiência elegante",
+          "status": "suggestion"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2025-11-19",
+      "weekday": "Quarta-feira",
+      "location": "Montevidéu",
+      "events": [
+        {
+          "time": "09:30",
+          "type": "reservation",
+          "title": "Pizzorno Tour",
+          "details": "Tour completo + Almoço - Transfer incluído",
+          "status": "confirmed",
+          "reservation_id": "RES001"
+        },
+        {
+          "time": "14:30",
+          "type": "logistics",
+          "title": "Retorno ao Hotel",
+          "details": "Transfer incluído",
+          "status": "confirmed"
+        },
+        {
+          "time": "Tarde/Noite",
+          "type": "free",
+          "title": "Livre",
+          "details": "Descanso ou Rambla",
+          "status": "free"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2025-11-20",
+      "weekday": "Quinta-feira",
+      "location": "Montevidéu → Punta del Este",
+      "events": [
+        {
+          "time": "Manhã",
+          "type": "logistics",
+          "title": "Check-out Montevidéu",
+          "details": "Hotel a confirmar",
+          "status": "pending"
+        },
+        {
+          "time": "10:00-12:00",
+          "type": "travel",
+          "title": "Viagem para Punta del Este",
+          "details": "140 km - ~2h de carro",
+          "status": "planned"
+        },
+        {
+          "time": "12:00-13:00",
+          "type": "checkin",
+          "title": "Check-in Barradas Hotel",
+          "details": "Reserva #6417055860, PIN: 2921",
+          "status": "confirmed"
+        },
+        {
+          "time": "Tarde",
+          "type": "free",
+          "title": "Livre / Exploração",
+          "details": "Porto de PDE, instalação",
+          "status": "free"
+        },
+        {
+          "time": "18:30",
+          "type": "reservation",
+          "title": "Pré-Wedding L'Incanto",
+          "details": "Dress: Casual Chique",
+          "status": "confirmed",
+          "reservation_id": "RES002"
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "date": "2025-11-21",
+      "weekday": "Sexta-feira",
+      "location": "Punta del Este",
+      "events": [
+        {
+          "time": "Manhã",
+          "type": "activity",
+          "title": "City Tour de Carro",
+          "details": "Porto, Los Dedos",
+          "status": "suggestion"
+        },
+        {
+          "time": "Tarde",
+          "type": "activity",
+          "title": "Casapueblo",
+          "details": "Cerimônia do Sol ao pôr do sol",
+          "status": "suggestion"
+        },
+        {
+          "time": "Noite",
+          "type": "meal",
+          "title": "Jantar",
+          "details": "Lo de Tere (sugestão)",
+          "status": "suggestion"
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "date": "2025-11-22",
+      "weekday": "Sábado",
+      "location": "Punta del Este",
+      "events": [
+        {
+          "time": "Manhã",
+          "type": "free",
+          "title": "Livre",
+          "details": "Descanso, praia",
+          "status": "free"
+        },
+        {
+          "time": "16:30",
+          "type": "reservation",
+          "title": "Casamento Fasano",
+          "details": "Dress: Esporte Fino",
+          "status": "confirmed",
+          "reservation_id": "RES003"
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "date": "2025-11-23",
+      "weekday": "Domingo",
+      "location": "Punta del Este → Montevidéu",
+      "events": [
+        {
+          "time": "Manhã",
+          "type": "free",
+          "title": "Livre",
+          "details": "Check-out Barradas",
+          "status": "free"
+        },
+        {
+          "time": "Tarde",
+          "type": "travel",
+          "title": "Viagem para Montevidéu",
+          "details": "~2h de carro",
+          "status": "planned"
+        },
+        {
+          "time": "Tarde",
+          "type": "checkin",
+          "title": "Check-in Montevidéu",
+          "details": "Hotel a confirmar",
+          "status": "pending"
+        },
+        {
+          "time": "20:30",
+          "type": "reservation",
+          "title": "Primuseum",
+          "details": "Jantar e Show de Tango",
+          "status": "confirmed",
+          "reservation_id": "RES004"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "date": "2025-11-24",
+      "weekday": "Segunda-feira",
+      "location": "Montevidéu",
+      "events": [
+        {
+          "time": "10:30",
+          "type": "reservation",
+          "title": "Bouza Tour",
+          "details": "Tour completo + Almoço - Transfer incluído",
+          "status": "confirmed",
+          "reservation_id": "RES005"
+        },
+        {
+          "time": "14:00",
+          "type": "logistics",
+          "title": "Retorno ao Hotel",
+          "details": "Transfer incluído",
+          "status": "confirmed"
+        },
+        {
+          "time": "Tarde",
+          "type": "free",
+          "title": "Livre",
+          "details": "Últimas compras, Punta Carretas Shopping",
+          "status": "free"
+        },
+        {
+          "time": "Noite",
+          "type": "meal",
+          "title": "Jantar Leve",
+          "details": "Arrumar malas",
+          "status": "suggestion"
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "date": "2025-11-25",
+      "weekday": "Terça-feira",
+      "location": "Montevidéu → Brasil",
+      "events": [
+        {
+          "time": "23:30-00:00",
+          "type": "logistics",
+          "title": "Devolução do Carro",
+          "details": "Aeroporto Carrasco",
+          "status": "pending"
+        },
+        {
+          "time": "02:10",
+          "type": "departure",
+          "title": "Partida",
+          "details": "LATAM - Aeroporto Carrasco",
+          "status": "confirmed"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_days": 8,
+    "confirmed_reservations": 5,
+    "pending_items": 3,
+    "suggestions": 8
+  }
+}
+

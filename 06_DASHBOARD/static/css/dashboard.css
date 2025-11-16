@@ -494,7 +494,7 @@ body {
         max-width: 800px;
         margin: 0 auto;
     }
-    
+
     .actions-grid {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -505,7 +505,7 @@ body {
     .header {
         padding-top: max(1rem, env(safe-area-inset-top));
     }
-    
+
     .main-container {
         padding-bottom: max(1rem, env(safe-area-inset-bottom));
     }

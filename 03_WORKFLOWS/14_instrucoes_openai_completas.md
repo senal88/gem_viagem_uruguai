@@ -263,7 +263,7 @@ Para eventos críticos, valide automaticamente antes do evento:
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ PRONTO PARA OPENAI
 

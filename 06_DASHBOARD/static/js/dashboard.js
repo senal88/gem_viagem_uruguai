@@ -71,22 +71,22 @@ function initDashboard() {
 function initClock() {
     const updateClock = () => {
         const now = new Date();
-        const dateStr = now.toLocaleDateString('pt-BR', { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
+        const dateStr = now.toLocaleDateString('pt-BR', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
         });
-        const timeStr = now.toLocaleTimeString('pt-BR', { 
-            hour: '2-digit', 
-            minute: '2-digit' 
+        const timeStr = now.toLocaleTimeString('pt-BR', {
+            hour: '2-digit',
+            minute: '2-digit'
         });
-        
-        document.getElementById('current-date').textContent = 
+
+        document.getElementById('current-date').textContent =
             dateStr.charAt(0).toUpperCase() + dateStr.slice(1);
         document.getElementById('current-time').textContent = timeStr;
     };
-    
+
     updateClock();
     setInterval(updateClock, 1000);
 }
@@ -95,7 +95,7 @@ function initClock() {
 function loadNextEvent() {
     const now = new Date();
     const today = now.toISOString().split('T')[0];
-    
+
     // Encontrar próximo evento
     const upcomingEvents = tripData.reservations
         .filter(event => event.date >= today)
@@ -103,14 +103,14 @@ function loadNextEvent() {
             if (a.date !== b.date) return a.date.localeCompare(b.date);
             return a.time.localeCompare(b.time);
         });
-    
+
     const nextEvent = upcomingEvents[0];
     const container = document.getElementById('next-event');
-    
+
     if (nextEvent) {
         const eventDate = new Date(nextEvent.date + 'T' + nextEvent.time);
         const timeUntil = getTimeUntil(eventDate);
-        
+
         container.innerHTML = `
             <div class="event-item">
                 <div>
@@ -133,16 +133,16 @@ function loadNextEvent() {
 function loadTimeline() {
     const container = document.getElementById('timeline');
     const today = new Date().toISOString().split('T')[0];
-    
+
     const upcoming = tripData.reservations
         .filter(event => event.date >= today)
         .slice(0, 5);
-    
+
     if (upcoming.length === 0) {
         container.innerHTML = '<p>Nenhum evento agendado</p>';
         return;
     }
-    
+
     container.innerHTML = upcoming.map(event => `
         <div class="timeline-item">
             <div class="timeline-date">${formatDate(event.date)} às ${event.time}</div>
@@ -157,7 +157,7 @@ function loadTimeline() {
 // Carregar clima (simulado - integrar com API real)
 function loadWeather() {
     const container = document.getElementById('weather-info');
-    
+
     // Simular dados - substituir por chamada real à API
     container.innerHTML = `
         <div class="weather-info">
@@ -172,7 +172,7 @@ function loadWeather() {
             </div>
         </div>
     `;
-    
+
     // TODO: Integrar com API de clima real
     fetch('/api/weather')
         .then(res => res.json())
@@ -197,7 +197,7 @@ function loadWeather() {
 // Carregar câmbio (simulado - integrar com API real)
 function loadExchange() {
     const container = document.getElementById('exchange-info');
-    
+
     // Simular dados - substituir por chamada real à API
     container.innerHTML = `
         <div class="exchange-rate">
@@ -207,7 +207,7 @@ function loadExchange() {
             </div>
         </div>
     `;
-    
+
     // TODO: Integrar com API de câmbio real
     fetch('/api/exchange')
         .then(res => res.json())
@@ -238,7 +238,7 @@ function initQuickActions() {
 function handleQuickAction(action) {
     const modal = document.getElementById('modal-overlay');
     const modalBody = document.getElementById('modal-body');
-    
+
     switch(action) {
         case 'contacts':
             modalBody.innerHTML = `
@@ -291,7 +291,7 @@ function handleQuickAction(action) {
             `;
             break;
     }
-    
+
     modal.classList.add('active');
 }
 
@@ -313,13 +313,13 @@ function formatDate(dateStr) {
 function getTimeUntil(targetDate) {
     const now = new Date();
     const diff = targetDate - now;
-    
+
     if (diff < 0) return 'Já passou';
-    
+
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    
+
     if (days > 0) return `Em ${days} dia(s) e ${hours}h`;
     if (hours > 0) return `Em ${hours}h e ${minutes}min`;
     return `Em ${minutes}min`;

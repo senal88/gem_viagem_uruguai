@@ -162,7 +162,7 @@ Você **NÃO precisa buscar** quando:
 
 ---
 
-**Última atualização**: 16 de Novembro de 2025  
-**Versão**: 1.0.0  
+**Última atualização**: 16 de Novembro de 2025
+**Versão**: 1.0.0
 **Status**: ✅ PRONTO PARA ANTHROPIC CLAUDE API
 

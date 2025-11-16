@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 # Carregar variáveis de ambiente
 load_dotenv()
 
-app = Flask(__name__, 
+app = Flask(__name__,
             template_folder='../templates',
             static_folder='../static')
 CORS(app)
@@ -101,26 +101,26 @@ def chat():
         message = data.get('message', '')
         provider = data.get('provider', 'openai')
         history = data.get('history', [])
-        
+
         if not message:
             return jsonify({'error': 'Mensagem vazia'}), 400
-        
+
         # Processar mensagem com o provider selecionado
         response = process_chat(message, provider, history)
-        
+
         return jsonify({
             'response': response,
             'provider': provider,
             'timestamp': datetime.now().isoformat()
         })
-        
+
     except Exception as e:
         print(f"Erro no chat: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
 def process_chat(message, provider, history):
     """Processar mensagem com o provider selecionado"""
-    
+
     if provider == 'openai':
         return chat_openai(message, history)
     elif provider == 'anthropic':
@@ -134,27 +134,27 @@ def chat_openai(message, history):
     """Chat com OpenAI"""
     try:
         from openai import OpenAI
-        
+
         client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-        
+
         messages = [{"role": "system", "content": SYSTEM_PROMPT}]
-        
+
         # Adicionar histórico
         for h in history:
             messages.append({"role": h['role'], "content": h['content']})
-        
+
         # Adicionar mensagem atual
         messages.append({"role": "user", "content": message})
-        
+
         response = client.chat.completions.create(
             model=os.getenv('OPENAI_MODEL', 'gpt-4-turbo-preview'),
             messages=messages,
             max_tokens=2000,
             temperature=0.7
         )
-        
+
         return response.choices[0].message.content
-        
+
     except ImportError:
         return "OpenAI SDK não instalado. Execute: pip install openai"
     except Exception as e:
@@ -164,26 +164,26 @@ def chat_anthropic(message, history):
     """Chat com Anthropic"""
     try:
         import anthropic
-        
+
         client = anthropic.Anthropic(api_key=os.getenv('ANTHROPIC_API_KEY'))
-        
+
         # Construir mensagens
         messages = []
         for h in history:
             if h['role'] != 'system':
                 messages.append({"role": h['role'], "content": h['content']})
-        
+
         messages.append({"role": "user", "content": message})
-        
+
         response = client.messages.create(
             model=os.getenv('ANTHROPIC_MODEL', 'claude-3-5-sonnet-20241022'),
             max_tokens=2000,
             system=SYSTEM_PROMPT,
             messages=messages
         )
-        
+
         return response.content[0].text
-        
+
     except ImportError:
         return "Anthropic SDK não instalado. Execute: pip install anthropic"
     except Exception as e:
@@ -193,26 +193,26 @@ def chat_gemini(message, history):
     """Chat com Gemini"""
     try:
         import google.generativeai as genai
-        
+
         genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
-        
+
         model = genai.GenerativeModel(
             model_name=os.getenv('GOOGLE_MODEL', 'gemini-2.5-pro'),
             system_instruction=SYSTEM_PROMPT
         )
-        
+
         # Construir contexto do histórico
         context = "\n".join([
             f"{'Usuário' if h['role'] == 'user' else 'Assistente'}: {h['content']}"
             for h in history[-5:]  # Últimas 5 mensagens
         ])
-        
+
         full_message = f"{context}\n\nUsuário: {message}" if context else message
-        
+
         response = model.generate_content(full_message)
-        
+
         return response.text
-        
+
     except ImportError:
         return "Google Generative AI SDK não instalado. Execute: pip install google-generativeai"
     except Exception as e:
@@ -249,24 +249,24 @@ def reservations():
 def next_event():
     """Endpoint para próximo evento"""
     today = datetime.now().date().isoformat()
-    
+
     upcoming = [
         r for r in TRIP_DATA['reservations']
         if r['date'] >= today
     ]
-    
+
     if upcoming:
         upcoming.sort(key=lambda x: (x['date'], x['time']))
         return jsonify(upcoming[0])
-    
+
     return jsonify({'message': 'Nenhum evento próximo'})
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
     debug = os.getenv('FLASK_DEBUG', 'False').lower() == 'true'
-    
+
     print(f"🚀 Servidor iniciando na porta {port}")
     print(f"📱 Acesse no iPhone: http://[SEU_IP_LOCAL]:{port}")
-    
+
     app.run(host='0.0.0.0', port=port, debug=debug)
 
