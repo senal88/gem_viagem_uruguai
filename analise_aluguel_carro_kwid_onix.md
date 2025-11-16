@@ -11,7 +11,14 @@
 **Veículos Comparados:** Kwid vs Onix  
 **Plataformas Analisadas:** Booking, Budget, Avis, senamfo.com.br  
 
-**Status:** 🔄 Análise em progresso (links fornecidos)
+**Status:** ✅ RESERVA CONFIRMADA - Budget (Confirmação: 35328815BR4)
+
+**RESERVA FINAL:**
+- **Locadora:** Budget
+- **Número de Confirmação:** 35328815BR4
+- **Retirada:** 18/11/2025, 11:00 AM - Aeroporto MVD
+- **Devolução:** 25/11/2025, 12:30 AM (00:30) - Aeroporto MVD
+- **Período:** 7 dias
 
 ---
 

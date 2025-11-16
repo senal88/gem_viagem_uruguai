@@ -17,22 +17,24 @@
 
 ## 🚙 ALUGUEL DE CARRO
 
-### Informações da Reserva
+### Informações da Reserva CONFIRMADA
 
 | Campo | Valor |
 |-------|-------|
-| **Plataforma** | Booking.com |
-| **Período** | 18 a 24 de novembro de 2025 (6 dias) |
-| **Local de Retirada** | Aeroporto Internacional de Carrasco (MVD) |
-| **Data/Hora Retirada** | 18/11/2025, ~11:00 (após desembarque) |
-| **Local de Devolução** | Aeroporto Internacional de Carrasco (MVD) |
-| **Data/Hora Devolução** | 24/11/2025, ~23:30-00:00 (antes do voo) |
-| **Status** | ⏳ Reserva realizada (verificar confirmação) |
+| **Locadora** | Budget |
+| **Número de Confirmação** | 35328815BR4 |
+| **Período** | 18 a 25 de novembro de 2025 (7 dias) |
+| **Local de Retirada** | Aeroporto Internacional de Carrasco (MVD) - Montevidéu |
+| **Data/Hora Retirada** | 18/11/2025, 11:00 AM |
+| **Local de Devolução** | Aeroporto Internacional de Carrasco (MVD) - Montevidéu |
+| **Data/Hora Devolução** | 25/11/2025, 12:30 AM (00:30) |
+| **Status** | ✅ CONFIRMADA |
 
-**Link da Reserva:**
-```
-https://cars.booking.com/search-results?adplat=cross_product_bar&aid=304142&coordinates=-34.83679962158203%2C-56.01620101928711&cor=br&doDay=25&doHour=0&doMinute=0&doMonth=11&doYear=2025&driversAge=30&dropCoordinates=-34.83679962158203%2C-56.01620101928711&dropFtsType=A&dropLocation=&dropLocationIata=MVD&dropLocationName=Aeroporto%20Internacional%20de%20Carrasco&ftsType=A&label=gen173nr-10CAEoggI46AdILVgEaCCIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Aqn-48gGwAIB0gIkZDM3MjZlMjEtMTdhYi00YmQ3LWJiOWUtZTQ2NjI1NGY1MzU42AIB4AIB&location=&locationIata=MVD&locationName=Aeroporto%20Internacional%20de%20Carrasco&prefcurrency=BRL&preflang=br&puDay=18&puHour=10&puMinute=0&puMonth=11&puYear=2025
-```
+**Observações:**
+- Retirada: Terça-feira, 18 de novembro de 2025 às 11:00 AM
+- Devolução: Terça-feira, 25 de novembro de 2025 às 12:30 AM (00:30)
+- Local: Aeroporto Montevidéu (Carrasco - MVD)
+- Número de confirmação: **35328815BR4** (guardar para retirada)
 
 ---
 

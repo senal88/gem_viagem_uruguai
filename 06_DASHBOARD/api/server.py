@@ -152,13 +152,13 @@ def gem_adicionar_oferta_detalhada():
     try:
         from api_endpoints import analisador, OfertaCarro
         dados = request.json
-        
-        campos_obrigatorios = ['plataforma', 'veiculo', 'preco_diaria', 'preco_total', 
+
+        campos_obrigatorios = ['plataforma', 'veiculo', 'preco_diaria', 'preco_total',
                                'seguro_basico', 'combustivel', 'cancelamento', 'limite_km']
         for campo in campos_obrigatorios:
             if campo not in dados:
                 return jsonify({'error': f'Campo obrigatório ausente: {campo}'}), 400
-        
+
         oferta = OfertaCarro(
             plataforma=dados['plataforma'],
             veiculo=dados['veiculo'],
@@ -176,9 +176,9 @@ def gem_adicionar_oferta_detalhada():
             observacoes=dados.get('observacoes'),
             link_reserva=dados.get('link_reserva')
         )
-        
+
         analisador.adicionar_oferta(oferta)
-        
+
         return jsonify({
             'success': True,
             'message': 'Oferta adicionada com sucesso',
@@ -188,7 +188,7 @@ def gem_adicionar_oferta_detalhada():
                 'preco_total': oferta.preco_total
             }
         }), 201
-        
+
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
